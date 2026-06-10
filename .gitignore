@@ -1,15 +1,21 @@
-# macOS
+# ── Private vault folders (NEVER pushed to GitHub) ───────────────────────────
+00-Inbox/
+Templates/
+
+# ── macOS ────────────────────────────────────────────────────────────────────
 .DS_Store
 
-# Obsidian — keep settings, ignore workspace (changes every session)
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+# ── Obsidian ─────────────────────────────────────────────────────────────────
+.obsidian/
 
-# Processing logs
+# ── Quartz build artifacts ───────────────────────────────────────────────────
+node_modules/
+public/
+.quartz/
+.quartz-cache/
+
+# ── Project files not needed in repo ─────────────────────────────────────────
 .inbox-processing.log
-
-# Loose images at root (should be moved into notes or attachments/)
-/Pasted image *.png
-
-# Claude Code
 .claude/
+/Pasted image *.png
+CLAUDE.md
