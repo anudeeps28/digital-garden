@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Obsidian — keep settings, ignore workspace (changes every session)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Processing logs
+.inbox-processing.log
+
+# Loose images at root (should be moved into notes or attachments/)
+/Pasted image *.png
+
+# Claude Code
+.claude/
