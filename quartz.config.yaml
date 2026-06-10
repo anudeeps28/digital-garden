@@ -200,10 +200,10 @@ plugins:
       position: afterBody
       priority: 10
   - source: github:quartz-community/footer
-    enabled: true
+    enabled: false
     options:
       links:
-        GitHub: https://github.com/anudeepsharma
+        GitHub: https://github.com/anudeeps28
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
