@@ -10,10 +10,10 @@ date: 2026-06-26
 Chunk classification tags each document chunk with what kind of content it holds, so retrieval can filter by structure, not just by words.
 
 ## Definition
-When a health-plan document is split during [[Chunking]], each resulting chunk is labeled by content type — Benefit, TableRow, Exclusion, Definition, Eligibility, PlanAdmin, or Prose. Storing this label as metadata in [[Azure AI Search]] lets retrieval narrow the field before scoring: a question about what's excluded can restrict to Exclusion chunks, and a copay lookup can favor TableRow chunks. In the project this structural tagging makes [[Hybrid Search]] far more precise, because the system isn't searching the whole corpus blindly — it searches the slice that structurally matches the question's [[Query Intent Classification|intent]].
+When documents are split during [[Chunking]], each resulting chunk can be labeled by content type — for example, Definition, Prose, Table, Metadata, or Query-specific categories. Storing this label as metadata in a vector database or search index lets retrieval narrow the field before scoring: a question seeking an exclusion can restrict to Exclusion-type chunks, and a numerical lookup can favor Table-type chunks. This structural tagging makes [[Hybrid Search]] far more precise, because the system isn't searching the whole corpus blindly — it searches the slice that structurally matches the question's [[Query Intent Classification|intent]].
 
 ## Source
-AI document ingestion project
+Foundational concept in semantic search and RAG systems; formalized in practice across vector database and search engine communities. Widely adopted by tools like LangChain, Llamaindex, and modern vector database platforms (Pinecone, Weaviate, Milvus) as a best practice for improving retrieval precision.
 
 ---
 

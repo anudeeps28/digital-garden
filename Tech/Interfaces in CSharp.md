@@ -10,10 +10,10 @@ date: 2026-03-24
 An interface is a contract that says "any class doing this job must have these methods" — it defines *what* something does without specifying *how*.
 
 ## Definition
-In [[CSharp]], an interface (prefixed with `I`, e.g., `IDocumentService`) declares method signatures, properties, and events that implementing classes must provide. Interfaces are the backbone of [[Dependency Injection]] and [[Clean Architecture]] — the Application layer defines interfaces, and the Infrastructure layer provides the concrete implementations. This means you can swap out implementations (e.g., replace a real [[Azure Blob Storage]] client with a fake one in [[Unit Tests]]) without changing any business logic.
+In [[CSharp]], an interface (prefixed with `I`, e.g., `IDocumentService`) declares method signatures, properties, and events that implementing classes must provide. Interfaces are the backbone of [[Dependency Injection]] and [[Clean Architecture]] — the Application layer defines interfaces, and the Infrastructure layer provides the concrete implementations. This means you can swap out implementations without changing any business logic, for example by replacing a real external service client with a test double in [[Unit Tests]].
 
 ## Source
-AI document ingestion project
+Microsoft documentation and C# language specification; interfaces are a core object-oriented programming feature standardized as part of the C# language since its introduction in 2000. The pattern of using interfaces for [[Dependency Inversion]] was formalized by Robert C. Martin in *Clean Architecture: A Craftsman's Guide to Software Structure and Design* (2017).
 
 ---
 

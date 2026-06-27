@@ -10,10 +10,10 @@ date: 2026-03-24
 Namespaces are folders for code — they organize classes into logical groups and prevent naming collisions.
 
 ## Definition
-In [[CSharp]], a namespace is a way to group related classes, interfaces, and [[DTOs (Data Transfer Objects)]] under a hierarchical name like `App.DocIngestion.Application.Services`. They mirror the project structure in [[Clean Architecture]] — each layer has its own namespace (e.g., `Domain`, `Application`, `Infrastructure`). Namespaces prevent two classes with the same name from conflicting and make `using` statements at the top of files act like import declarations, pulling in only the code you need.
+In [[CSharp]], a namespace is a way to group related classes, interfaces, and [[DTOs (Data Transfer Objects)]] under a hierarchical name like `MyApplication.Services.Auth`. They mirror project structure in [[Clean Architecture]] — each layer has its own namespace (e.g., `Domain`, `Application`, `Infrastructure`). Namespaces prevent two classes with the same name from conflicting and make `using` statements at the top of files act like import declarations, pulling in only the code you need.
 
 ## Source
-AI document ingestion project
+Microsoft, introduced in C# 1.0 as part of the .NET Framework (2002). The concept draws from earlier language design principles, particularly C++'s namespace feature (introduced in C++ standard in 1998).
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-03-24
 Authentication is proving who you are — verifying your identity before granting access to the system.
 
 ## Definition
-Authentication (authn) answers the question "Who are you?" In the project, when a client calls the [[REST API]], it must include a [[Bearer Token]] (a [[JWT]] issued by [[Entra ID]]). The API's [[Middleware]] validates this token — checking its signature, expiration, and issuer — before allowing the request to reach the [[Controller]]. If the token is missing or invalid, the API returns a `401 Unauthorized` [[HTTP Status Codes|status code]]. Authentication is distinct from [[Authorization]] — authentication proves identity, authorization checks permissions.
+Authentication (authn) answers the question "Who are you?" In practice, when a client calls a [[REST API]], it typically includes a [[Bearer Token]] (often a [[JWT]] issued by an identity provider like [[Entra ID]]). The API's [[Middleware]] validates this token — checking its signature, expiration, and issuer — before allowing the request to reach the application logic. If the token is missing or invalid, the API returns a `401 Unauthorized` [[HTTP Status Codes|status code]]. Authentication is distinct from [[Authorization]] — authentication proves identity, authorization checks permissions.
 
 ## Source
-AI document ingestion project
+Foundational concept in computer security; modern digital authentication formalized in RFC 6234 (Internet Security Glossary, 2011) and RFC 7235 (HTTP Authentication, 2015). Bearer token authentication specifically is standardized in RFC 6750 (OAuth 2.0 Bearer Token Usage, 2012).
 
 ---
 

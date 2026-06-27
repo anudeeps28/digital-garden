@@ -10,10 +10,10 @@ date: 2026-03-24
 `[FromForm]` tells a controller to read a parameter from a multipart form upload rather than the JSON body.
 
 ## Definition
-In [[ASP.NET Core]], [[Controller]] action parameters are bound from the request body by default (as [[JSON]]). The `[FromForm]` attribute overrides this, telling the framework to read the value from form data instead — which is how file uploads work. When a client uploads a PDF to the the project ingestion API, the file comes as `multipart/form-data`, and the controller uses `[FromForm] IFormFile file` to receive it. This is essential for the document upload [[API Endpoints|endpoint]] where files and metadata are submitted together.
+In [[ASP.NET Core]], [[Controller]] action parameters are bound from the request body by default (as [[JSON]]). The `[FromForm]` attribute overrides this, telling the framework to read the value from form data instead — which is how file uploads work. When a client submits `multipart/form-data`, the controller uses `[FromForm] IFormFile file` to receive the uploaded file. This is essential for [[API Endpoints]] where files and metadata are submitted together.
 
 ## Source
-AI document ingestion project
+Microsoft, introduced in ASP.NET Core as a built-in model binding source attribute.
 
 ---
 
@@ -29,4 +29,4 @@ AI document ingestion project
 [[Controller]] action methods use `[FromForm]` to decorate their parameters, and [[Request and Response]] architecture controls how request data is read and processed throughout the pipeline.
 
 **Paths** — *where this leads*
-[[Ingestion]] endpoints use `[FromForm]` to receive uploaded documents, and those files are then stored in [[Azure Blob Storage]] for persistence.
+API endpoints use `[FromForm]` to receive uploaded files and structured form data, enabling integration with file storage systems like [[Azure Blob Storage]].

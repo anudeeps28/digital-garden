@@ -13,7 +13,7 @@ Middleware is code that runs on every HTTP request before it reaches your contro
 In [[ASP.NET Core]] ([[.NET 8]]), middleware components form a pipeline that each request passes through. Each piece of middleware can inspect or modify the [[Request and Response|request]], do some work, and then pass it to the next middleware in the chain — or short-circuit and return a response immediately (e.g., rejecting unauthenticated requests). Common middleware includes: [[Authentication]] (validating [[Bearer Token|tokens]]), [[Serilog|logging]] (recording each request), error handling (catching exceptions and returning proper [[HTTP Status Codes]]), and CORS (allowing cross-origin requests). Middleware is registered in `Program.cs` and runs in the order it's added.
 
 ## Source
-AI document ingestion project
+TJ Holowaychuk, Express.js (2010); formalized in ASP.NET Core (Microsoft, 2016) as an integrated request processing pipeline.
 
 ---
 

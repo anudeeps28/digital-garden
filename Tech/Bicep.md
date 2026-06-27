@@ -10,10 +10,10 @@ date: 2026-06-26
 Bicep is a clean, declarative language that lets you describe Azure infrastructure the way you'd describe it to a colleague — then compiles down to the verbose ARM JSON Azure actually understands.
 
 ## Definition
-Bicep is a domain-specific language (DSL) that transpiles to Azure Resource Manager (ARM) templates, giving you readable, type-safe [[IaC]] for [[Azure]]. On the AI document ingestion project, every cloud resource is defined in Bicep — a `main.bicep` orchestrates the deployment and pulls in environment values from a `.bicepparam` file so Test and Prod stay separate but share one source of truth. The resources it stamps out include the [[Azure Functions]] app, [[Azure Container Apps]] embedding container, [[Azure SQL]], [[Azure Key Vault]], [[Azure OpenAI]], and [[Azure AI Search]], all wired to a [[Managed Identity]] so no secrets live in the templates. Because Bicep is declarative, re-running it converges the environment to the desired state rather than issuing imperative commands.
+Bicep is a domain-specific language (DSL) that transpiles to Azure Resource Manager (ARM) templates, giving you readable, type-safe [[IaC]] for [[Azure]]. In practice, every cloud resource is defined in Bicep — a `main.bicep` orchestrates the deployment and pulls in environment values from a `.bicepparam` file so test and production environments stay separate but share one source of truth. The resources Bicep can provision include [[Azure Functions]] apps, [[Azure Container Apps]] containers, [[Azure SQL]], [[Azure Key Vault]], [[Azure OpenAI]], and [[Azure AI Search]], all wired to a [[Managed Identity]] so no secrets live in the templates. Because Bicep is declarative, re-running it converges the environment to the desired state rather than issuing imperative commands.
 
 ## Source
-AI document ingestion project
+Microsoft, introduced as a domain-specific language for Azure infrastructure-as-code in 2020; now a core part of Azure's resource definition tooling alongside ARM templates.
 
 ---
 

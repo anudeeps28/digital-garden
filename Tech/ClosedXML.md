@@ -10,10 +10,10 @@ date: 2026-06-26
 A .NET library for building real Excel workbooks in code — sheets, formatting, formulas and all.
 
 ## Definition
-ClosedXML is the C# library I use in the AI document ingestion project to generate native `.xlsx` Excel files for plan-data exports. From a [[Controller]] action I build a workbook in memory — styled headers, multiple sheets, typed cells — and stream it back as a download through the [[REST API]]. It's the rich-format counterpart to [[CsvHelper]]: I reach for ClosedXML when the user wants a formatted, Excel-native deliverable, and for plain tabular dumps I use CSV instead. Both turn [[DTOs (Data Transfer Objects)|DTOs]] coming out of the data layer into something a business user can open.
+ClosedXML is a C# library for generating native `.xlsx` Excel files programmatically — sheets, formatting, formulas, and styling all available through a fluent API. In practice, you build a workbook in memory with styled headers, multiple sheets, and typed cells, then stream or save it as a file. It's the rich-format counterpart to [[CsvHelper]]: use ClosedXML when you need a formatted, Excel-native deliverable with styling and structure, and reach for CSV when plain tabular data suffices. Both turn structured data — such as [[DTOs (Data Transfer Objects)|DTOs]] from a data layer — into something end users can open and work with in Excel.
 
 ## Source
-AI document ingestion project
+Jean-Marie Alfonse, open-source project; first released 2009. See [ClosedXML on GitHub](https://github.com/ClosedXML/ClosedXML).
 
 ---
 

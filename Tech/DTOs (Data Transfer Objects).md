@@ -10,10 +10,10 @@ date: 2026-03-24
 DTOs are simple classes whose only job is to carry data between layers or across network boundaries — no business logic, just properties.
 
 ## Definition
-A Data Transfer Object is a plain [[CSharp]] class (or record) with properties but no methods or behavior. In [[Clean Architecture]], DTOs live in the Application layer and define the shape of data that moves between the API and the business logic. For example, a `DocumentUploadRequest` DTO carries the file, group number, and metadata from the [[Controller]] to the service layer, while a `DocumentResponse` DTO carries results back. DTOs prevent exposing internal database entities directly through the [[REST API]], which would create tight coupling and security risks.
+A Data Transfer Object is a plain [[CSharp]] class (or record) with properties but no methods or behavior. In [[Clean Architecture]], DTOs live in the Application layer and define the shape of data that moves between the API and the business logic. DTOs prevent exposing internal database entities directly through the [[REST API]], which would create tight coupling and security risks. A request DTO carries input from the [[Controller]] to the service layer, while a response DTO carries results back to the client.
 
 ## Source
-AI document ingestion project
+Martin Fowler, *Patterns of Enterprise Application Architecture* (2002); popularized in Java by the J2EE community and formalized across languages including C# in ASP.NET and distributed system architectures.
 
 ---
 

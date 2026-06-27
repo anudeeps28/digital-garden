@@ -10,10 +10,10 @@ date: 2026-03-24
 Tables are like spreadsheets in a database — each row is one record, each column is a field, and they store structured data.
 
 ## Definition
-In a relational database like [[Azure SQL]], data is organized into tables. Each table has a defined set of columns (fields with specific data types) and rows (individual records). For example, a `Documents` table might have columns for `Id`, `FileName`, `GroupNumber`, `UploadDate`, and `Status`. Tables are related to each other through [[Foreign Key|foreign keys]] — the `Plans` table references the `Groups` table, which references the `Employers` table. In [[CSharp]], tables map to entity classes, and [[EF Core]] handles the mapping between C# objects and database rows.
+In a relational database like [[Azure SQL]], data is organized into tables. Each table has a defined set of columns (fields with specific data types) and rows (individual records). For example, a customer table might have columns for `Id`, `Name`, `Email`, and `CreatedDate`. Tables are related to each other through [[Foreign Key|foreign keys]] — one table might reference another to establish relationships between entities. In [[CSharp]], tables map to entity classes, and [[EF Core]] handles the mapping between C# objects and database rows.
 
 ## Source
-AI document ingestion project
+Edgar F. Codd, foundational concept in relational database theory introduced in his 1970 paper *A Relational Model of Data for Large Shared Data Banks*.
 
 ---
 

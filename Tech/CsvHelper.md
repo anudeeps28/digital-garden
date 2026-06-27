@@ -10,17 +10,17 @@ date: 2026-06-26
 A .NET library that maps between C# objects and CSV rows so I don't hand-roll comma parsing.
 
 ## Definition
-CsvHelper is the C# library I use in the AI document ingestion project for reading and writing CSV — primarily for CSV plan-data exports. It maps a collection of [[DTOs (Data Transfer Objects)|DTOs]] straight to rows (and back), handling quoting, escaping, and headers correctly instead of me concatenating strings and inviting bugs. It's the lightweight, universally-openable counterpart to [[ClosedXML]]: CSV when the consumer just needs raw tabular data or another system will ingest it, Excel when formatting matters. The export typically streams out through a [[Controller]] on the [[REST API]].
+CsvHelper is a C# library for reading and writing CSV — handling the mechanical work of mapping [[DTOs (Data Transfer Objects)|DTOs]] to CSV rows (and back), with correct quoting, escaping, and header management. It avoids the trap of hand-rolling string concatenation for tabular exports. It's the lightweight, universally-openable counterpart to [[ClosedXML]]: CSV when the consumer needs raw data or another system will ingest it, Excel when formatting and cell-level control matter. In practice, such exports often stream through a [[Controller]] on a [[REST API]].
 
 ## Source
-AI document ingestion project
+Josh Close, open-source library first released ~2009; maintained on GitHub at joshclose/CsvHelper.
 
 ---
 
 ## Compass
 
 **Neighbors** — *what lives nearby*
-[[ClosedXML]] is the other export library in the same project, serving a similar data-mapping role but for formatted Excel output, while [[DTOs (Data Transfer Objects)|DTOs]] are the objects that CsvHelper maps into rows.
+[[ClosedXML]] serves a similar data-mapping role but for formatted Excel output, while [[DTOs (Data Transfer Objects)|DTOs]] are the objects that CsvHelper maps into rows.
 
 **Clash** — *what pushes against this*
 [[JSON]] represents the opposite approach — nested and structured payloads instead of the flat tabular rows that CSV provides.

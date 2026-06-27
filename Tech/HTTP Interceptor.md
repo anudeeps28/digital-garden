@@ -10,10 +10,10 @@ date: 2026-06-26
 An HTTP interceptor is Angular middleware that sits in front of every outgoing request — the perfect place to automatically attach the auth token.
 
 ## Definition
-An interceptor is a function (in modern Angular, a `HttpInterceptorFn`) registered globally that receives each outgoing request, can modify it, and passes it along the chain before it hits the network. It's the client-side mirror of backend [[Middleware]]: a single chokepoint every request flows through. In the AI document ingestion project, the `PlanDocumentRAG.Web` Angular 19 app uses MSAL's interceptor to silently acquire an access token from [[Entra ID]] and attach it as a [[Bearer Token]] `Authorization` header on calls to the protected [[REST API]] — so individual services never hand-roll auth headers. Because requests are [[RxJS Observable|Observables]], the interceptor composes cleanly into that pipeline.
+An interceptor is a function (in modern Angular, a `HttpInterceptorFn`) registered globally that receives each outgoing request, can modify it, and passes it along the chain before it hits the network. It's the client-side mirror of backend [[Middleware]]: a single chokepoint every request flows through. In practice, an interceptor can silently acquire credentials and attach a [[Bearer Token]] `Authorization` header on calls to protected [[REST API]]s — so individual services never need to hand-roll auth headers themselves. Because requests are [[RxJS Observable|Observables]], the interceptor composes cleanly into that reactive pipeline.
 
 ## Source
-AI document ingestion project
+Google Angular Team, introduced as a core feature in Angular 4.3 (2017). HTTP Interceptors formalized the middleware pattern for client-side HTTP request transformation; prior frameworks used similar middleware concepts, but Angular standardized it as an interceptor architecture.
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-06-26
 A keyed service lets you register several implementations of one interface under string keys and ask for the exact one you want.
 
 ## Definition
-Keyed services (added in .NET 8) solve the "which implementation?" problem when a single interface has multiple concrete versions. You register each under a string key and resolve it with `[FromKeyedServices("key")]` or `GetRequiredKeyedService<T>("key")`. In the AI document ingestion project I register two OpenAI chat clients against the same interface: `"chat"` for the heavyweight **GPT-4o** (deep RAG answers) and `"chat-fast"` for the cheap **nano** model (quick classification, title generation). The service that needs an answer just asks for the key that fits the job, keeping the cost/quality trade-off explicit at the call site instead of buried in a factory. It's an extension of ordinary [[Dependency Injection]], and the keys themselves are often driven by the [[IOptions Pattern|IOptions]] config.
+Keyed services (added in .NET 8) solve the "which implementation?" problem when a single interface has multiple concrete versions. You register each under a string key and resolve it with `[FromKeyedServices("key")]` or `GetRequiredKeyedService<T>("key")`. For example, you might register two database clients against the same interface—`"primary"` for the heavyweight read-heavy implementation and `"cache"` for the lightweight in-memory variant. The service that needs data just asks for the key that fits the job, keeping the performance/resource trade-off explicit at the call site instead of buried in a factory. It's an extension of ordinary [[Dependency Injection]], and the keys themselves are often driven by the [[IOptions Pattern|IOptions]] config.
 
 ## Source
-AI document ingestion project
+Microsoft, introduced in ASP.NET Core 8 (released November 2023). See the [official .NET 8 release notes](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8) and [keyed services documentation](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection#keyed-services).
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 type: atomic
-tags: [ai/llm, kba]
+tags: [ai/llm]
 date: 2026-03-24
 ---
 
@@ -10,10 +10,10 @@ date: 2026-03-24
 Template-based extraction uses a fixed JSON template plus an AI model to pull structured data from unstructured documents automatically.
 
 ## Definition
-Instead of manually reading a plan document and typing out benefit details, template-based extraction gives the [[LLM (Large Language Model)|LLM]] a JSON schema (the template) that defines which fields to extract — like deductible amounts, copays, coinsurance percentages, and coverage limits. The model reads the document chunks and fills in the template with the correct values. In the project, this powers automated benefit extraction: a plan document goes in, and structured [[JSON]] data comes out. The template acts as both the instruction and the output format, sent to [[Azure OpenAI]] as part of the [[Prompt Engineering|prompt]]. This replaces hours of manual data entry.
+Template-based extraction gives the [[LLM (Large Language Model)|LLM]] a JSON schema (the template) that defines which fields to extract. The model reads source documents and fills in the template with the correct values. The template acts as both the instruction and the output format, sent to the model as part of the [[Prompt Engineering|prompt]]. This approach converts unstructured text into structured [[JSON]] data automatically, replacing manual transcription work.
 
 ## Source
-AI document ingestion project
+Emerged as a common pattern in [[Prompt Engineering|prompt engineering]] circa 2022–2023 with the rise of large language models (GPT-3.5, GPT-4) and structured output capabilities. Combines JSON Schema (formalized as a standard by the JSON Schema collaborative) with LLM instruction-following to extract data into predefined templates.
 
 ---
 
@@ -31,4 +31,4 @@ AI document ingestion project
 
 ## Paths — *where this leads*
 
-The extracted data is output as structured [[JSON]], sourced from [[Plan Document|plan documents]], capturing specific [[Benefits]] fields like deductible and copay amounts that become [[Metadata]] stored in [[Azure SQL]].
+The extracted data is output as structured [[JSON]], which can be stored in databases, piped into downstream processing, or integrated into larger systems. Template-based extraction unlocks automation wherever structured data needs to be pulled from unstructured sources.

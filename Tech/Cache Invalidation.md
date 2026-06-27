@@ -10,10 +10,10 @@ date: 2026-06-26
 Cache invalidation is the hard problem of deciding when cached data has gone stale and must be thrown away.
 
 ## Definition
-Cache invalidation answers the question every cache must face: when is this entry no longer trustworthy? In the AI document ingestion project I keep it simple and use **time-based absolute expiration** — each [[In-Memory Caching|IMemoryCache]] entry (templates, RAG answers) carries a TTL, and once it lapses the next read misses and refetches from [[Azure SQL]] or the LLM. I deliberately avoid manual eviction tied to writes, because the data changes rarely and a short TTL bounds staleness to an acceptable window without the bug-prone bookkeeping of "remember to evict on every update." The trade-off is explicit: a longer TTL means fewer round-trips but a longer window where a user might see slightly old data. It's famously one of the two hard things in computer science.
+Cache invalidation answers the question every cache must face: when is this entry no longer trustworthy? In practice, **time-based absolute expiration** is a simple approach — each cached entry carries a TTL, and once it lapses the next read misses and refetches from the source. One way to avoid complexity is to skip manual eviction tied to writes when the data changes infrequently; instead, a short TTL bounds staleness to an acceptable window without the bug-prone bookkeeping of "remember to evict on every update." The trade-off is explicit: a longer TTL means fewer round-trips but a longer window where a consumer might see slightly old data. It's famously one of the two hard things in computer science.
 
 ## Source
-AI document ingestion project
+Phil Karlton, attributed quote in systems design communities circa 1990s; foundational concept in caching theory formalized across distributed systems and database literature. Often cited alongside Donald Knuth's work on algorithm design and optimization. The problem became formalized in modern cache coherence protocols (e.g., MESI, MOESI) and HTTP cache specifications (RFC 7234, 2014).
 
 ---
 

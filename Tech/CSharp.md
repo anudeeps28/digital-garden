@@ -7,13 +7,13 @@ date: 2026-03-24
 # C#
 
 ## Idea
-C# is a statically-typed, object-oriented programming language developed by Microsoft, and the primary language used across Production projects.
+C# is a statically-typed, object-oriented programming language developed by Microsoft.
 
 ## Definition
-C# (pronounced "C-sharp") is a general-purpose, high-level programming language that runs on the [[.NET 8]] runtime. It combines the power of C/C++ with the productivity of languages like Java, offering strong typing, garbage collection, and first-class support for modern patterns like [[Async Await in CSharp]], [[Interfaces in CSharp]], and [[Dependency Injection]]. At the project, all backend services, APIs, and business logic are written in C#.
+C# (pronounced "C-sharp") is a general-purpose, high-level programming language that runs on the [[.NET 8]] runtime. It combines the power of C/C++ with the productivity of languages like Java, offering strong typing, garbage collection, and first-class support for modern patterns like [[Async Await in CSharp]], [[Interfaces in CSharp]], and [[Dependency Injection]].
 
 ## Source
-AI document ingestion project
+Anders Hejlsberg, Microsoft; first released with .NET Framework in 2000. Evolved continuously as part of the .NET ecosystem, with major releases tracked alongside .NET versions.
 
 ---
 

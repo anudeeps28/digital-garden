@@ -10,10 +10,10 @@ date: 2026-06-26
 PDF.js (the `pdfjs-dist` package) is a pure-browser PDF rendering engine — it draws PDF pages onto a canvas with no plugin or server round-trip.
 
 ## Definition
-Built by Mozilla, PDF.js parses and renders PDF files entirely in JavaScript, so a web app can display documents inline instead of forcing a download or relying on the browser's native viewer. In the AI document ingestion project, the `PlanDocumentRAG.Web` Angular 19 chat UI uses `pdfjs-dist` inside its document-viewer component to show the source plan PDFs a chat answer was grounded in — letting a reviewer click a citation and see the exact page the LLM pulled from. This closes the trust loop for RAG: the answer comes from the [[REST API]], and PDF.js renders the underlying evidence right beside it.
+Built by Mozilla, PDF.js parses and renders PDF files entirely in JavaScript, so a web app can display documents inline instead of forcing a download or relying on the browser's native viewer. In practice, this enables interactive document viewing in web applications — for example, a chat UI can embed PDF.js to display source documents inline, letting users click citations and see the exact pages referenced, closing the trust loop for document-grounded applications.
 
 ## Source
-AI document ingestion project
+Mozilla, first released 2011 as an open-source JavaScript PDF renderer; initially developed to provide an alternative to closed-source PDF plugins and to enable PDF viewing in the browser without external dependencies.
 
 ---
 
@@ -29,4 +29,4 @@ A plain download link or server-side PDF-to-image conversion offer no inline, in
 PDF.js is integrated as a component within [[Angular]], the framework that hosts it in the larger application.
 
 **Paths** — *where this leads*
-The viewer shows the source that the [[REST API]]'s answer cited, closing the loop on grounded responses. There's also a sibling concern in [[DOMPurify]] — both are about rendering untrusted content safely in the browser.
+Inline document viewing enables grounded, verifiable responses — users can see the source material that answers were based on. There's also a sibling concern in [[DOMPurify]] — both are about rendering untrusted content safely in the browser.

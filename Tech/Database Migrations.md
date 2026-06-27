@@ -13,7 +13,7 @@ Migrations track changes to your database structure over time — like version c
 When you modify your [[CSharp]] entity classes (add a column, create a table, change a data type), [[EF Core]] can generate a migration — a C# file containing the `Up()` method (apply the change) and `Down()` method (undo it). Running `dotnet ef migrations add AddDocumentStatus` creates the migration, and `dotnet ef database update` applies it to [[Azure SQL]]. Migrations are stored as code files and committed to [[Git]], so every developer and the [[CI-CD Pipeline]] can reproduce the exact database schema. They're applied in order, each building on the previous one.
 
 ## Source
-AI document ingestion project
+Ruby on Rails, introduced as ActiveRecord Migrations (2004); popularized the concept of versioned, code-based database schema changes. Later adopted by other frameworks including Entity Framework (Microsoft, 2008) and Flyway.
 
 ---
 

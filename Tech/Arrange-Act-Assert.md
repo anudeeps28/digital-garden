@@ -10,10 +10,10 @@ date: 2026-06-26
 A clean test reads in three beats: set the stage, do the thing, then check what happened.
 
 ## Definition
-Arrange-Act-Assert (AAA) is the standard layout I follow for every test in the AI document ingestion project. **Arrange** wires up the inputs and [[Moq]] mocks, **Act** invokes the single method under test, and **Assert** verifies the outcome (usually via [[FluentAssertions]]). Keeping those three phases visually separate makes each [[xUnit]] [[Unit Tests|unit test]] state its intent at a glance and quietly enforces one-behaviour-per-test. The same rhythm scales up to [[Integration Tests]] built on [[WebApplicationFactory]] — arrange the request, act by sending it, assert on the response.
+Arrange-Act-Assert (AAA) is the standard layout for writing clear, readable tests. **Arrange** wires up the inputs and mocks, **Act** invokes the single method under test, and **Assert** verifies the outcome. Keeping those three phases visually separate makes each test state its intent at a glance and quietly enforces one-behaviour-per-test. The same rhythm scales to any test framework—whether [[xUnit]] [[Unit Tests|unit tests]] with [[Moq]] and [[FluentAssertions]], or [[Integration Tests]] that arrange a request, act by sending it, and assert on the response.
 
 ## Source
-AI document ingestion project
+Bill Wake, *Extreme Programming Explored* (2002); popularized as a foundational testing pattern in test-driven development and xUnit frameworks. Also documented in Robert C. Martin's *Clean Code: A Handbook of Agile Software Craftsmanship* (2008).
 
 ---
 

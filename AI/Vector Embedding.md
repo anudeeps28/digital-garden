@@ -10,10 +10,10 @@ date: 2026-03-24
 A vector embedding turns text into a list of numbers so that similar meanings end up close together mathematically.
 
 ## Definition
-An embedding is a numerical representation of text — a list (vector) of hundreds or thousands of floating-point numbers. An embedding model (like Ada from [[Azure OpenAI]]) converts a sentence or paragraph into this vector. The key insight: texts with similar meanings produce vectors that are close together in this high-dimensional space. "What is the copay?" and "How much do I pay per visit?" would have similar vectors even though the words differ. In the project, every document chunk gets embedded and stored in [[Azure AI Search]], enabling [[Vector Search]] — finding relevant chunks by meaning rather than exact keyword match.
+An embedding is a numerical representation of text — a list (vector) of hundreds or thousands of floating-point numbers. An embedding model (like Ada from [[Azure OpenAI]]) converts a sentence or paragraph into this vector. The key insight: texts with similar meanings produce vectors that are close together in this high-dimensional space. "What is the copay?" and "How much do I pay per visit?" would have similar vectors even though the words differ. In practice, every document chunk can be embedded and stored in vector databases, enabling [[Vector Search]] — finding relevant chunks by meaning rather than exact keyword match.
 
 ## Source
-AI document ingestion project
+Tomas Mikolov et al., "Efficient Estimation of Word Representations in Vector Space" (Google, 2013). The Word2Vec paper introduced neural word embeddings using skip-gram and CBOW models, establishing the practical foundation for representing words and text as dense vectors. Modern sentence and document embeddings evolved from these principles using transformer architectures.
 
 ---
 
@@ -26,7 +26,7 @@ AI document ingestion project
 [[Keyword Matching]] searches by exact word matches rather than meaning, and [[Plain Text]] exists without any numerical representation at all, making both fundamentally opposed to the vector embedding approach.
 
 **Roots** — *where this comes from*
-[[LLM (Large Language Model)]] and embedding models are related neural networks that work with similar underlying principles, and [[Azure OpenAI]] provides the embedding model that powers this approach in practice.
+[[LLM (Large Language Model)]] and embedding models are related neural networks that work with similar underlying principles, emerging from the same deep learning foundations. Modern embedding models like OpenAI's Ada are built on transformer architectures that enable powerful semantic representations.
 
 **Paths** — *where this leads*
-[[Vector Search]] enables searching by vector similarity, which can be combined with [[Keyword Matching]] in [[Hybrid Search]] for more robust results. The vectors are stored and indexed in [[Azure AI Search]], and the process requires [[Chunking]] to prepare text before embedding.
+[[Vector Search]] enables searching by vector similarity, which can be combined with [[Keyword Matching]] in [[Hybrid Search]] for more robust results. Vector databases and search systems store and index these embeddings, and the process requires [[Chunking]] to prepare text before embedding.

@@ -10,10 +10,10 @@ date: 2026-03-24
 Serilog is a .NET logging library that writes structured logs — key-value pairs instead of plain text strings, making logs searchable and queryable.
 
 ## Definition
-Serilog is a [[NuGet]] logging library for [[.NET 8]] that produces [[Structured Logging|structured logs]]. Instead of `Log.Info("User 123 uploaded file plan.pdf")`, you write `Log.Info("User {UserId} uploaded file {FileName}", 123, "plan.pdf")` — the values are preserved as searchable properties. Serilog can write to multiple "sinks" simultaneously: the console, files, and [[Application Insights]]. In the project, Serilog is configured in `Program.cs` and used throughout the application to log request details, processing steps, errors, and performance data. These structured logs flow into App Insights where you can query them with KQL.
+Serilog is a [[NuGet]] logging library for [[.NET 8]] that produces [[Structured Logging|structured logs]]. Instead of `Log.Info("User 123 uploaded file plan.pdf")`, you write `Log.Info("User {UserId} uploaded file {FileName}", 123, "plan.pdf")` — the values are preserved as searchable properties. Serilog can write to multiple "sinks" simultaneously: the console, files, and [[Application Insights]]. In practice, Serilog is typically configured in `Program.cs` and used throughout an application to log request details, processing steps, errors, and performance data. These structured logs can flow into Application Insights or other monitoring systems where they can be queried and analyzed.
 
 ## Source
-AI document ingestion project
+Nicholas Blumhardt, created Serilog in 2013. First released as an open-source project and maintained on GitHub; widely adopted across the .NET ecosystem as a structured logging standard.
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-06-26
 BM25 is the classic keyword-relevance formula that scores how well a document matches a search query based on word overlap.
 
 ## Definition
-BM25 (Best Match 25) ranks documents by combining term frequency (how often a query word appears in a chunk) with inverse document frequency (how rare that word is across the whole corpus), plus a length-normalization factor so long chunks don't win unfairly. It is purely lexical — it matches exact words and stems, with no understanding of meaning. In the project, BM25 powers the keyword half of [[Hybrid Search]] inside [[Azure AI Search]]: it reliably catches specific terms like plan numbers and dollar amounts that [[Vector Search]] might gloss over, while the vector half handles paraphrase and synonyms. The two scores are fused before [[Semantic Re-ranking]] takes a final pass.
+BM25 (Best Match 25) ranks documents by combining term frequency (how often a query word appears in a chunk) with inverse document frequency (how rare that word is across the whole corpus), plus a length-normalization factor so long chunks don't win unfairly. It is purely lexical — it matches exact words and stems, with no understanding of meaning. In practice, BM25 powers the keyword half of [[Hybrid Search]]: it reliably catches specific terms and exact matches that [[Vector Search]] might miss through semantic approximation, while the vector half handles paraphrase and synonyms. The two scores are fused before [[Semantic Re-ranking]] takes a final pass.
 
 ## Source
-AI document ingestion project
+Stephen E. Robertson and Karen Spärck Jones, foundational work in probabilistic retrieval models (1970s–1980s); formalized as BM25 in "Some Simple Effective Approximations to the 2-Poisson Model for Probabilistic Weighted Retrieval" (Robertson & Walker, 1994).
 
 ---
 

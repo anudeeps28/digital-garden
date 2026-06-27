@@ -10,10 +10,10 @@ date: 2026-06-26
 Deployment scope is the "where does this apply" of a Bicep deployment — the whole subscription, or just one resource group.
 
 ## Definition
-Scope determines the level at which an Azure deployment operates: a subscription-scoped deployment can create resource groups and networking foundations, while a resource-group-scoped deployment stamps the actual application resources inside an existing group. On the AI document ingestion project, bootstrap-style infrastructure — resource groups and [[Virtual Networks (VNets)]] — is created at subscription scope, then the app resources like [[Azure Functions]], [[Azure Container Apps]], and [[Azure SQL]] are deployed at resource-group scope. Picking the right scope in [[Bicep]] (via the `targetScope` declaration) is what lets the bootstrap layer and the app layer stay cleanly separated. [[Bicep Module]]s can also declare their own scope, so a single deployment can touch more than one level.
+Scope determines the level at which an Azure deployment operates: a subscription-scoped deployment can create resource groups and networking foundations, while a resource-group-scoped deployment stamps application resources inside an existing group. In practice, bootstrap-style infrastructure — resource groups and [[Virtual Networks (VNets)]] — is often created at subscription scope, then app resources like [[Azure Functions]], [[Azure Container Apps]], and [[Azure SQL]] are deployed at resource-group scope. Picking the right scope in [[Bicep]] (via the `targetScope` declaration) is what lets different infrastructure layers stay cleanly separated. [[Bicep Module]]s can also declare their own scope, so a single deployment can touch more than one level.
 
 ## Source
-AI document ingestion project
+Microsoft, Azure Resource Manager (introduced 2014); Bicep (Microsoft, 2021) as the domain-specific language for ARM templates.
 
 ---
 

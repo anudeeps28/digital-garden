@@ -10,10 +10,10 @@ date: 2026-06-26
 A robot that drives a real browser through the app the way a user would, then checks it behaved.
 
 ## Definition
-Playwright is the browser-automation framework behind the AI document ingestion project's end-to-end tests (they live under `tests/e2e`). It launches a real browser, clicks through the [[Angular]] UI, uploads a document, and asserts the result — exercising the front end, the [[REST API]], and the database together as one system. It sits at the top of the testing pyramid: broad, realistic, and slower, so I keep these few and high-value while [[Jest]] and [[xUnit]] handle the fast, numerous [[Unit Tests]]. Failures here surface exactly the cross-layer breakage that isolated tests miss, which is [[Fail Fast Fail Loudly]] at the system level.
+Playwright is a browser-automation framework that launches a real browser and drives it through an application the way a user would, then asserts the results. In practice, E2E test suites use Playwright to exercise the front end, APIs, and database together as one system. It sits at the top of the testing pyramid: broad, realistic, and slower than unit tests, so it's best kept limited and high-value while [[Jest]] and [[xUnit]] handle the fast, numerous [[Unit Tests]]. Failures here surface exactly the cross-layer breakage that isolated tests miss, which is [[Fail Fast Fail Loudly]] at the system level.
 
 ## Source
-AI document ingestion project
+Microsoft, first released 2019 as an open-source browser automation framework. Initial versions supported Chromium, Firefox, and WebKit across Windows, macOS, and Linux.
 
 ---
 

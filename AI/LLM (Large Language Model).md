@@ -10,10 +10,10 @@ date: 2026-03-24
 An LLM is an AI model trained on massive text data that can read, understand, and generate human language — like GPT-4o.
 
 ## Definition
-A Large Language Model is a neural network with billions of parameters trained on enormous text datasets. It processes input text as [[Tokens]], understands context and meaning, and generates coherent responses. LLMs can summarize, translate, answer questions, extract structured data, and more. In the project, the LLM (GPT-4o via [[Azure OpenAI]]) is used for two main tasks: answering natural language questions about plan documents through [[RAG (Retrieval-Augmented Generation)|RAG]], and extracting structured benefit data through [[Template-Based Extraction]]. The model doesn't "know" your documents — it needs them provided as context through [[Prompt Engineering|prompts]].
+A Large Language Model is a neural network with billions of parameters trained on enormous text datasets. It processes input text as [[Tokens]], understands context and meaning, and generates coherent responses. LLMs can summarize, translate, answer questions, extract structured data, and more. In practice, LLMs are applied through [[RAG (Retrieval-Augmented Generation)|RAG]] to answer questions about documents grounded in real data, and through [[Template-Based Extraction]] to extract structured information from text. The model doesn't "know" your documents — it needs them provided as context through [[Prompt Engineering|prompts]].
 
 ## Source
-AI document ingestion project
+OpenAI, *Language Models are Unsupervised Multitask Learners* (2019, GPT-2); Alec Radford et al. Foundational work building on transformer architecture; GPT-3 (Brown et al., 2020) demonstrated few-shot learning at scale, and GPT-4 (OpenAI, 2023) extended capabilities further.
 
 ---
 
@@ -29,4 +29,4 @@ AI document ingestion project
 [[Artificial Intelligence]] is the broader field that encompasses LLMs as one of its most significant subsets, and the central question driving their development is: how do you prevent LLMs from hallucinating (making up facts)?
 
 **Paths** — *where this leads*
-[[RAG (Retrieval-Augmented Generation)]] grounds LLMs in real documents to prevent hallucination, [[Prompt Engineering]] crafts the instructions that guide the LLM's behavior, [[Tokens]] define how LLMs measure and process text, and [[Azure OpenAI]] is the service that hosts and runs the LLM in production.
+[[RAG (Retrieval-Augmented Generation)]] grounds LLMs in real documents to prevent hallucination, [[Prompt Engineering]] crafts the instructions that guide the LLM's behavior, and [[Tokens]] define how LLMs measure and process text.

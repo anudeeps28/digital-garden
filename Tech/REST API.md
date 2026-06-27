@@ -11,10 +11,10 @@ date: 2026-03-24
 A standard way of building web services that uses HTTP to let clients read, create, update, and delete resources.
 
 ## Definition
-REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API exposes resources (like documents, users, or groups) at specific URLs and uses [[HTTP Methods]] (GET, POST, PUT, DELETE) to perform operations on them. Each request is stateless — the server doesn't remember previous requests. Data is typically sent and received as [[JSON]]. In [[.NET 8]] and [[ASP.NET Core]], REST APIs are built using [[Controller]] classes that map incoming HTTP requests to C# methods.
+REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API exposes resources (like documents, users, or groups) at specific URLs and uses [[HTTP Methods]] (GET, POST, PUT, DELETE) to perform operations on them. Each request is stateless — the server doesn't remember previous requests. Data is typically sent and received as [[JSON]]. In practice, REST APIs are implemented using frameworks like [[ASP.NET Core]], where [[Controller]] classes map incoming HTTP requests to handler methods.
 
 ## Source
-AI document ingestion project
+Roy Fielding, doctoral dissertation *Architectural Styles and the Design of Network-based Software Architectures* (2000). REST emerged as a formalization of the architectural principles already embedded in HTTP/1.1.
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-03-24
 Vector search finds documents whose meaning is similar to your query by comparing vector embeddings — it searches by concept, not just keywords.
 
 ## Definition
-Vector search (also called semantic search) compares the [[Vector Embedding]] of a query against the embeddings of stored document chunks. If two vectors are "close" in the embedding space (measured by cosine similarity), the texts have similar meaning. This means a search for "annual maximum out-of-pocket" can find a chunk that says "yearly OOP limit" even though no words match. In the project, [[Azure AI Search]] performs vector search over plan document chunks to find the most relevant passages for [[RAG (Retrieval-Augmented Generation)|RAG]] queries.
+Vector search (also called semantic search) compares the [[Vector Embedding]] of a query against the embeddings of stored document chunks. If two vectors are "close" in the embedding space (measured by cosine similarity), the texts have similar meaning. For example, a search for "annual maximum out-of-pocket" can find a chunk that says "yearly OOP limit" even though no words match. Vector search is operationalized in modern platforms like [[Azure AI Search]], Pinecone, and Weaviate to power [[RAG (Retrieval-Augmented Generation)|RAG]] systems that retrieve the most relevant passages for a given query.
 
 ## Source
-AI document ingestion project
+Modern vector search emerged from information retrieval research and word embedding techniques. Tomas Mikolov et al. introduced Word2Vec in 2013, enabling dense vector representations of words. The application of dense embeddings to document retrieval and semantic search was popularized in the late 2010s through tools like Elasticsearch with dense_vector support, Weaviate, Pinecone, and integration into major platforms like OpenAI's API and Azure AI Search, enabling practical semantic search at scale.
 
 ---
 

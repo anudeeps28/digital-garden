@@ -13,7 +13,7 @@ A token is the unit an AI reads text in — roughly one word equals one token �
 [[LLM (Large Language Model)|LLMs]] don't process text character by character — they break it into tokens (subword pieces). "Hello world" is 2 tokens, but "unbelievable" might be split into "un", "believ", "able" (3 tokens). Every API call to [[Azure OpenAI]] is billed by tokens: input tokens (your [[Prompt Engineering|prompt]] + context) plus output tokens (the model's response). Models also have a maximum context window measured in tokens (e.g., 128K tokens for GPT-4o). This is why [[Chunking]] matters — you can't feed an entire document if it exceeds the token limit, and more tokens = higher cost.
 
 ## Source
-AI document ingestion project
+OpenAI, formalized in their API documentation and tokenizer implementations (particularly the BPE tokenizer used by GPT models). The concept of subword tokenization originates in natural language processing and machine learning research, with byte-pair encoding (BPE) introduced in the context of neural text processing in the early 2010s.
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-06-26
 MSAL (Microsoft Authentication Library) is the library the Angular app uses to log users in through Entra ID and obtain access tokens for calling the API.
 
 ## Definition
-MSAL handles the messy parts of the [[OAuth 2.0 and OIDC]] flow for you — redirecting to Microsoft's login page, caching tokens, and silently refreshing them. The Angular flavour (`@azure/msal-angular`) plugs into the framework with a guard, an interceptor, and providers. In the AI document ingestion project, the `PlanDocumentRAG.Web` Angular 19 chat UI uses MSAL to sign reviewers in against [[Entra ID]], then acquire an access token scoped to the backend [[REST API]]. That token rides along as a [[Bearer Token]] via the [[HTTP Interceptor]], while the [[Angular Route Guard]] keeps unauthenticated users off the chat route. The MSAL config (client ID, authority, [[SPA Redirect URIs]], API scope) is loaded from the runtime [[Runtime Config (Build Once Deploy Everywhere)|config.json]] so the same build works across environments.
+MSAL handles the messy parts of the [[OAuth 2.0 and OIDC]] flow for you — redirecting to Microsoft's login page, caching tokens, and silently refreshing them. The Angular flavour (`@azure/msal-angular`) plugs into the framework with a guard, an interceptor, and providers. In practice, MSAL can be used to sign users in against [[Entra ID]], then acquire an access token scoped to a backend [[REST API]]. That token rides along as a [[Bearer Token]] via the [[HTTP Interceptor]], while an [[Angular Route Guard]] keeps unauthenticated users off protected routes. The MSAL config (client ID, authority, [[SPA Redirect URIs]], API scope) is typically loaded from runtime configuration so the same build works across environments.
 
 ## Source
-AI document ingestion project
+Microsoft, introduced in the Azure ecosystem; formalized as the Microsoft Authentication Library (MSAL) for various platforms including web, mobile, and desktop (first release for .NET, 2016; JavaScript support added 2018).
 
 ---
 

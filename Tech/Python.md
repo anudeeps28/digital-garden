@@ -7,20 +7,20 @@ date: 2026-06-26
 # Python
 
 ## Idea
-A high-level, dynamically typed language that earns its place in the The project stack precisely where its ML ecosystem is unbeatable.
+A high-level, dynamically typed language with an unbeatable ML and scientific computing ecosystem.
 
 ## Definition
-Python is a high-level, dynamic, interpreted language known for readable syntax and a massive scientific/ML ecosystem. In the AI document ingestion project, the main system is [[DotNet 8]], and Python shows up in exactly one place: the self-hosted embedding microservice (`services/embedding-service`). We chose Python there because the ML libraries — [[Sentence Transformers]] and [[PyTorch]] — are strongest and most mature in this ecosystem, with no comparable .NET equivalent. That single service is a [[FastAPI]] app running the all-MiniLM-L6-v2 model to produce 384-dim [[Vector Embedding|vectors]], served by [[Uvicorn]] and packaged in [[Docker]]. Python is used surgically, not everywhere.
+Python is a high-level, dynamic, interpreted language known for readable syntax and a massive scientific/ML ecosystem. In practice, Python excels where ML libraries like [[Sentence Transformers]] and [[PyTorch]] are strongest and most mature, offering no real .NET equivalents. It's commonly used to build specialized services like embedding microservices—often with [[FastAPI]] as the web framework, [[Uvicorn]] as the ASGI server, and [[Docker]] for deployment. This targeted use case (rather than system-wide) maximizes Python's strengths in ML while keeping the surrounding architecture flexible.
 
 ## Source
-AI document ingestion project
+Guido van Rossum, created in 1989 and first released in 1991. Designed as a high-level, interpreted language emphasizing code readability and simplicity.
 
 ---
 
 ## Compass
 
 **Neighbors** — *what lives nearby*
-[[DotNet 8]] is the other language runtime in the project, and Python complements rather than replaces it. [[FastAPI]] is the Python web framework that we built on top of this language for our service.
+[[DotNet 8]] and [[Java]] are statically typed competitors in backend development; Python complements rather than replaces them in specialized domains. [[FastAPI]] is the Python web framework commonly built on top of Python for high-performance services.
 
 **Clash** — *what pushes against this*
 [[DotNet 8]] is statically typed and serves as the default for the rest of the system, contrasting sharply with Python's dynamic typing.

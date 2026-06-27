@@ -10,10 +10,10 @@ date: 2026-06-26
 A modern async Python framework that turns type hints into a documented HTTP API almost for free.
 
 ## Definition
-FastAPI is a modern, async-first Python web framework that builds a [[REST API]] from ordinary type-annotated functions and generates interactive OpenAPI docs automatically. In the AI document ingestion project, FastAPI is the web layer of the embedding microservice (`services/embedding-service`): it exposes the `/embed` and `/embed/batch` endpoints that accept [[JSON]] text and return 384-dim [[Vector Embedding|vectors]] from the all-MiniLM-L6-v2 model. It leans on [[Pydantic]] for request/response validation and is run by [[Uvicorn]] inside the [[Docker]] container. Choosing this lightweight self-hosted service let us avoid paying [[Azure OpenAI]] for embeddings.
+FastAPI is a modern, async-first Python web framework that builds a [[REST API]] from ordinary type-annotated functions and generates interactive OpenAPI docs automatically. In practice, FastAPI serves as the web layer for microservices: it exposes endpoints that accept [[JSON]] input and return structured responses, leveraging [[Pydantic]] for request/response validation and running via [[Uvicorn]] inside [[Docker]] containers. The framework is commonly used for lightweight, self-hosted API services because of its minimal overhead and automatic schema generation.
 
 ## Source
-AI document ingestion project
+Sebastián Ramírez, FastAPI framework (first released 2018); https://fastapi.tiangolo.com/
 
 ---
 
@@ -23,10 +23,10 @@ AI document ingestion project
 [[Uvicorn]] is the ASGI server that actually runs the FastAPI app, while [[REST API]] is the interface style that FastAPI implements.
 
 **Clash** — *what pushes against this*
-[[Azure OpenAI]] represents the managed embeddings API we chose not to call, opting instead for self-hosting this service.
+Managed cloud APIs like [[Azure OpenAI]] provide embeddings as a service but incur per-call costs; self-hosting lightweight services avoids these costs at the expense of operational complexity.
 
 **Roots** — *where this comes from*
 [[Python]] is the language and ecosystem that FastAPI lives in.
 
 **Paths** — *where this leads*
-[[Pydantic]] serves as the validation layer FastAPI uses to enforce schemas, while [[Vector Embedding]] is what the endpoints ultimately produce.
+[[Pydantic]] serves as the validation layer FastAPI uses to enforce request/response schemas, while the endpoints connect to downstream services or data processing layers that consume the structured responses.

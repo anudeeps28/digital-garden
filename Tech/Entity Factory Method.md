@@ -10,10 +10,10 @@ date: 2026-06-26
 An entity factory method creates a domain object through a named static `Create()` instead of a raw constructor, so an entity can never be born in an invalid state.
 
 ## Definition
-The entity factory method pattern keeps a domain entity's invariants in one place: instead of a public constructor that callers fill in field by field, the entity exposes a static `Create(...)` that validates inputs and returns a valid instance, and the constructor is made private. Once created, the entity is mutated only through **intent-named state methods** — in the AI document ingestion project a `Document` moves forward via `MarkProcessed()` or `MarkFailed(reason)` rather than letting outside code poke `Status = "..."` directly. This bakes [[Guard Clauses]] into creation and every transition, so illegal states (a "Processed" document with no result) simply can't be expressed. The [[EF Core]] entities follow this so persistence and domain rules don't fight each other.
+The entity factory method pattern keeps a domain entity's invariants in one place: instead of a public constructor that callers fill in field by field, the entity exposes a static `Create(...)` that validates inputs and returns a valid instance, and the constructor is made private. Once created, the entity is mutated only through **intent-named state methods** — for example, a `Document` moves forward via `MarkProcessed()` or `MarkFailed(reason)` rather than letting outside code poke `Status = "..."` directly. This bakes [[Guard Clauses]] into creation and every transition, so illegal states simply can't be expressed. When used with ORMs like [[EF Core]], this approach ensures persistence mechanics and domain rules don't conflict.
 
 ## Source
-AI document ingestion project
+Foundational design pattern in domain-driven design (Eric Evans, *Domain-Driven Design: Tackling Complexity in the Heart of Software*, 2003) and object-oriented design literature. Formalized as the Factory Method pattern in Erich Gamma et al., *Design Patterns: Elements of Reusable Object-Oriented Software* (1994).
 
 ---
 

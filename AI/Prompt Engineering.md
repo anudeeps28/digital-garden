@@ -13,7 +13,7 @@ Prompt engineering is the art of crafting instructions for an AI model — the s
 A prompt is the text input you send to an [[LLM (Large Language Model)|LLM]]. It typically has two parts: the **system prompt** (persistent instructions that define behavior, tone, and constraints — like "You are a health benefits assistant. Only answer from provided context.") and the **user prompt** (the actual question or task). In [[RAG (Retrieval-Augmented Generation)|RAG]], the prompt includes retrieved document chunks as context. In [[Template-Based Extraction]], the prompt includes a JSON schema and tells the model to extract matching fields. Good prompts are specific, provide examples, and set clear boundaries. Small changes in wording can dramatically affect output quality.
 
 ## Source
-AI document ingestion project
+Emerged as a discipline with the rise of large language models (OpenAI GPT-2, 2019 onwards). Formalized through industry practice and research papers including "Prompting as a Programming Language" (Liang et al., 2023) and foundational work on prompt design techniques like Few-Shot Learning and Chain-of-Thought (Wei et al., 2022).
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-06-26
 A custom Angular pipe that takes the LLM's markdown answer and turns it into safe, displayable HTML — parsing with marked and sanitizing with DOMPurify.
 
 ## Definition
-An Angular pipe is a small transform you apply in a template (`{{ answer | markdown }}`) to reshape a value for display. The markdown rendering pipe in the AI document ingestion project's `PlanDocumentRAG.Web` Angular 19 chat UI does two steps: first it runs the model's markdown through `marked` to produce HTML (so headings, lists, bold, and code blocks render properly), then it passes that HTML through [[DOMPurify]] to strip any XSS vectors before binding it into the DOM. The input is the answer text returned by the [[REST API]] — untrusted, since an LLM generated it — which is exactly why sanitization is non-negotiable. The result is then rendered via `[innerHTML]` in the chat bubble.
+An Angular pipe is a small transform you apply in a template (`{{ answer | markdown }}`) to reshape a value for display. A markdown rendering pipe follows two steps: first it runs markdown source through a parser like `marked` to produce HTML (so headings, lists, bold, and code blocks render properly), then it passes that HTML through [[DOMPurify]] to strip any XSS vectors before binding it into the DOM. The input is typically untrusted content — whether from user submissions, external APIs, or LLM responses — which is exactly why sanitization is non-negotiable. The result is then rendered via `[innerHTML]` binding in the template.
 
 ## Source
-AI document ingestion project
+Angular pipes are a core templating feature documented in the Angular framework documentation; the pattern of combining markdown parsing (via libraries like marked) with HTML sanitization (DOMPurify) is a standard practice in web applications handling user-generated or untrusted content.
 
 ---
 
@@ -24,7 +24,7 @@ AI document ingestion project
 You could display the raw markdown string as-is, which keeps the text readable but leaves formatting symbols like `**` and `#` showing literally on screen rather than rendering as bold or headings.
 
 ## Roots — *where this comes from*
-[[Angular]] treats pipes as a core templating feature of the framework, making them the natural place to apply transformations like this right before display.
+This pattern emerges from the need to safely render dynamic content in the browser. [[Angular]] provides pipes as a templating feature specifically designed for in-template transformations, making them the natural place to apply a chain of sanitization steps right before display.
 
 ## Paths — *where this leads*
-This pipe enables [[DOMPurify|DOMPurify's]] XSS-safety guarantee on markdown content, and it consumes answers that the [[REST API]] has streamed back from the model.
+This pattern enables [[DOMPurify|DOMPurify's]] XSS-safety guarantee on any markdown content that flows through it — whether from user input, API responses, or generated text. It sits at the critical junction where untrusted data meets the DOM.

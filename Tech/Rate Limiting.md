@@ -10,10 +10,10 @@ date: 2026-06-26
 Rate limiting caps how many requests one user can fire in a time window, protecting the API from abuse and runaway costs.
 
 ## Definition
-Rate limiting throttles request volume so a single caller can't overwhelm the service or rack up huge LLM bills. In the the project AI Document Ingestion API, I wire up ASP.NET Core's built-in `RateLimiter` [[Middleware]] using a **fixed-window** limiter partitioned per authenticated user — the partition key comes off the user's identity from the [[Bearer Token]]. When a user exceeds their window, the API short-circuits with [[HTTP Status Codes|429 Too Many Requests]] and emits standard rate-limit headers (including `Retry-After`) so clients know when to come back. Because LLM calls are expensive and slow, this is as much a cost guardrail as a security one. It pairs naturally with [[Exponential Backoff]] on the client side.
+Rate limiting throttles request volume so a single caller can't overwhelm the service or rack up huge costs. In practice, you wire up a rate-limiting [[Middleware]] using a **fixed-window** limiter partitioned per authenticated user — the partition key comes off the user's identity. When a user exceeds their window, the API short-circuits with [[HTTP Status Codes|429 Too Many Requests]] and emits standard rate-limit headers (including `Retry-After`) so clients know when to come back. Because API calls can be expensive and slow, this is as much a cost guardrail as a security one. It pairs naturally with [[Exponential Backoff]] on the client side.
 
 ## Source
-AI document ingestion project
+Foundational concept in API design; formalized in HTTP specifications including RFC 6585 (2011, defining 429 status code) and RFC 7231 (2014, defining `Retry-After` header). Widely implemented in frameworks like ASP.NET Core, Express, and Django.
 
 ---
 

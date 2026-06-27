@@ -10,10 +10,10 @@ date: 2026-03-24
 JSON is the standard text format APIs use to send and receive structured data — it looks like a dictionary of key-value pairs.
 
 ## Definition
-JSON (JavaScript Object Notation) is a lightweight data interchange format that's easy for both humans and machines to read. It uses curly braces for objects (`{"name": "John", "age": 30}`), square brackets for arrays, and supports strings, numbers, booleans, and null. In [[REST API]] communication, [[DTOs (Data Transfer Objects)]] are automatically serialized to JSON for responses and deserialized from JSON for requests. [[.NET 8]] uses `System.Text.Json` by default for this conversion. In the project, JSON is also used for [[Template-Based Extraction]] schemas that define which fields to extract from plan documents.
+JSON (JavaScript Object Notation) is a lightweight data interchange format that's easy for both humans and machines to read. It uses curly braces for objects (`{"name": "John", "age": 30}`), square brackets for arrays, and supports strings, numbers, booleans, and null. In [[REST API]] communication, [[DTOs (Data Transfer Objects)]] are automatically serialized to JSON for responses and deserialized from JSON for requests. [[.NET 8]] uses `System.Text.Json` by default for this conversion. In practice, JSON is also used for defining schemas and configuration structures.
 
 ## Source
-AI document ingestion project
+Douglas Crockford, first specified in 2001; now formalized in RFC 7158 (2013) and RFC 8259 (2017) as the standard data interchange format for the web.
 
 ---
 
@@ -29,4 +29,4 @@ AI document ingestion project
 [[REST API]] depends on JSON as the standard data format for communication, and [[Request and Response]] bodies are where JSON gets carried between client and server.
 
 **Paths** — *where this leads*
-JSON maps to [[DTOs (Data Transfer Objects)]] — C# objects that serialize to and deserialize from JSON — and [[Swagger and OpenAPI]] documents JSON schemas for each endpoint. It also powers [[Template-Based Extraction]], which uses JSON templates to define which fields to extract from documents.
+JSON maps to [[DTOs (Data Transfer Objects)]] — strongly-typed objects that serialize to and deserialize from JSON — and [[Swagger and OpenAPI]] documents JSON schemas for each endpoint. It also powers data extraction workflows, which use JSON schemas to define structured data patterns.

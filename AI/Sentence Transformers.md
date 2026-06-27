@@ -7,18 +7,18 @@ date: 2026-06-26
 # Sentence Transformers
 
 ## Idea
-A library of pretrained models that map a sentence to a single dense vector — the heart of our cost-saving, self-hosted embedding service.
+A library of pretrained models that map a sentence to a single dense vector for semantic similarity tasks.
 
 ## Definition
-Sentence Transformers is a Python library offering pretrained models that turn whole sentences or passages into dense [[Vector Embedding|embeddings]], where semantic similarity becomes geometric closeness. In the AI document ingestion project, this is the core of the embedding microservice: we self-host the `all-MiniLM-L6-v2` model, which produces 384-dimensional vectors, instead of paying for [[Azure OpenAI]] embeddings — a deliberate cost-cutting choice for a system that embeds large volumes of document [[Chunking|chunks]]. The model runs on [[PyTorch]] (CPU-only), is wrapped by a [[FastAPI]] app, served by [[Uvicorn]], and deployed in [[Docker]] on [[Azure Container Apps]]. Those embeddings then power [[Vector Search]] and [[Hybrid Search]] in our [[RAG (Retrieval-Augmented Generation)]] pipeline.
+Sentence Transformers is a Python library offering pretrained models that turn whole sentences or passages into dense [[Vector Embedding|embeddings]], where semantic similarity becomes geometric closeness. For example, models like `all-MiniLM-L6-v2` produce 384-dimensional vectors suitable for encoding entire paragraphs. In practice, self-hosting these models on [[PyTorch]] (often CPU-only) via a lightweight API wrapper provides cost advantages over commercial embedding services. These embeddings then power [[Vector Search]] and [[Hybrid Search]] in [[RAG (Retrieval-Augmented Generation)]] pipelines.
 
 ## Source
-AI document ingestion project
+Nils Reimers and Iryna Gurevych, "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks" (2019), AIFB, University of Karlsruhe. Open-source Python library released at https://github.com/UKPLab/sentence-transformers.
 
 ---
 
 ## Neighbors — *what lives nearby*
-[[Vector Embedding]] is exactly what this library produces, turning text into dense vectors. [[Azure OpenAI]] is an alternative embeddings provider — the commercial option we chose against in favor of self-hosting Sentence Transformers for cost reasons.
+[[Vector Embedding]] is exactly what this library produces, turning text into dense vectors. [[Azure OpenAI]] is an alternative embeddings provider — a commercial option compared to self-hosting open-source models for cost-sensitive applications.
 
 ## Clash — *what pushes against this*
 [[Tokens]] are the discrete sub-word units that text is broken into, whereas Sentence Transformers collapses an entire sentence or passage into a single continuous vector representation.

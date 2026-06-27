@@ -10,10 +10,10 @@ date: 2026-03-24
 Integration tests check multiple pieces working together — verifying that components actually connect and communicate correctly.
 
 ## Definition
-While [[Unit Tests]] verify individual methods in isolation, integration tests verify that components work correctly when combined — that the API controller actually calls the service, which actually talks to the database, which actually returns the right data. Integration tests are slower and more complex (they may need a real database or test server), but they catch problems that unit tests can't — like incorrect [[EF Core]] queries, misconfigured [[Dependency Injection]], or broken [[Middleware]] pipelines. In the project, integration tests might spin up a test server, call an [[API Endpoints|endpoint]], and verify the full request-response cycle.
+While [[Unit Tests]] verify individual methods in isolation, integration tests verify that components work correctly when combined — that the API controller actually calls the service, which actually talks to the database, which actually returns the right data. Integration tests are slower and more complex (they may need a real database or test server), but they catch problems that unit tests can't — like incorrect [[EF Core]] queries, misconfigured [[Dependency Injection]], or broken [[Middleware]] pipelines. In practice, integration tests might spin up a test server, call an [[API Endpoints|endpoint]], and verify the full request-response cycle.
 
 ## Source
-AI document ingestion project
+Kent Beck, *xUnit Test Patterns: Refactoring Test Code* (2007); foundational concept in test-driven development and continuous integration practices that emerged in the 1990s XP (Extreme Programming) movement.
 
 ---
 

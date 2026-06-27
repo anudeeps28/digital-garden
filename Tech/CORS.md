@@ -38,7 +38,7 @@ app.UseCors(); // must come before UseAuthentication/UseAuthorization
 - On [[Azure App Service]], there's a separate IIS-level CORS that can conflict with your code — see [[Azure Portal CORS vs Code CORS]]
 
 ## Source
-PlanDocumentRAG deployment — CORS blocked Angular UI at `kbasdev.keyfamily.local` from calling the API at `azurewebsites.net`.
+W3C recommendation; formalized in the Fetch Standard (WHATWG). CORS evolved from earlier workarounds like JSONP to provide a secure, standardized mechanism for cross-origin requests.
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-03-24
 Dependency Injection (DI) is a pattern where classes receive the tools they need from the outside rather than creating them internally.
 
 ## Definition
-Instead of a class saying `new BlobStorageClient()` inside itself, DI means the class declares "I need an `IBlobStorageClient`" in its constructor, and the framework automatically provides one at runtime. In [[.NET 8]], DI is built into the framework — you register services in `Program.cs` and the runtime resolves them everywhere. This keeps classes focused on their job, makes them testable (you can inject [[Moq]] fakes), and supports [[Clean Architecture]] by letting the Application layer depend on [[Interfaces in CSharp]] without knowing about Infrastructure details.
+Instead of a class saying `new BlobStorageClient()` inside itself, DI means the class declares "I need an `IBlobStorageClient`" in its constructor, and the framework automatically provides one at runtime. Modern frameworks like [[.NET 8]] build DI into the platform — you register services in configuration and the runtime resolves them throughout the application. This keeps classes focused on their job, makes them testable (you can inject mock implementations), and supports [[Clean Architecture]] by letting higher-level layers depend on [[Interfaces in CSharp]] without knowing about lower-level implementation details.
 
 ## Source
-AI document ingestion project
+Martin Fowler, *Inversion of Control Containers and the Dependency Injection pattern* (2004).
 
 ---
 

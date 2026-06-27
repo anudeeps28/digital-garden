@@ -10,10 +10,10 @@ date: 2026-06-26
 A test host that boots the real API in-memory so tests hit the whole pipeline, not a stubbed slice.
 
 ## Definition
-`WebApplicationFactory<T>` is the ASP.NET Core helper that spins up my actual [[DotNet 8]] API in-process — routing, [[Middleware]], DI, [[Controller]]s and all — without binding a real port. In the AI document ingestion project this is the backbone of the [[Integration Tests]]: a real HTTP request flows through the genuine [[REST API]] pipeline (often against a test database) so I catch wiring bugs that [[Unit Tests]] never see. I usually override DI registrations to swap real dependencies for fakes, which is the integration-test counterpart to using [[Moq]] in unit tests.
+`WebApplicationFactory<T>` is the ASP.NET Core helper that spins up the actual [[DotNet 8]] API in-process — routing, [[Middleware]], DI, [[Controller]]s and all — without binding a real port. In practice, this is the backbone of the [[Integration Tests]]: a real HTTP request flows through the genuine [[REST API]] pipeline (often against a test database) so developers catch wiring bugs that [[Unit Tests]] never see. Typically DI registrations are overridden to swap real dependencies for fakes, which is the integration-test counterpart to using [[Moq]] in unit tests.
 
 ## Source
-AI document ingestion project
+Microsoft, introduced in ASP.NET Core 2.1 as a built-in testing facility via the `Microsoft.AspNetCore.Mvc.Testing` package.
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-06-26
 Query intent classification is reading a question to figure out what kind of answer it wants, so the system can pick the right handler.
 
 ## Definition
-Before answering, the system parses the user's question to detect its shape: is it asking for one specific field ("the copay for X"), a comparison across plans, or an exploratory overview? Each shape maps to a different, cost-appropriate handler. In the project this is the job inside the IntentParser that feeds [[Query Routing]] — a specific-field question can go to [[Azure SQL]], while an exploratory one needs [[RAG (Retrieval-Augmented Generation)|Vector RAG]]. Classifying intent first is what makes [[Selective LLM Usage]] possible: you only spend GPT-4o tokens on the questions that genuinely need synthesis.
+Before answering, the system parses the user's question to detect its shape: is it asking for one specific field, a comparison across options, or an exploratory overview? Each shape maps to a different, cost-appropriate handler. In practice, a specific-field question can be routed to efficient structured queries, while an exploratory one requires semantic understanding. Classifying intent first is what makes [[Selective LLM Usage]] possible: you only spend expensive model tokens on the questions that genuinely need synthesis.
 
 ## Source
-AI document ingestion project
+Foundational concept in NLP and information retrieval; formalized in the context of dialogue systems and question-answering systems. The systematic classification of user queries into intent categories is a core technique in conversational AI, popularized through work on dialogue state tracking and question-answering systems (e.g., Amazon Alexa, Google Assistant, and research systems like Stanford's Question-Answering Infra (QANET) and Microsoft's semantic parsing work).
 
 ---
 

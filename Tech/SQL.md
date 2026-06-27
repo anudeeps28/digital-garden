@@ -10,10 +10,10 @@ date: 2026-03-24
 SQL is the standard language for talking to relational databases — SELECT reads data, INSERT adds it, UPDATE changes it, DELETE removes it.
 
 ## Definition
-SQL (Structured Query Language) is how you communicate with relational databases like [[Azure SQL]]. The four core operations (CRUD) map to SQL commands: `SELECT * FROM Plans WHERE GroupNumber = '123'` (read), `INSERT INTO Documents (Name, Type) VALUES ('plan.pdf', 'PDF')` (create), `UPDATE Plans SET Status = 'Active'` (update), `DELETE FROM Plans WHERE Id = 5` (delete). In the project, while developers mostly interact with the database through [[EF Core]] (which generates SQL from [[CSharp]] code), understanding SQL is essential for debugging queries, writing [[Database Migrations|migrations]], and working directly with [[Azure SQL]] in tools like SSMS or Azure Data Studio.
+SQL (Structured Query Language) is how you communicate with relational databases like [[Azure SQL]]. The four core operations (CRUD) map to SQL commands: `SELECT * FROM table WHERE column = 'value'` (read), `INSERT INTO table (column1, column2) VALUES (val1, val2)` (create), `UPDATE table SET column = value` (update), `DELETE FROM table WHERE id = 5` (delete). In practice, while developers often interact with databases through ORMs like [[EF Core]] (which generates SQL from [[CSharp]] code), understanding SQL is essential for debugging queries, writing [[Database Migrations|migrations]], and working directly with relational databases in tools like SQL Server Management Studio or Azure Data Studio.
 
 ## Source
-AI document ingestion project
+Donald Chamberlin and Raymond Boyce, IBM, *SEQUEL: A Structured English Query Language* (1974); later standardized as ANSI SQL-86 (1986) and updated to SQL:1992, SQL:1999, SQL:2003, and beyond.
 
 ---
 

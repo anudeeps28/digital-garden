@@ -10,10 +10,10 @@ date: 2026-06-26
 The IOptions pattern binds a chunk of appsettings to a strongly-typed C# class and injects it where you need it.
 
 ## Definition
-The IOptions pattern is the .NET-idiomatic way to read configuration: instead of reaching into `IConfiguration` with magic string keys, I define a plain POCO (e.g. `OpenAiOptions`, `RateLimitOptions`), bind a section of `appsettings.json` to it at startup, and inject `IOptions<T>` via [[Dependency Injection]]. In the AI document ingestion project this keeps settings like OpenAI endpoints, cache TTLs, and rate-limit windows type-safe and discoverable — a typo becomes a compile-time or bind-time problem instead of a silent null at runtime. It naturally complements [[Fail Fast Fail Loudly]]: validate the bound options on startup so a misconfigured environment refuses to boot rather than failing on the first request.
+The IOptions pattern is the .NET-idiomatic way to read configuration: instead of reaching into `IConfiguration` with magic string keys, you define a plain POCO (e.g. `ApiOptions`, `CacheOptions`), bind a section of `appsettings.json` to it at startup, and inject `IOptions<T>` via [[Dependency Injection]]. This keeps settings type-safe and discoverable — a typo becomes a compile-time or bind-time problem instead of a silent null at runtime. It naturally complements [[Fail Fast Fail Loudly]]: validate the bound options on startup so a misconfigured environment refuses to boot rather than failing on the first request.
 
 ## Source
-AI document ingestion project
+Microsoft, introduced in ASP.NET Core as a built-in feature for strongly-typed configuration management.
 
 ---
 

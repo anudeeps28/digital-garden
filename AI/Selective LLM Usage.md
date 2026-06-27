@@ -10,10 +10,10 @@ date: 2026-06-26
 Selective LLM usage is the cost-discipline mindset of calling the LLM only where deterministic logic genuinely can't cope.
 
 ## Definition
-LLM calls are powerful but expensive and slow, so the design principle is to reserve them for the hard cases and let cheap deterministic code handle the rest. In the project this shows up as concrete budgets: the LLM touches only about 5% of extracted fields and 10-20% of queries, keeping spend near a ~$250/month target. The rest is handled by [[Template-Based Extraction]], [[Azure SQL]] lookups, and [[BM25 Scoring]]. This is really a mental model more than a feature — it drives [[Query Routing]] and [[Field Verification]], where the question is always "can something cheaper do this correctly first?" before reaching for GPT-4o on [[Azure OpenAI]].
+LLM calls are powerful but expensive and slow, so the design principle is to reserve them for the hard cases and let cheap deterministic code handle the rest. In practice, this shows up as concrete budgets: the LLM is applied selectively, touching only a small fraction of workload volume while deterministic alternatives handle the majority through [[Template-Based Extraction]], fuzzy matching, and simple scoring heuristics. This is really a mental model more than a feature — it drives [[Query Routing]] and [[Field Verification]], where the question is always "can something cheaper do this correctly first?" before invoking a capable LLM.
 
 ## Source
-AI document ingestion project
+Industry best practice; crystallized from production AI systems (2023–2024) as LLM API costs scaled. Core principle: use cheaper deterministic methods first, escalate to LLM only when needed. No single inventor; emerged organically from practitioners optimizing cost/latency tradeoffs in hybrid AI systems.
 
 ---
 

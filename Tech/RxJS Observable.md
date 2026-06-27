@@ -10,10 +10,10 @@ date: 2026-06-26
 An Observable is a stream of values over time that you subscribe to — Angular's standard way of modelling anything asynchronous, especially HTTP calls.
 
 ## Definition
-RxJS (Reactive Extensions for JavaScript) gives you Observables: lazy streams that emit zero or more values, then complete or error. Nothing happens until you `.subscribe()`, and you can transform streams with operators like `map`, `switchMap`, and `catchError`. Angular's `HttpClient` returns Observables, so in the AI document ingestion project the `PlanDocumentRAG.Web` Angular 19 chat UI consumes them everywhere it talks to the [[REST API]] — sending a chat query and receiving the answer, and posting thumbs-up/down feedback. The startup config loader even bridges to a promise via `firstValueFrom(http.get('config.json'))`. Observables pair with [[Angular Signals]]: the stream models the async request, while a signal holds the resolved state for the template.
+RxJS (Reactive Extensions for JavaScript) gives you Observables: lazy streams that emit zero or more values, then complete or error. Nothing happens until you `.subscribe()`, and you can transform streams with operators like `map`, `switchMap`, and `catchError`. Angular's `HttpClient` returns Observables, making them the standard way to handle asynchronous operations throughout the framework — sending requests and receiving responses. Observables can be bridged to promises via `firstValueFrom()` when needed. Observables pair with [[Angular Signals]]: the stream models the async request, while a signal holds the resolved state for the template.
 
 ## Source
-AI document ingestion project
+Microsoft Reactive Extensions (Rx) team; RxJS first released circa 2010 as the JavaScript port of Reactive Extensions. The Reactive Extensions library was created as a unified API for asynchronous event-based programming, initially released for .NET.
 
 ---
 

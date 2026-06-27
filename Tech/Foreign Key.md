@@ -10,10 +10,10 @@ date: 2026-03-24
 A foreign key links one table to another — it's a column that references the primary key of a different table, creating a relationship.
 
 ## Definition
-A foreign key is a column in one [[Database Tables|table]] that references the [[Primary Key]] of another table. For example, in the project, the `Plans` table has a `GroupId` foreign key pointing to the `Groups` table, and `Groups` has an `EmployerId` pointing to `Employers`. This creates the hierarchy: Employer → Group → Plan. Foreign keys enforce **referential integrity** — you can't create a plan for a group that doesn't exist. In [[EF Core]], foreign keys are expressed as navigation properties (e.g., `public Group Group { get; set; }`) and EF generates the foreign key columns in [[Azure SQL]].
+A foreign key is a column in one [[Database Tables|table]] that references the [[Primary Key]] of another table. For example, a `Plans` table might have a `GroupId` foreign key pointing to a `Groups` table, and `Groups` might have an `EmployerId` pointing to an `Employers` table, creating a hierarchy: Employer → Group → Plan. Foreign keys enforce **referential integrity** — you can't create a plan for a group that doesn't exist. In [[EF Core]], foreign keys are expressed as navigation properties (e.g., `public Group Group { get; set; }`) and EF generates the foreign key columns in relational databases like [[Azure SQL]].
 
 ## Source
-AI document ingestion project
+E.F. Codd, "A Relational Model of Data for Large Shared Data Banks" (1970). The foundational paper that introduced the relational database model and formalized the concept of foreign keys as references maintaining referential integrity.
 
 ---
 

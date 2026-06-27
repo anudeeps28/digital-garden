@@ -10,10 +10,10 @@ date: 2026-06-26
 A C# library that turns test checks into sentences you can actually read.
 
 ## Definition
-FluentAssertions gives me chainable, natural-language assertions like `result.Should().NotBeNull()` and `items.Should().HaveCount(3)` instead of the terser `Assert.Equal`. In the AI document ingestion project I lean on it inside the [[xUnit]] suites so the *verify* step of each test reads almost like English, and its failure messages spell out exactly what was expected vs. actual — which embodies [[Fail Fast Fail Loudly]]. It pairs naturally with [[Moq]] (mock the dependency, then assert on the captured call) and lives in the **Assert** leg of [[Arrange-Act-Assert]].
+FluentAssertions provides chainable, natural-language assertions like `result.Should().NotBeNull()` and `items.Should().HaveCount(3)` instead of the terser `Assert.Equal`. In practice, it's used within test frameworks like [[xUnit]] so the *verify* step of each test reads almost like English, and its failure messages spell out exactly what was expected vs. actual — which embodies [[Fail Fast Fail Loudly]]. It pairs naturally with [[Moq]] (mock the dependency, then assert on the captured call) and lives in the **Assert** leg of [[Arrange-Act-Assert]].
 
 ## Source
-AI document ingestion project
+Dennis Doomen, FluentAssertions open-source library, first released circa 2010; now widely adopted in the C# ecosystem.
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-03-24
 Moq is a library for creating fake/mock versions of services so you can test code without connecting to real Azure services or databases.
 
 ## Definition
-Moq (pronounced "mock") is a [[NuGet]] mocking library for [[CSharp]]. It creates fake implementations of [[Interfaces in CSharp|interfaces]] at runtime — for example, `new Mock<IBlobStorageClient>()` creates a fake blob storage client that you can configure to return specific data. This lets [[Unit Tests]] verify business logic without calling real [[Azure Blob Storage]], [[Azure SQL]], or [[Azure OpenAI]]. You can also verify that specific methods were called: `mock.Verify(x => x.UploadAsync(It.IsAny<Stream>()), Times.Once)`. Moq works because the project uses [[Dependency Injection]] — services depend on interfaces, not concrete classes.
+Moq (pronounced "mock") is a [[NuGet]] mocking library for [[CSharp]]. It creates fake implementations of [[Interfaces in CSharp|interfaces]] at runtime — for example, `new Mock<IDataClient>()` creates a fake client that you can configure to return specific data. This lets [[Unit Tests]] verify business logic without calling real external services. You can also verify that specific methods were called: `mock.Verify(x => x.FetchAsync(It.IsAny<string>()), Times.Once)`. Moq works seamlessly with [[Dependency Injection]] — services depend on interfaces, not concrete implementations — making it easy to inject mocks during testing.
 
 ## Source
-AI document ingestion project
+Daniel Cazzulino, open-source project created in 2007; now maintained on GitHub as a widely-adopted mocking framework in the .NET ecosystem.
 
 ---
 

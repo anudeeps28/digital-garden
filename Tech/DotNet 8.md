@@ -13,7 +13,7 @@ date: 2026-03-24
 .NET 8 is a Long-Term Support (LTS) release of Microsoft's open-source development platform. It includes the Common Language Runtime (CLR) that executes compiled C# code, a massive Base Class Library (BCL), and frameworks like ASP.NET Core for building [[REST API]] services. It handles memory management, just-in-time compilation, and provides built-in support for [[Dependency Injection]], configuration, logging (e.g., [[Serilog]]), and middleware pipelines. .NET 8 runs on Windows, Linux, and macOS, making it ideal for [[Docker]] containerized deployments.
 
 ## Source
-AI document ingestion project
+Microsoft, released November 2023 as a Long-Term Support (LTS) version of .NET; part of Microsoft's open-source development platform initiative.
 
 ---
 

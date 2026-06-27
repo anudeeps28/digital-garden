@@ -10,10 +10,10 @@ date: 2026-03-24
 HTTP methods are the verbs that tell an API what action to perform on a resource — GET reads, POST creates, PUT updates, DELETE removes.
 
 ## Definition
-HTTP methods (also called HTTP verbs) define the type of operation a client wants to perform when calling a [[REST API]]. The four main methods are: **GET** (retrieve data without changing anything), **POST** (create a new resource), **PUT** (update an existing resource), and **DELETE** (remove a resource). Each [[API Endpoints|endpoint]] combines an HTTP method with a URL path — for example, `POST /api/documents/upload` creates a new document, while `GET /api/documents/123` retrieves one. [[Controller]] methods in [[CSharp]] are decorated with attributes like `[HttpGet]` or `[HttpPost]` to map to these verbs.
+HTTP methods (also called HTTP verbs) define the type of operation a client wants to perform when calling a [[REST API]]. The four main methods are: **GET** (retrieve data without changing anything), **POST** (create a new resource), **PUT** (update an existing resource), and **DELETE** (remove a resource). Each [[API Endpoints|endpoint]] combines an HTTP method with a URL path — for example, `POST /api/resources` creates a new resource, while `GET /api/resources/123` retrieves one. In practice, [[Controller]] methods in [[CSharp]] are decorated with attributes like `[HttpGet]` or `[HttpPost]` to map to these verbs.
 
 ## Source
-AI document ingestion project
+Roy Fielding, doctoral dissertation *Architectural Styles and the Design of Network-based Software Architectures* (2000); formalized in HTTP/1.1 specification RFC 7231 (2014).
 
 ---
 

@@ -13,7 +13,7 @@ A request is what the client sends to the API (data, headers, method), and a res
 In a [[REST API]], every interaction is a request-response cycle. The **request** contains: the [[HTTP Methods|HTTP method]], the URL ([[API Endpoints|endpoint]]), headers (like authorization [[Bearer Token|tokens]]), and optionally a body (like [[JSON]] data or a file via [[FromForm Attribute|[FromForm]]]). The **response** contains: an [[HTTP Status Codes|HTTP status code]], response headers, and optionally a body (usually [[JSON]] containing [[DTOs (Data Transfer Objects)|DTOs]]). In [[CSharp]], the [[Controller]] receives the request, processes it, and returns an `IActionResult` wrapping the response. [[Middleware]] can modify both requests and responses as they flow through the pipeline.
 
 ## Source
-AI document ingestion project
+Roy Fielding, *Architectural Styles and the Design of Network-based Software Architectures* (doctoral dissertation, 2000); formalized in HTTP/1.1 RFC 7231 (2014).
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-06-26
 A signal is Angular's reactive primitive — a container holding a value that automatically notifies anyone reading it whenever that value changes.
 
 ## Definition
-You create a signal with `signal(initialValue)`, read it by calling it like a function (`count()`), and update it with `.set()` or `.update()`. Derived values use `computed()`, and side effects use `effect()`. Because reads are tracked, Angular knows exactly which parts of the UI depend on which signals — so it can refresh only those parts. In the AI document ingestion project, the `PlanDocumentRAG.Web` Angular 19 chat UI uses signals to hold conversation state (messages, loading flags, the selected source document), and this is precisely what makes [[Zoneless Change Detection]] work — the signal updates are the trigger that tells Angular to re-render, with no Zone.js needed. Signals complement [[RxJS Observable|Observables]]: observables model async streams from HTTP, signals model synchronous current state.
+You create a signal with `signal(initialValue)`, read it by calling it like a function (`count()`), and update it with `.set()` or `.update()`. Derived values use `computed()`, and side effects use `effect()`. Because reads are tracked, Angular knows exactly which parts of the UI depend on which signals — so it can refresh only those parts. In practice, signals hold component state (messages, loading flags, selected items), and signal updates trigger [[Zoneless Change Detection]] directly — the update is the signal that tells Angular to re-render, with no Zone.js needed. Signals complement [[RxJS Observable|Observables]]: observables model async streams from HTTP, signals model synchronous current state.
 
 ## Source
-AI document ingestion project
+Angular team (Google), introduced in Angular 16 (May 2023); see [Angular docs on signals](https://angular.io/guide/signals).
 
 ---
 
