@@ -1,6 +1,6 @@
 ---
 type: atomic
-tags: [#coding, #web, #fundamentals, #paths]
+tags: [coding, web, fundamentals, paths]
 date: 2026-04-02
 ---
 

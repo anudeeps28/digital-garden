@@ -1,6 +1,6 @@
 ---
 type: atomic
-tags: [#coding, #devops, #cicd, #deployment]
+tags: [coding, devops, cicd, deployment]
 date: 2026-04-02
 ---
 

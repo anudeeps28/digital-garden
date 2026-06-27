@@ -1,6 +1,6 @@
 ---
 type: atomic
-tags: [#coding, #angular, #deployment, #pattern]
+tags: [coding, angular, deployment, pattern]
 date: 2026-04-02
 ---
 

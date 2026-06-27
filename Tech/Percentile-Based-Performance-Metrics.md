@@ -1,6 +1,6 @@
 ---
 type: atomic
-tags: [#coding/distributed-systems, #mental-model]
+tags: [coding/distributed-systems, mental-model]
 date: 2026-03-30
 ---
 

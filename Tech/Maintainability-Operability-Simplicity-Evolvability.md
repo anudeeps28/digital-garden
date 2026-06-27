@@ -1,6 +1,6 @@
 ---
 type: atomic
-tags: [#coding/distributed-systems, #mental-model, #framework, #ddia]
+tags: [coding/distributed-systems, mental-model, framework, ddia]
 date: 2026-03-30
 ---
 

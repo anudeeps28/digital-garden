@@ -1,6 +1,6 @@
 ---
 type: resource
-tags: [#coding/distributed-systems, #ddia]
+tags: [coding/distributed-systems, ddia]
 date: 2026-03-30
 source-type: book
 url:

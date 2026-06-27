@@ -1,6 +1,6 @@
 ---
 type: atomic
-tags: [#coding, #database, #deployment, #migrations]
+tags: [coding, database, deployment, migrations]
 date: 2026-04-02
 ---
 

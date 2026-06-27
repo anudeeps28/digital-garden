@@ -1,6 +1,6 @@
 ---
 type: atomic
-tags: [#coding, #web, #security, #cors, #browser]
+tags: [coding, web, security, cors, browser]
 date: 2026-04-02
 ---
 

@@ -1,6 +1,6 @@
 ---
 type: atomic
-tags: [#coding, #web, #cors, #http]
+tags: [coding, web, cors, http]
 date: 2026-04-02
 ---
 
