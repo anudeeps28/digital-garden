@@ -10,10 +10,10 @@ date: 2026-06-26
 Co-reference resolution rewrites a follow-up question so vague pronouns are replaced with the real things they refer to.
 
 ## Definition
-In a conversation, people say "Does it cover physical therapy?" or "What about that plan?" — the meaning depends on earlier turns. Co-reference resolution swaps "it" and "that plan" for their concrete referents ("Does the Group 12345 plan cover physical therapy?") before anything is retrieved, because a vector or keyword search over a pronoun returns nothing useful. In the KBA project this is what makes multi-turn conversation work: the [[Follow-Up Rewriter]] performs the resolution using context from the [[Conversation Manager]], producing a standalone query that [[Hybrid Search]] can actually match. Without it, every follow-up would silently lose its subject.
+In a conversation, people say "Does it cover physical therapy?" or "What about that plan?" — the meaning depends on earlier turns. Co-reference resolution swaps "it" and "that plan" for their concrete referents ("Does the Group 12345 plan cover physical therapy?") before anything is retrieved, because a vector or keyword search over a pronoun returns nothing useful. In the project this is what makes multi-turn conversation work: the [[Follow-Up Rewriter]] performs the resolution using context from the [[Conversation Manager]], producing a standalone query that [[Hybrid Search]] can actually match. Without it, every follow-up would silently lose its subject.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

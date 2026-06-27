@@ -10,10 +10,10 @@ date: 2026-03-24
 Authentication is proving who you are — verifying your identity before granting access to the system.
 
 ## Definition
-Authentication (authn) answers the question "Who are you?" In the KBA project, when a client calls the [[REST API]], it must include a [[Bearer Token]] (a [[JWT]] issued by [[Entra ID]]). The API's [[Middleware]] validates this token — checking its signature, expiration, and issuer — before allowing the request to reach the [[Controller]]. If the token is missing or invalid, the API returns a `401 Unauthorized` [[HTTP Status Codes|status code]]. Authentication is distinct from [[Authorization]] — authentication proves identity, authorization checks permissions.
+Authentication (authn) answers the question "Who are you?" In the project, when a client calls the [[REST API]], it must include a [[Bearer Token]] (a [[JWT]] issued by [[Entra ID]]). The API's [[Middleware]] validates this token — checking its signature, expiration, and issuer — before allowing the request to reach the [[Controller]]. If the token is missing or invalid, the API returns a `401 Unauthorized` [[HTTP Status Codes|status code]]. Authentication is distinct from [[Authorization]] — authentication proves identity, authorization checks permissions.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

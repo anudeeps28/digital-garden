@@ -13,7 +13,7 @@ Status codes are three-digit numbers that tell the client whether a request succ
 Every [[REST API]] response includes an HTTP status code indicating the outcome. They're grouped by category: **2xx** (success — 200 OK, 201 Created, 204 No Content), **4xx** (client error — 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found), and **5xx** (server error — 500 Internal Server Error, 503 Service Unavailable). In [[CSharp]] controllers, you return these using methods like `Ok()`, `BadRequest()`, `NotFound()`, or `StatusCode(500)`. Choosing the right code makes your API predictable and easier to debug.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

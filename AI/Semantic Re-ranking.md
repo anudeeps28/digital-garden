@@ -10,10 +10,10 @@ date: 2026-06-26
 Semantic re-ranking is a second-pass ML model that re-orders already-retrieved chunks by how well they actually answer the question, not just how well they word-match.
 
 ## Definition
-After [[Hybrid Search]] returns its top candidates, semantic re-ranking takes roughly the top 50 chunks and runs them through a deep language model in [[Azure AI Search]] that scores each one against the true intent of the query. This catches cases where a chunk scored high on [[BM25 Scoring]] or [[Vector Search]] but isn't really relevant, and promotes chunks that are a better fit. In the KBA project this sharpens the [[Retrieval Context (Top-K)]] handed to GPT-4o, so the answer is grounded in the genuinely best passages rather than the ones that merely overlapped on words or vectors. It's a cheap relevance boost that doesn't require re-embedding anything.
+After [[Hybrid Search]] returns its top candidates, semantic re-ranking takes roughly the top 50 chunks and runs them through a deep language model in [[Azure AI Search]] that scores each one against the true intent of the query. This catches cases where a chunk scored high on [[BM25 Scoring]] or [[Vector Search]] but isn't really relevant, and promotes chunks that are a better fit. In the project this sharpens the [[Retrieval Context (Top-K)]] handed to GPT-4o, so the answer is grounded in the genuinely best passages rather than the ones that merely overlapped on words or vectors. It's a cheap relevance boost that doesn't require re-embedding anything.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

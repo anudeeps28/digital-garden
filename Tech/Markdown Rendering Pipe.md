@@ -10,10 +10,10 @@ date: 2026-06-26
 A custom Angular pipe that takes the LLM's markdown answer and turns it into safe, displayable HTML — parsing with marked and sanitizing with DOMPurify.
 
 ## Definition
-An Angular pipe is a small transform you apply in a template (`{{ answer | markdown }}`) to reshape a value for display. The markdown rendering pipe in the KBA AI-Doc-Ingestion project's `PlanDocumentRAG.Web` Angular 19 chat UI does two steps: first it runs the model's markdown through `marked` to produce HTML (so headings, lists, bold, and code blocks render properly), then it passes that HTML through [[DOMPurify]] to strip any XSS vectors before binding it into the DOM. The input is the answer text returned by the [[REST API]] — untrusted, since an LLM generated it — which is exactly why sanitization is non-negotiable. The result is then rendered via `[innerHTML]` in the chat bubble.
+An Angular pipe is a small transform you apply in a template (`{{ answer | markdown }}`) to reshape a value for display. The markdown rendering pipe in the AI document ingestion project's `PlanDocumentRAG.Web` Angular 19 chat UI does two steps: first it runs the model's markdown through `marked` to produce HTML (so headings, lists, bold, and code blocks render properly), then it passes that HTML through [[DOMPurify]] to strip any XSS vectors before binding it into the DOM. The input is the answer text returned by the [[REST API]] — untrusted, since an LLM generated it — which is exactly why sanitization is non-negotiable. The result is then rendered via `[innerHTML]` in the chat bubble.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

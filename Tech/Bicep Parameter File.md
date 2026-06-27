@@ -10,10 +10,10 @@ date: 2026-06-26
 A Bicep parameter file is the one knob-board per environment — same template, different settings — so Test and Prod never drift in structure but stay distinct in values.
 
 ## Definition
-A `.bicepparam` file supplies environment-specific values to a single shared Bicep template, letting one `main.bicep` deploy differently to each environment. On the KBA AI Document Ingestion project, `main.test.bicepparam` and `main.prod.bicepparam` feed the same `main.bicep` — they set things like SKU sizes, resource names, and which [[Azure OpenAI]] or [[Azure AI Search]] endpoint to target, while the template's logic stays identical. This is the mechanism that keeps Test and Prod as separate-but-mirrored environments. Sensitive values aren't hardcoded here either; secrets stay in [[Azure Key Vault]] and services reach them via [[Managed Identity]], so a param file holds configuration, not credentials.
+A `.bicepparam` file supplies environment-specific values to a single shared Bicep template, letting one `main.bicep` deploy differently to each environment. On the AI document ingestion project, `main.test.bicepparam` and `main.prod.bicepparam` feed the same `main.bicep` — they set things like SKU sizes, resource names, and which [[Azure OpenAI]] or [[Azure AI Search]] endpoint to target, while the template's logic stays identical. This is the mechanism that keeps Test and Prod as separate-but-mirrored environments. Sensitive values aren't hardcoded here either; secrets stay in [[Azure Key Vault]] and services reach them via [[Managed Identity]], so a param file holds configuration, not credentials.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

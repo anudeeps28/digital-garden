@@ -10,10 +10,10 @@ date: 2026-03-24
 NuGet is the package manager for .NET — it lets you install and manage third-party libraries in your project.
 
 ## Definition
-NuGet is to [[.NET 8]] what npm is to JavaScript — a central repository of reusable code packages. You add a package (like [[PdfPig]], [[Moq]], or [[Serilog]]) via `dotnet add package` or Visual Studio, and NuGet downloads it plus all its dependencies. Packages are listed in the `.csproj` file and restored automatically on build. In the KBA project, NuGet pulls in libraries for PDF parsing ([[PdfPig]]), Word doc reading ([[DocumentFormat.OpenXml]]), table extraction ([[Tabula]]), testing ([[xUnit]], [[Moq]]), and logging ([[Serilog]]).
+NuGet is to [[.NET 8]] what npm is to JavaScript — a central repository of reusable code packages. You add a package (like [[PdfPig]], [[Moq]], or [[Serilog]]) via `dotnet add package` or Visual Studio, and NuGet downloads it plus all its dependencies. Packages are listed in the `.csproj` file and restored automatically on build. In the project, NuGet pulls in libraries for PDF parsing ([[PdfPig]]), Word doc reading ([[DocumentFormat.OpenXml]]), table extraction ([[Tabula]]), testing ([[xUnit]], [[Moq]]), and logging ([[Serilog]]).
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

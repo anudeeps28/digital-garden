@@ -10,10 +10,10 @@ date: 2026-06-26
 The Result pattern returns an explicit Success/Failure object for expected problems instead of throwing exceptions for them.
 
 ## Definition
-The Result pattern models the outcome of an operation as a value — a `Result<T>` carrying either a success payload or a failure with an error code/message — rather than signalling failure by throwing. In the KBA AI Document Ingestion project I use it for *expected* failures: a document not found, a template name already taken, a RAG query that returned no grounded answer. The service returns `Result.Failure("...")`, the [[Controller]] maps that to the right [[HTTP Status Codes|status code]] (404, 409, 422), and exceptions stay reserved for the genuinely exceptional — a dropped [[Connection String|DB connection]], an out-of-memory. This keeps the happy path readable, makes failure modes part of the method signature, and avoids using costly exceptions for ordinary control flow.
+The Result pattern models the outcome of an operation as a value — a `Result<T>` carrying either a success payload or a failure with an error code/message — rather than signalling failure by throwing. In the AI document ingestion project I use it for *expected* failures: a document not found, a template name already taken, a RAG query that returned no grounded answer. The service returns `Result.Failure("...")`, the [[Controller]] maps that to the right [[HTTP Status Codes|status code]] (404, 409, 422), and exceptions stay reserved for the genuinely exceptional — a dropped [[Connection String|DB connection]], an out-of-memory. This keeps the happy path readable, makes failure modes part of the method signature, and avoids using costly exceptions for ordinary control flow.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

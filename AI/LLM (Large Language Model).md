@@ -10,10 +10,10 @@ date: 2026-03-24
 An LLM is an AI model trained on massive text data that can read, understand, and generate human language — like GPT-4o.
 
 ## Definition
-A Large Language Model is a neural network with billions of parameters trained on enormous text datasets. It processes input text as [[Tokens]], understands context and meaning, and generates coherent responses. LLMs can summarize, translate, answer questions, extract structured data, and more. In the KBA project, the LLM (GPT-4o via [[Azure OpenAI]]) is used for two main tasks: answering natural language questions about plan documents through [[RAG (Retrieval-Augmented Generation)|RAG]], and extracting structured benefit data through [[Template-Based Extraction]]. The model doesn't "know" your documents — it needs them provided as context through [[Prompt Engineering|prompts]].
+A Large Language Model is a neural network with billions of parameters trained on enormous text datasets. It processes input text as [[Tokens]], understands context and meaning, and generates coherent responses. LLMs can summarize, translate, answer questions, extract structured data, and more. In the project, the LLM (GPT-4o via [[Azure OpenAI]]) is used for two main tasks: answering natural language questions about plan documents through [[RAG (Retrieval-Augmented Generation)|RAG]], and extracting structured benefit data through [[Template-Based Extraction]]. The model doesn't "know" your documents — it needs them provided as context through [[Prompt Engineering|prompts]].
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

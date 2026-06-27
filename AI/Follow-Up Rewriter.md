@@ -10,10 +10,10 @@ date: 2026-06-26
 The follow-up rewriter is an LLM step that folds a multi-turn exchange down into a single standalone question ready for retrieval.
 
 ## Definition
-Retrieval works best on one self-contained query, but real conversations are spread across turns and full of context that lives in earlier messages. The follow-up rewriter takes the recent dialogue and condenses it into one clear question — doing [[Co-reference Resolution]] along the way to swap out pronouns. In the KBA project it pulls recent turns from the [[Conversation Manager]] and emits a query that [[Hybrid Search]] can match precisely, so "and the deductible?" becomes "What is the in-network deductible for the Group 12345 plan?" This rewrite is the bridge between a natural chat experience and the system's need for a crisp [[RAG Query]].
+Retrieval works best on one self-contained query, but real conversations are spread across turns and full of context that lives in earlier messages. The follow-up rewriter takes the recent dialogue and condenses it into one clear question — doing [[Co-reference Resolution]] along the way to swap out pronouns. In the project it pulls recent turns from the [[Conversation Manager]] and emits a query that [[Hybrid Search]] can match precisely, so "and the deductible?" becomes "What is the in-network deductible for the Group 12345 plan?" This rewrite is the bridge between a natural chat experience and the system's need for a crisp [[RAG Query]].
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-03-24
 RAG is a pattern where you first retrieve relevant document chunks, then ask the AI to answer based only on those chunks — grounding the AI in real data.
 
 ## Definition
-Retrieval-Augmented Generation combines information retrieval with [[LLM (Large Language Model)|LLM]] generation. Instead of asking the AI to answer from its training data (which may be wrong or outdated), you first search for relevant document chunks using [[Azure AI Search]] (via [[Hybrid Search]] or [[Vector Search]]), then include those chunks in the [[Prompt Engineering|prompt]] as context, and ask the model to answer based only on what it was given. This "grounds" the response in actual source documents. In the KBA project, when a user asks "What is the deductible for plan X?", RAG retrieves the relevant chunks from the plan document and feeds them to [[Azure OpenAI]] to generate an accurate answer.
+Retrieval-Augmented Generation combines information retrieval with [[LLM (Large Language Model)|LLM]] generation. Instead of asking the AI to answer from its training data (which may be wrong or outdated), you first search for relevant document chunks using [[Azure AI Search]] (via [[Hybrid Search]] or [[Vector Search]]), then include those chunks in the [[Prompt Engineering|prompt]] as context, and ask the model to answer based only on what it was given. This "grounds" the response in actual source documents. In the project, when a user asks "What is the deductible for plan X?", RAG retrieves the relevant chunks from the plan document and feeds them to [[Azure OpenAI]] to generate an accurate answer.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

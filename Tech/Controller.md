@@ -13,7 +13,7 @@ A controller is a C# class that listens for incoming HTTP requests, processes th
 In [[ASP.NET Core]] (part of [[.NET 8]]), a controller is a class that inherits from `ControllerBase` and contains action methods mapped to [[API Endpoints]]. Each method handles a specific [[HTTP Methods|HTTP method]] and URL pattern — for example, a `DocumentsController` might have a `POST Upload()` method and a `GET GetById(int id)` method. Controllers receive data via [[FromForm Attribute|[FromForm]]] or [[FromQuery Attribute|[FromQuery]]] attributes, delegate business logic to services obtained through [[Dependency Injection]], and return [[DTOs (Data Transfer Objects)]] serialized as [[JSON]] with appropriate [[HTTP Status Codes]]. In [[Clean Architecture]], controllers live in the API layer.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

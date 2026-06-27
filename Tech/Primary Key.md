@@ -10,10 +10,10 @@ date: 2026-03-24
 A primary key is a unique identifier for each row in a table — no two rows can share the same primary key value.
 
 ## Definition
-Every [[Database Tables|table]] in a relational database needs a primary key — a column (or combination of columns) that uniquely identifies each record. Typically this is an auto-incrementing integer `Id` column or a GUID. For example, in the KBA `Documents` table, each document gets a unique `Id`. Primary keys enforce uniqueness (you can't accidentally insert duplicate records) and serve as the target for [[Foreign Key|foreign keys]] in related tables. In [[EF Core]], a property named `Id` or `{ClassName}Id` is automatically treated as the primary key.
+Every [[Database Tables|table]] in a relational database needs a primary key — a column (or combination of columns) that uniquely identifies each record. Typically this is an auto-incrementing integer `Id` column or a GUID. For example, in the the project `Documents` table, each document gets a unique `Id`. Primary keys enforce uniqueness (you can't accidentally insert duplicate records) and serve as the target for [[Foreign Key|foreign keys]] in related tables. In [[EF Core]], a property named `Id` or `{ClassName}Id` is automatically treated as the primary key.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

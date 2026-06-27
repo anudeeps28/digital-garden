@@ -13,7 +13,7 @@ An interface is a contract that says "any class doing this job must have these m
 In [[CSharp]], an interface (prefixed with `I`, e.g., `IDocumentService`) declares method signatures, properties, and events that implementing classes must provide. Interfaces are the backbone of [[Dependency Injection]] and [[Clean Architecture]] — the Application layer defines interfaces, and the Infrastructure layer provides the concrete implementations. This means you can swap out implementations (e.g., replace a real [[Azure Blob Storage]] client with a fake one in [[Unit Tests]]) without changing any business logic.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

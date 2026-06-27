@@ -10,10 +10,10 @@ date: 2026-06-26
 Query intent classification is reading a question to figure out what kind of answer it wants, so the system can pick the right handler.
 
 ## Definition
-Before answering, the system parses the user's question to detect its shape: is it asking for one specific field ("the copay for X"), a comparison across plans, or an exploratory overview? Each shape maps to a different, cost-appropriate handler. In the KBA project this is the job inside the IntentParser that feeds [[Query Routing]] — a specific-field question can go to [[Azure SQL]], while an exploratory one needs [[RAG (Retrieval-Augmented Generation)|Vector RAG]]. Classifying intent first is what makes [[Selective LLM Usage]] possible: you only spend GPT-4o tokens on the questions that genuinely need synthesis.
+Before answering, the system parses the user's question to detect its shape: is it asking for one specific field ("the copay for X"), a comparison across plans, or an exploratory overview? Each shape maps to a different, cost-appropriate handler. In the project this is the job inside the IntentParser that feeds [[Query Routing]] — a specific-field question can go to [[Azure SQL]], while an exploratory one needs [[RAG (Retrieval-Augmented Generation)|Vector RAG]]. Classifying intent first is what makes [[Selective LLM Usage]] possible: you only spend GPT-4o tokens on the questions that genuinely need synthesis.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

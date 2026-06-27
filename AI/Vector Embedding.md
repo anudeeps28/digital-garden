@@ -10,10 +10,10 @@ date: 2026-03-24
 A vector embedding turns text into a list of numbers so that similar meanings end up close together mathematically.
 
 ## Definition
-An embedding is a numerical representation of text — a list (vector) of hundreds or thousands of floating-point numbers. An embedding model (like Ada from [[Azure OpenAI]]) converts a sentence or paragraph into this vector. The key insight: texts with similar meanings produce vectors that are close together in this high-dimensional space. "What is the copay?" and "How much do I pay per visit?" would have similar vectors even though the words differ. In the KBA project, every document chunk gets embedded and stored in [[Azure AI Search]], enabling [[Vector Search]] — finding relevant chunks by meaning rather than exact keyword match.
+An embedding is a numerical representation of text — a list (vector) of hundreds or thousands of floating-point numbers. An embedding model (like Ada from [[Azure OpenAI]]) converts a sentence or paragraph into this vector. The key insight: texts with similar meanings produce vectors that are close together in this high-dimensional space. "What is the copay?" and "How much do I pay per visit?" would have similar vectors even though the words differ. In the project, every document chunk gets embedded and stored in [[Azure AI Search]], enabling [[Vector Search]] — finding relevant chunks by meaning rather than exact keyword match.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

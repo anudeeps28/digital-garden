@@ -10,10 +10,10 @@ date: 2026-06-26
 Response enrichment injects extra directives into the synthesis prompt so the LLM's answer comes out clearer and more complete.
 
 ## Definition
-Before GPT-4o synthesizes an answer, response enrichment appends helpful context and instructions to the prompt — for example a source inventory listing which documents the chunks came from, or a cost-share summary that pre-organizes deductible and copay figures. These directives steer the model toward a clearer, better-structured answer without changing the retrieved chunks themselves. In the KBA project this is layered on via [[Prompt Pieces]], appended after the [[Retrieval Context (Top-K)]] is assembled, and it complements [[Persona-Based Synthesis]]: enrichment improves substance and clarity, persona handles tone and format. Together they make the raw retrieval read like a polished answer.
+Before GPT-4o synthesizes an answer, response enrichment appends helpful context and instructions to the prompt — for example a source inventory listing which documents the chunks came from, or a cost-share summary that pre-organizes deductible and copay figures. These directives steer the model toward a clearer, better-structured answer without changing the retrieved chunks themselves. In the project this is layered on via [[Prompt Pieces]], appended after the [[Retrieval Context (Top-K)]] is assembled, and it complements [[Persona-Based Synthesis]]: enrichment improves substance and clarity, persona handles tone and format. Together they make the raw retrieval read like a polished answer.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

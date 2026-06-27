@@ -10,10 +10,10 @@ date: 2026-06-26
 Zoneless change detection is an Angular 19 mode that drops Zone.js and instead refreshes the UI only when signals or explicit events tell it something changed.
 
 ## Definition
-Historically Angular relied on Zone.js, which monkey-patches every async API (timers, promises, events) to know "something might have changed, re-check the whole component tree." That's convenient but coarse and costly. Zoneless mode removes Zone.js entirely; Angular only runs change detection when a [[Angular Signals|signal]] it depends on updates, when an event handler fires, or when an async pipe emits. In the KBA AI-Doc-Ingestion project, the `PlanDocumentRAG.Web` Angular 19 chat UI runs zoneless (`provideZonelessChangeDetection()`), which is why state is held in [[Angular Signals]] and template-driven reactivity rather than mutated fields — the signals are what tell Angular when to redraw the streaming chat answer.
+Historically Angular relied on Zone.js, which monkey-patches every async API (timers, promises, events) to know "something might have changed, re-check the whole component tree." That's convenient but coarse and costly. Zoneless mode removes Zone.js entirely; Angular only runs change detection when a [[Angular Signals|signal]] it depends on updates, when an event handler fires, or when an async pipe emits. In the AI document ingestion project, the `PlanDocumentRAG.Web` Angular 19 chat UI runs zoneless (`provideZonelessChangeDetection()`), which is why state is held in [[Angular Signals]] and template-driven reactivity rather than mutated fields — the signals are what tell Angular when to redraw the streaming chat answer.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

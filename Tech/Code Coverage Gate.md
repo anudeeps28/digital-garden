@@ -10,10 +10,10 @@ date: 2026-06-26
 A pipeline tripwire: if too little of the code is tested, the build refuses to go green.
 
 ## Definition
-A code coverage gate is a check in the [[CI-CD Pipeline]] that measures how much of the code is executed by tests and **fails the build** if line coverage drops below a threshold (around 75% on the KBA AI Document Ingestion project). Coverage is collected from the [[xUnit]] runs and the [[Jest]] runs, then compared to the bar before any [[Build Artifacts]] are published. It's a concrete instance of [[Fail Fast Fail Loudly]] — it stops undertested code from ever reaching a [[Release Stages|release stage]]. It measures quantity of coverage, not quality, so it complements rather than replaces [[Code Rabbit]] review and [[CodeQL]] scanning.
+A code coverage gate is a check in the [[CI-CD Pipeline]] that measures how much of the code is executed by tests and **fails the build** if line coverage drops below a threshold (around 75% on the AI document ingestion project). Coverage is collected from the [[xUnit]] runs and the [[Jest]] runs, then compared to the bar before any [[Build Artifacts]] are published. It's a concrete instance of [[Fail Fast Fail Loudly]] — it stops undertested code from ever reaching a [[Release Stages|release stage]]. It measures quantity of coverage, not quality, so it complements rather than replaces [[Code Rabbit]] review and [[CodeQL]] scanning.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

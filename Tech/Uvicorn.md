@@ -10,10 +10,10 @@ date: 2026-06-26
 The lightweight ASGI server that lets a single FastAPI process handle many concurrent embedding requests.
 
 ## Definition
-Uvicorn is an ASGI (Asynchronous Server Gateway Interface) server for Python — the production process that actually receives HTTP connections and hands them to an async app. In the KBA AI Document Ingestion project, Uvicorn runs the [[FastAPI]] embedding service inside the [[Docker]] container, serving the `/embed` and `/embed/batch` endpoints with high concurrency so many requests can be in flight while the model computes [[Vector Embedding|vectors]]. It's the runtime bridge between the container's exposed port and our Python code, deployed on [[Azure Container Apps]].
+Uvicorn is an ASGI (Asynchronous Server Gateway Interface) server for Python — the production process that actually receives HTTP connections and hands them to an async app. In the AI document ingestion project, Uvicorn runs the [[FastAPI]] embedding service inside the [[Docker]] container, serving the `/embed` and `/embed/batch` endpoints with high concurrency so many requests can be in flight while the model computes [[Vector Embedding|vectors]]. It's the runtime bridge between the container's exposed port and our Python code, deployed on [[Azure Container Apps]].
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

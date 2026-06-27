@@ -10,10 +10,10 @@ date: 2026-03-24
 Async/await is C#'s pattern for writing non-blocking code that waits for slow operations (like file uploads or database calls) without freezing the application.
 
 ## Definition
-In [[CSharp]], `async` marks a method as asynchronous, and `await` pauses execution until a long-running task completes — but instead of blocking the thread, it frees it up to handle other work. This is critical in web APIs where you don't want one slow database call to hold up every other incoming request. An async method returns a `Task` or `Task<T>` instead of a direct value. The [[.NET 8]] runtime manages the thread scheduling behind the scenes. In the KBA project, nearly every service method is async because it calls [[Azure Blob Storage]], [[Azure SQL]], or [[Azure OpenAI]].
+In [[CSharp]], `async` marks a method as asynchronous, and `await` pauses execution until a long-running task completes — but instead of blocking the thread, it frees it up to handle other work. This is critical in web APIs where you don't want one slow database call to hold up every other incoming request. An async method returns a `Task` or `Task<T>` instead of a direct value. The [[.NET 8]] runtime manages the thread scheduling behind the scenes. In the project, nearly every service method is async because it calls [[Azure Blob Storage]], [[Azure SQL]], or [[Azure OpenAI]].
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

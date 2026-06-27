@@ -10,10 +10,10 @@ date: 2026-06-26
 Bicep is a clean, declarative language that lets you describe Azure infrastructure the way you'd describe it to a colleague — then compiles down to the verbose ARM JSON Azure actually understands.
 
 ## Definition
-Bicep is a domain-specific language (DSL) that transpiles to Azure Resource Manager (ARM) templates, giving you readable, type-safe [[IaC]] for [[Azure]]. On the KBA AI Document Ingestion project, every cloud resource is defined in Bicep — a `main.bicep` orchestrates the deployment and pulls in environment values from a `.bicepparam` file so Test and Prod stay separate but share one source of truth. The resources it stamps out include the [[Azure Functions]] app, [[Azure Container Apps]] embedding container, [[Azure SQL]], [[Azure Key Vault]], [[Azure OpenAI]], and [[Azure AI Search]], all wired to a [[Managed Identity]] so no secrets live in the templates. Because Bicep is declarative, re-running it converges the environment to the desired state rather than issuing imperative commands.
+Bicep is a domain-specific language (DSL) that transpiles to Azure Resource Manager (ARM) templates, giving you readable, type-safe [[IaC]] for [[Azure]]. On the AI document ingestion project, every cloud resource is defined in Bicep — a `main.bicep` orchestrates the deployment and pulls in environment values from a `.bicepparam` file so Test and Prod stay separate but share one source of truth. The resources it stamps out include the [[Azure Functions]] app, [[Azure Container Apps]] embedding container, [[Azure SQL]], [[Azure Key Vault]], [[Azure OpenAI]], and [[Azure AI Search]], all wired to a [[Managed Identity]] so no secrets live in the templates. Because Bicep is declarative, re-running it converges the environment to the desired state rather than issuing imperative commands.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

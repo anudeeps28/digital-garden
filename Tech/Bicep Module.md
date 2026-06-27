@@ -10,10 +10,10 @@ date: 2026-06-26
 A Bicep module is a self-contained chunk of infrastructure you can name, reuse, and snap together — like a function for cloud resources.
 
 ## Definition
-A Bicep module is a separate `.bicep` file that encapsulates the definition of one logical piece of infrastructure (say, the container app, or Application Insights) and exposes parameters and outputs so it can be composed by a top-level template. On the KBA AI Document Ingestion project, `main.bicep` doesn't define every resource inline — it calls into modules, each owning a coherent slice such as the [[Azure Container Apps]] embedding service or [[Application Insights]] telemetry. This keeps [[Bicep]] readable and lets the same module be reused across Test and Prod with different inputs. Outputs from one module (like a resource ID or the [[Managed Identity]] principal) feed into the next, so dependencies wire themselves up cleanly.
+A Bicep module is a separate `.bicep` file that encapsulates the definition of one logical piece of infrastructure (say, the container app, or Application Insights) and exposes parameters and outputs so it can be composed by a top-level template. On the AI document ingestion project, `main.bicep` doesn't define every resource inline — it calls into modules, each owning a coherent slice such as the [[Azure Container Apps]] embedding service or [[Application Insights]] telemetry. This keeps [[Bicep]] readable and lets the same module be reused across Test and Prod with different inputs. Outputs from one module (like a resource ID or the [[Managed Identity]] principal) feed into the next, so dependencies wire themselves up cleanly.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

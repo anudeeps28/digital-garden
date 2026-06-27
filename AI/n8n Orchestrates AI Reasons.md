@@ -13,7 +13,7 @@ In AI automation, the orchestration tool handles all coordination while the AI h
 A separation-of-concerns principle: n8n (or any workflow orchestrator) owns routing, auth, validation, retries, logging, and approvals. The LLM owns reasoning, summarization, classification, and response drafting. AI never directly accesses databases or APIs — everything is routed through capability-constrained workflows.
 
 ## Source
-KBA AI Automation Foundation Guide — [[Claude Code AI Automation Guide]]
+the project AI Automation Foundation Guide — [[Claude Code AI Automation Guide]]
 
 ---
 

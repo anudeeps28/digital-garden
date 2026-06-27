@@ -10,10 +10,10 @@ date: 2026-06-26
 Standalone components are Angular components that declare their own dependencies directly, doing away with the old NgModule ceremony.
 
 ## Definition
-Before Angular 14, every component had to be declared inside an NgModule and that module had to import whatever the component needed. Standalone components flip this: the component itself carries an `imports: [...]` array listing exactly what it uses, so there's no separate module file to wire up. From Angular 17 onward this is the default. In the KBA AI-Doc-Ingestion project, the `PlanDocumentRAG.Web` Angular 19 chat UI is built entirely from standalone components — the chat shell, the document viewer, and the message list each import their own pieces. Bootstrapping happens through `bootstrapApplication()` with a flat list of providers rather than a root module, which is also where [[MSAL Authentication]] and the [[APP_INITIALIZER]] config loader are registered.
+Before Angular 14, every component had to be declared inside an NgModule and that module had to import whatever the component needed. Standalone components flip this: the component itself carries an `imports: [...]` array listing exactly what it uses, so there's no separate module file to wire up. From Angular 17 onward this is the default. In the AI document ingestion project, the `PlanDocumentRAG.Web` Angular 19 chat UI is built entirely from standalone components — the chat shell, the document viewer, and the message list each import their own pieces. Bootstrapping happens through `bootstrapApplication()` with a flat list of providers rather than a root module, which is also where [[MSAL Authentication]] and the [[APP_INITIALIZER]] config loader are registered.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-06-26
 A clean test reads in three beats: set the stage, do the thing, then check what happened.
 
 ## Definition
-Arrange-Act-Assert (AAA) is the standard layout I follow for every test in the KBA AI Document Ingestion project. **Arrange** wires up the inputs and [[Moq]] mocks, **Act** invokes the single method under test, and **Assert** verifies the outcome (usually via [[FluentAssertions]]). Keeping those three phases visually separate makes each [[xUnit]] [[Unit Tests|unit test]] state its intent at a glance and quietly enforces one-behaviour-per-test. The same rhythm scales up to [[Integration Tests]] built on [[WebApplicationFactory]] — arrange the request, act by sending it, assert on the response.
+Arrange-Act-Assert (AAA) is the standard layout I follow for every test in the AI document ingestion project. **Arrange** wires up the inputs and [[Moq]] mocks, **Act** invokes the single method under test, and **Assert** verifies the outcome (usually via [[FluentAssertions]]). Keeping those three phases visually separate makes each [[xUnit]] [[Unit Tests|unit test]] state its intent at a glance and quietly enforces one-behaviour-per-test. The same rhythm scales up to [[Integration Tests]] built on [[WebApplicationFactory]] — arrange the request, act by sending it, assert on the response.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

@@ -14,7 +14,7 @@ Organize code into layers where each layer has one job, with dependencies pointi
 Clean Architecture is a software design pattern that separates code into distinct layers — Domain, Application, Infrastructure, API, Functions, and Parsing — so that each layer has a single responsibility. The Domain layer sits at the center with zero dependencies and contains entities and business rules. The Application layer holds business logic and use cases. Infrastructure handles external concerns like [[Azure]] services and databases. The API layer is the web-facing entry point built with [[ASP.NET Core]]. Functions are serverless triggers (e.g., [[Azure Functions]]). Parsing is responsible for reading PDFs and Word documents. Each outer layer depends on inner layers, never the reverse, which makes the system testable, maintainable, and swappable.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 
@@ -30,4 +30,4 @@ KBA AI Document Ingestion project
 Clean Architecture sits within the broader discipline of [[Software Architecture]], the practice of structuring systems for maintainability and extensibility. [[SOLID Principles]] are the design principles that Clean Architecture embodies and builds upon. The foundational question underneath all of this is: How do you decide which layer a piece of code belongs in?
 
 **Paths** — *where this leads*
-[[Dependency Injection]] is the mechanism that wires layers together without tight coupling, making the architecture work in practice. [[Unit Testing]] becomes straightforward because clean separation makes each layer independently testable. In the KBA project specifically, this architecture is implemented in [[.NET 8]], the framework chosen to support these clean layer boundaries.
+[[Dependency Injection]] is the mechanism that wires layers together without tight coupling, making the architecture work in practice. [[Unit Testing]] becomes straightforward because clean separation makes each layer independently testable. In the project specifically, this architecture is implemented in [[.NET 8]], the framework chosen to support these clean layer boundaries.

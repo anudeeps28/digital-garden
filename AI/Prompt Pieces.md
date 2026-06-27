@@ -10,10 +10,10 @@ date: 2026-06-26
 Prompt pieces are modular, versioned prompt fragments that get assembled at runtime instead of hardcoding one giant prompt.
 
 ## Definition
-Rather than baking a single monolithic prompt into the code, the KBA project breaks the prompt into named, versioned fragments — base role, answer format, domain knowledge, synonyms, persona — stored in a PromptPieces table. At runtime the system assembles the relevant pieces into the final prompt sent to GPT-4o. Because the pieces live in data, not code, they can be edited and A/B tested without a redeploy, which is huge for tuning [[Prompt Engineering]] against real benefit questions. This modularity is what makes [[Persona-Based Synthesis]] and [[Response Enrichment]] clean to implement: you swap in a different persona piece or append an enrichment directive without touching the rest.
+Rather than baking a single monolithic prompt into the code, the project breaks the prompt into named, versioned fragments — base role, answer format, domain knowledge, synonyms, persona — stored in a PromptPieces table. At runtime the system assembles the relevant pieces into the final prompt sent to GPT-4o. Because the pieces live in data, not code, they can be edited and A/B tested without a redeploy, which is huge for tuning [[Prompt Engineering]] against real benefit questions. This modularity is what makes [[Persona-Based Synthesis]] and [[Response Enrichment]] clean to implement: you swap in a different persona piece or append an enrichment directive without touching the rest.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

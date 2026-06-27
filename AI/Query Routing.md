@@ -10,10 +10,10 @@ date: 2026-06-26
 Query routing is the decision of whether a user's question should be answered by a fast structured database lookup or by the slower, fuzzier Vector RAG path.
 
 ## Definition
-Some benefit questions have crisp, structured answers ("What is the Group 12345 deductible?") that an [[Azure SQL]] query can return instantly and exactly. Others are open-ended ("What mental health support is available?") and need [[RAG (Retrieval-Augmented Generation)|Vector RAG]] over embedded chunks. Query routing picks the right path so each question gets the cheapest capable handler. In the KBA project this lives in the IntentParser, which depends on [[Query Intent Classification]] to make the call — though today it is hard-routed straight to RAG, with the SQL path planned. Getting routing right is the core of [[Selective LLM Usage]]: don't burn an LLM call on something a SQL row answers better.
+Some benefit questions have crisp, structured answers ("What is the Group 12345 deductible?") that an [[Azure SQL]] query can return instantly and exactly. Others are open-ended ("What mental health support is available?") and need [[RAG (Retrieval-Augmented Generation)|Vector RAG]] over embedded chunks. Query routing picks the right path so each question gets the cheapest capable handler. In the project this lives in the IntentParser, which depends on [[Query Intent Classification]] to make the call — though today it is hard-routed straight to RAG, with the SQL path planned. Getting routing right is the core of [[Selective LLM Usage]]: don't burn an LLM call on something a SQL row answers better.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

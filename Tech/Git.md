@@ -10,10 +10,10 @@ date: 2026-03-24
 Git is a version control system that tracks every change to every file — allowing you to collaborate, review history, and undo mistakes.
 
 ## Definition
-Git is a distributed version control system that records a complete history of every change made to your codebase. Each change is captured in a commit (a snapshot with a message explaining what changed and why). Git enables parallel development through [[Git Branches|branches]], collaboration through [[Pull Request|pull requests]], and safety through the ability to revert any change. In the KBA project, all code lives in a Git repository hosted on [[Azure DevOps]]. Developers work on feature branches, submit PRs for review, and merge into the main branch, which triggers the [[CI-CD Pipeline]].
+Git is a distributed version control system that records a complete history of every change made to your codebase. Each change is captured in a commit (a snapshot with a message explaining what changed and why). Git enables parallel development through [[Git Branches|branches]], collaboration through [[Pull Request|pull requests]], and safety through the ability to revert any change. In the project, all code lives in a Git repository hosted on [[Azure DevOps]]. Developers work on feature branches, submit PRs for review, and merge into the main branch, which triggers the [[CI-CD Pipeline]].
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

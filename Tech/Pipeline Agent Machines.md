@@ -13,12 +13,12 @@ A pipeline agent is the actual machine — Windows server, Linux VM, container �
 Azure DevOps doesn't run pipeline tasks in some abstract cloud — every step runs on a specific machine that has the Azure DevOps **agent service** installed. Two flavors:
 
 - **Microsoft-hosted agents** — disposable VMs that Microsoft provisions per job. Fresh OS each time, common toolchains preinstalled, no state carries over. Easy but slow to start, and they live on the public internet so they can't reach private resources.
-- **Self-hosted agents** — machines you (or your ops team) own. Persistent state, custom toolchains, and — critically — they can sit *inside* your [[Virtual Networks (VNets)|VNet]] so they can deploy to resources with [[publicNetworkAccess Disabled]]. KBA's `SVDDCAPP01`-style hostnames are self-hosted agents grouped into [[Deployment Groups]].
+- **Self-hosted agents** — machines you (or your ops team) own. Persistent state, custom toolchains, and — critically — they can sit *inside* your [[Virtual Networks (VNets)|VNet]] so they can deploy to resources with [[publicNetworkAccess Disabled]]. The project's `SVDDCAPP01`-style hostnames are self-hosted agents grouped into [[Deployment Groups]].
 
 The agent runs as a service, polls Azure DevOps over HTTPS for queued jobs, downloads the job's task definitions, executes them locally, and streams logs back. If the agent is offline, the pipeline waits.
 
 ## Source
-CI/CD learning session — KBA's on-prem agent topology.
+CI/CD learning session — The project's on-prem agent topology.
 
 ---
 

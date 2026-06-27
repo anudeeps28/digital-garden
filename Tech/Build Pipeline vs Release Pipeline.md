@@ -50,7 +50,7 @@ The [[CI-CD Pipeline]] is the combined concept that encompasses both build and r
 Manual deployment — copying files to server by hand with no pipeline — represents the opposite approach. The "Works on my machine" problem arises when there's no standardized build/deploy process, defeating the entire purpose of separation.
 
 **Roots** — *where this comes from*
-This concept lives within [[Azure DevOps]], where KBA's pipelines are hosted and managed. It's an implementation of the broader [[CI-CD Pipeline]] pattern that separates concerns between building code and deploying it.
+This concept lives within [[Azure DevOps]], where The project's pipelines are hosted and managed. It's an implementation of the broader [[CI-CD Pipeline]] pattern that separates concerns between building code and deploying it.
 
 **Paths** — *where this leads*
 [[Migration Scripts (DBAUp)]] often run as part of the release pipeline to handle database changes. The principle of "build once, deploy everywhere" connects to [[Runtime Config (Build Once Deploy Everywhere)]], where one build artifact is deployed with different configurations per environment. Understanding this separation informs critical branch strategy decisions — which branches should trigger builds?

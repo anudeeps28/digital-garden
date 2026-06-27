@@ -7,13 +7,13 @@ date: 2026-06-26
 # Angular
 
 ## Idea
-Angular is Google's TypeScript front-end framework for building single-page applications — the foundation of KBA's UAT chat UI.
+Angular is Google's TypeScript front-end framework for building single-page applications — the foundation of The project's UAT chat UI.
 
 ## Definition
-Angular is a batteries-included framework (router, HTTP client, dependency injection, forms, change detection) written in and authored with [[TypeScript]]. Unlike a library, it dictates a lot of structure, which is why it scales well for real applications. In the KBA AI-Doc-Ingestion project, the `PlanDocumentRAG.Web` app is Angular 19 and serves the UAT chat interface where reviewers query plan documents and read LLM answers. It leans on the modern Angular surface: [[Standalone Components]] instead of NgModules, [[Zoneless Change Detection]], [[Angular Signals]] for reactive state, [[MSAL Authentication]] against [[Entra ID]], and a [[Runtime Config (Build Once Deploy Everywhere)|config.json]] loaded at startup so one build runs in every environment.
+Angular is a batteries-included framework (router, HTTP client, dependency injection, forms, change detection) written in and authored with [[TypeScript]]. Unlike a library, it dictates a lot of structure, which is why it scales well for real applications. In the AI document ingestion project, the `PlanDocumentRAG.Web` app is Angular 19 and serves the UAT chat interface where reviewers query plan documents and read LLM answers. It leans on the modern Angular surface: [[Standalone Components]] instead of NgModules, [[Zoneless Change Detection]], [[Angular Signals]] for reactive state, [[MSAL Authentication]] against [[Entra ID]], and a [[Runtime Config (Build Once Deploy Everywhere)|config.json]] loaded at startup so one build runs in every environment.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

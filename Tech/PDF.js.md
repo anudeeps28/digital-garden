@@ -10,10 +10,10 @@ date: 2026-06-26
 PDF.js (the `pdfjs-dist` package) is a pure-browser PDF rendering engine — it draws PDF pages onto a canvas with no plugin or server round-trip.
 
 ## Definition
-Built by Mozilla, PDF.js parses and renders PDF files entirely in JavaScript, so a web app can display documents inline instead of forcing a download or relying on the browser's native viewer. In the KBA AI-Doc-Ingestion project, the `PlanDocumentRAG.Web` Angular 19 chat UI uses `pdfjs-dist` inside its document-viewer component to show the source plan PDFs a chat answer was grounded in — letting a reviewer click a citation and see the exact page the LLM pulled from. This closes the trust loop for RAG: the answer comes from the [[REST API]], and PDF.js renders the underlying evidence right beside it.
+Built by Mozilla, PDF.js parses and renders PDF files entirely in JavaScript, so a web app can display documents inline instead of forcing a download or relying on the browser's native viewer. In the AI document ingestion project, the `PlanDocumentRAG.Web` Angular 19 chat UI uses `pdfjs-dist` inside its document-viewer component to show the source plan PDFs a chat answer was grounded in — letting a reviewer click a citation and see the exact page the LLM pulled from. This closes the trust loop for RAG: the answer comes from the [[REST API]], and PDF.js renders the underlying evidence right beside it.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

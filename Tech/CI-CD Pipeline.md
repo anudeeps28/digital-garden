@@ -10,10 +10,10 @@ date: 2026-03-24
 A CI/CD pipeline automatically builds, tests, and deploys your code when you push — removing manual steps and catching bugs early.
 
 ## Definition
-CI/CD stands for **Continuous Integration** (automatically building and testing code on every commit) and **Continuous Deployment** (automatically deploying passing builds to production). In [[Azure DevOps]], a pipeline is defined in YAML and runs whenever code is pushed or a [[Pull Request]] is merged. A typical KBA pipeline: (1) restore [[NuGet]] packages, (2) build the [[.NET 8]] solution, (3) run [[Unit Tests]] and [[Integration Tests]] with [[xUnit]], (4) build a [[Docker Image]], (5) push to [[Azure Container Registry]], (6) deploy to [[Azure Container Apps]], (7) run [[Database Migrations]]. If any step fails, the pipeline stops and the team is notified.
+CI/CD stands for **Continuous Integration** (automatically building and testing code on every commit) and **Continuous Deployment** (automatically deploying passing builds to production). In [[Azure DevOps]], a pipeline is defined in YAML and runs whenever code is pushed or a [[Pull Request]] is merged. A typical the project pipeline: (1) restore [[NuGet]] packages, (2) build the [[.NET 8]] solution, (3) run [[Unit Tests]] and [[Integration Tests]] with [[xUnit]], (4) build a [[Docker Image]], (5) push to [[Azure Container Registry]], (6) deploy to [[Azure Container Apps]], (7) run [[Database Migrations]]. If any step fails, the pipeline stops and the team is notified.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

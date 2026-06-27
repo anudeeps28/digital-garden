@@ -10,10 +10,10 @@ date: 2026-03-24
 A Docker image is the blueprint for a container — a read-only template containing your app, runtime, and dependencies, ready to be run.
 
 ## Definition
-A [[Docker]] image is built from a `Dockerfile` — a text file with instructions like "start from the .NET 8 SDK image, copy my code, build it, and set the entry point." Each instruction creates a layer, and layers are cached for fast rebuilds. Images are tagged with versions (e.g., `kba-api:v1.2.3`) and stored in registries like [[Azure Container Registry]]. When you "run" an image, Docker creates a container from it. In the KBA project, the [[CI-CD Pipeline]] builds a Docker image of the [[REST API]], pushes it to ACR, and [[Azure Container Apps]] pulls and runs it.
+A [[Docker]] image is built from a `Dockerfile` — a text file with instructions like "start from the .NET 8 SDK image, copy my code, build it, and set the entry point." Each instruction creates a layer, and layers are cached for fast rebuilds. Images are tagged with versions (e.g., `kba-api:v1.2.3`) and stored in registries like [[Azure Container Registry]]. When you "run" an image, Docker creates a container from it. In the project, the [[CI-CD Pipeline]] builds a Docker image of the [[REST API]], pushes it to ACR, and [[Azure Container Apps]] pulls and runs it.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

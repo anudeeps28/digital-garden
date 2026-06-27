@@ -10,10 +10,10 @@ date: 2026-06-26
 A modern async Python framework that turns type hints into a documented HTTP API almost for free.
 
 ## Definition
-FastAPI is a modern, async-first Python web framework that builds a [[REST API]] from ordinary type-annotated functions and generates interactive OpenAPI docs automatically. In the KBA AI Document Ingestion project, FastAPI is the web layer of the embedding microservice (`services/embedding-service`): it exposes the `/embed` and `/embed/batch` endpoints that accept [[JSON]] text and return 384-dim [[Vector Embedding|vectors]] from the all-MiniLM-L6-v2 model. It leans on [[Pydantic]] for request/response validation and is run by [[Uvicorn]] inside the [[Docker]] container. Choosing this lightweight self-hosted service let us avoid paying [[Azure OpenAI]] for embeddings.
+FastAPI is a modern, async-first Python web framework that builds a [[REST API]] from ordinary type-annotated functions and generates interactive OpenAPI docs automatically. In the AI document ingestion project, FastAPI is the web layer of the embedding microservice (`services/embedding-service`): it exposes the `/embed` and `/embed/batch` endpoints that accept [[JSON]] text and return 384-dim [[Vector Embedding|vectors]] from the all-MiniLM-L6-v2 model. It leans on [[Pydantic]] for request/response validation and is run by [[Uvicorn]] inside the [[Docker]] container. Choosing this lightweight self-hosted service let us avoid paying [[Azure OpenAI]] for embeddings.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-06-26
 Exponential backoff retries a failed call while waiting longer each time, so you don't hammer a struggling service.
 
 ## Definition
-Exponential backoff is a retry strategy where the wait between attempts grows multiplicatively — 1s, 2s, 4s, 8s — usually with a little random jitter to avoid synchronized retry storms. In the KBA AI Document Ingestion project I lean on it for **transient** Azure failures: a brief [[Azure SQL]] timeout, an [[Azure Blob Storage]] hiccup, or an OpenAI call that returns [[HTTP Status Codes|429]]. When the response carries a `Retry-After`, I honor that value instead of my own delay. The point is to distinguish transient faults (worth retrying) from permanent ones (don't bother), and to give the downstream room to recover. It's the client-side counterpart to the server-side [[Rate Limiting]] that produced the 429 in the first place.
+Exponential backoff is a retry strategy where the wait between attempts grows multiplicatively — 1s, 2s, 4s, 8s — usually with a little random jitter to avoid synchronized retry storms. In the AI document ingestion project I lean on it for **transient** Azure failures: a brief [[Azure SQL]] timeout, an [[Azure Blob Storage]] hiccup, or an OpenAI call that returns [[HTTP Status Codes|429]]. When the response carries a `Retry-After`, I honor that value instead of my own delay. The point is to distinguish transient faults (worth retrying) from permanent ones (don't bother), and to give the downstream room to recover. It's the client-side counterpart to the server-side [[Rate Limiting]] that produced the 429 in the first place.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

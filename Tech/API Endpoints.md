@@ -13,7 +13,7 @@ Endpoints are specific URLs your API exposes — each one is an address where cl
 An API endpoint is a combination of an [[HTTP Methods|HTTP method]] and a URL path that maps to a specific [[Controller]] action. For example, `POST /api/documents/upload` is an endpoint that accepts a file upload, while `GET /api/documents/{id}` retrieves a specific document. Endpoints define the public contract of your [[REST API]] — what operations are available and where to find them. In [[.NET 8]], endpoints are defined using route attributes on controller methods like `[Route("api/[controller]")]` and `[HttpPost("upload")]`. [[Swagger and OpenAPI]] auto-generates documentation for all endpoints.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

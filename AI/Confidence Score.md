@@ -10,10 +10,10 @@ date: 2026-06-26
 A confidence score is a 0-to-1 number the system attaches to an extraction or an answer, signaling how much it trusts the result.
 
 ## Definition
-Every extracted field and every RAG answer carries a confidence score so the system knows when to act automatically versus when to escalate. A high score means proceed; a low one means flag for [[Field Verification]] by the cheap gpt-4.1-nano model or send it to a human. In the KBA project this number is the gatekeeper across the pipeline: [[Self-Learning Templates]] only auto-deploy above an 85% confidence threshold, and low-confidence [[Template-Based Extraction]] outputs get double-checked. Treating confidence as a first-class signal is what lets the system lean on automation while keeping a safety net for the uncertain cases.
+Every extracted field and every RAG answer carries a confidence score so the system knows when to act automatically versus when to escalate. A high score means proceed; a low one means flag for [[Field Verification]] by the cheap gpt-4.1-nano model or send it to a human. In the project this number is the gatekeeper across the pipeline: [[Self-Learning Templates]] only auto-deploy above an 85% confidence threshold, and low-confidence [[Template-Based Extraction]] outputs get double-checked. Treating confidence as a first-class signal is what lets the system lean on automation while keeping a safety net for the uncertain cases.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

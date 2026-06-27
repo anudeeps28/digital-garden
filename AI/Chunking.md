@@ -13,7 +13,7 @@ Chunking is splitting a large document into smaller pieces so the AI can process
 LLMs have limited context windows ([[Tokens]]), so you can't feed an entire 100-page plan document into one prompt. Chunking breaks the document into smaller, manageable pieces — each chunk might be a page, a section, or a fixed number of characters. Each chunk is then embedded as a [[Vector Embedding]] and indexed in [[Azure AI Search]]. When a [[RAG (Retrieval-Augmented Generation)|RAG]] query comes in, only the most relevant chunks are retrieved, keeping the prompt focused and costs low. The [[Chunking Strategy]] (how you split) directly impacts search quality — splitting mid-sentence or mid-table produces poor results.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

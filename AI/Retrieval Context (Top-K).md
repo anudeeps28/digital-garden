@@ -10,10 +10,10 @@ date: 2026-06-26
 Retrieval context is the set of top ~15 most relevant chunks that get injected into the LLM prompt as the grounding for its answer.
 
 ## Definition
-RAG works by giving the LLM only the most relevant slices of the corpus instead of the whole document set. The "top-K" is that selected set — in the KBA project, roughly the top 15 chunks surviving [[Hybrid Search]] and [[Semantic Re-ranking]] — placed into the GPT-4o prompt so the model synthesizes its answer from real source text rather than memory. Choosing K is a balance: too few chunks and the answer misses context; too many and you waste [[Tokens]] and dilute focus. This context is the literal grounding of [[RAG (Retrieval-Augmented Generation)|RAG]], and everything upstream — chunking, search, re-ranking — exists to make these final chunks the right ones.
+RAG works by giving the LLM only the most relevant slices of the corpus instead of the whole document set. The "top-K" is that selected set — in the project, roughly the top 15 chunks surviving [[Hybrid Search]] and [[Semantic Re-ranking]] — placed into the GPT-4o prompt so the model synthesizes its answer from real source text rather than memory. Choosing K is a balance: too few chunks and the answer misses context; too many and you waste [[Tokens]] and dilute focus. This context is the literal grounding of [[RAG (Retrieval-Augmented Generation)|RAG]], and everything upstream — chunking, search, re-ranking — exists to make these final chunks the right ones.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

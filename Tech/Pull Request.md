@@ -10,10 +10,10 @@ date: 2026-03-24
 A pull request is a formal request to merge your branch into the main codebase, reviewed by teammates before approval.
 
 ## Definition
-A Pull Request (PR) is a [[Git]] workflow mechanism where a developer says "my [[Git Branches|branch]] is ready — please review and merge it." The PR shows all the code changes (diffs), and teammates can comment, request changes, or approve. In [[Azure DevOps]], PRs can have required reviewers, linked work items, and automated checks (like the [[CI-CD Pipeline]] running [[Unit Tests]]). PRs are a quality gate — they catch bugs, enforce standards, and share knowledge across the team. In the KBA project, every code change goes through a PR before reaching the main branch.
+A Pull Request (PR) is a [[Git]] workflow mechanism where a developer says "my [[Git Branches|branch]] is ready — please review and merge it." The PR shows all the code changes (diffs), and teammates can comment, request changes, or approve. In [[Azure DevOps]], PRs can have required reviewers, linked work items, and automated checks (like the [[CI-CD Pipeline]] running [[Unit Tests]]). PRs are a quality gate — they catch bugs, enforce standards, and share knowledge across the team. In the project, every code change goes through a PR before reaching the main branch.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

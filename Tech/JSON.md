@@ -10,10 +10,10 @@ date: 2026-03-24
 JSON is the standard text format APIs use to send and receive structured data — it looks like a dictionary of key-value pairs.
 
 ## Definition
-JSON (JavaScript Object Notation) is a lightweight data interchange format that's easy for both humans and machines to read. It uses curly braces for objects (`{"name": "John", "age": 30}`), square brackets for arrays, and supports strings, numbers, booleans, and null. In [[REST API]] communication, [[DTOs (Data Transfer Objects)]] are automatically serialized to JSON for responses and deserialized from JSON for requests. [[.NET 8]] uses `System.Text.Json` by default for this conversion. In the KBA project, JSON is also used for [[Template-Based Extraction]] schemas that define which fields to extract from plan documents.
+JSON (JavaScript Object Notation) is a lightweight data interchange format that's easy for both humans and machines to read. It uses curly braces for objects (`{"name": "John", "age": 30}`), square brackets for arrays, and supports strings, numbers, booleans, and null. In [[REST API]] communication, [[DTOs (Data Transfer Objects)]] are automatically serialized to JSON for responses and deserialized from JSON for requests. [[.NET 8]] uses `System.Text.Json` by default for this conversion. In the project, JSON is also used for [[Template-Based Extraction]] schemas that define which fields to extract from plan documents.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

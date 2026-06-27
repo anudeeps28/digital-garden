@@ -10,10 +10,10 @@ date: 2026-06-26
 In-memory caching keeps hot data in the running process so you skip repeat database or LLM calls.
 
 ## Definition
-In-memory caching stores frequently-read data right in the app's process memory, keyed by a lookup, so the next request hits RAM instead of a slow source. In the KBA AI Document Ingestion project I use `IMemoryCache` (injected via [[Dependency Injection]]) to cache two expensive things: document **templates** read from [[Azure SQL]], and **RAG answers** so an identical question doesn't re-run an LLM call. Each entry gets a TTL (absolute expiration), and on a miss the code falls back to the real source — a clean case of [[Graceful Degradation]]. Because it lives in-process it's blazing fast but per-instance (not shared across servers) and bounded by memory, which is exactly why a deliberate [[Cache Invalidation]] policy matters.
+In-memory caching stores frequently-read data right in the app's process memory, keyed by a lookup, so the next request hits RAM instead of a slow source. In the AI document ingestion project I use `IMemoryCache` (injected via [[Dependency Injection]]) to cache two expensive things: document **templates** read from [[Azure SQL]], and **RAG answers** so an identical question doesn't re-run an LLM call. Each entry gets a TTL (absolute expiration), and on a miss the code falls back to the real source — a clean case of [[Graceful Degradation]]. Because it lives in-process it's blazing fast but per-instance (not shared across servers) and bounded by memory, which is exactly why a deliberate [[Cache Invalidation]] policy matters.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

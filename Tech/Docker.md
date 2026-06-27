@@ -10,10 +10,10 @@ date: 2026-03-24
 Docker packages your app and all its dependencies into a container that runs the same everywhere — your machine, a colleague's machine, or the cloud.
 
 ## Definition
-Docker is a platform for building, shipping, and running applications in containers. A container is a lightweight, standalone package that includes your application code, runtime ([[.NET 8]]), libraries, and configuration — everything needed to run. You define the container in a `Dockerfile`, build it into a [[Docker Image]], and run it anywhere Docker is installed. This eliminates "works on my machine" problems. In the KBA project, the [[REST API]] is containerized: the [[CI-CD Pipeline]] builds a Docker image, pushes it to [[Azure Container Registry]], and deploys it to [[Azure Container Apps]].
+Docker is a platform for building, shipping, and running applications in containers. A container is a lightweight, standalone package that includes your application code, runtime ([[.NET 8]]), libraries, and configuration — everything needed to run. You define the container in a `Dockerfile`, build it into a [[Docker Image]], and run it anywhere Docker is installed. This eliminates "works on my machine" problems. In the project, the [[REST API]] is containerized: the [[CI-CD Pipeline]] builds a Docker image, pushes it to [[Azure Container Registry]], and deploys it to [[Azure Container Apps]].
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-03-24
 A connection string is the "address + password" your application uses to connect to a database — it tells the app where the database is and how to authenticate.
 
 ## Definition
-A connection string is a formatted text string containing the server address, database name, and authentication credentials needed to connect to [[Azure SQL]] (or any database). A typical one looks like: `Server=myserver.database.windows.net;Database=KBADocIngestion;User Id=admin;Password=***;`. In the KBA project, connection strings are stored securely in [[Azure Key Vault]] — never hardcoded in source code. [[EF Core]] reads the connection string at startup to establish the database connection. Modern best practice uses **managed identity** through [[Entra ID]] instead of username/password, eliminating the need to store credentials at all.
+A connection string is a formatted text string containing the server address, database name, and authentication credentials needed to connect to [[Azure SQL]] (or any database). A typical one looks like: `Server=myserver.database.windows.net;Database=DocIngestion;User Id=admin;Password=***;`. In the project, connection strings are stored securely in [[Azure Key Vault]] — never hardcoded in source code. [[EF Core]] reads the connection string at startup to establish the database connection. Modern best practice uses **managed identity** through [[Entra ID]] instead of username/password, eliminating the need to store credentials at all.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

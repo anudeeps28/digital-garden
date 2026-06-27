@@ -13,7 +13,7 @@ Swagger/OpenAPI auto-generates interactive documentation for your API, letting y
 OpenAPI is a specification for describing [[REST API]] endpoints in a machine-readable format. Swagger is the tooling that renders this specification as a web page where you can see every [[API Endpoints|endpoint]], its parameters, [[HTTP Methods|methods]], expected [[Request and Response|request/response]] shapes, and [[HTTP Status Codes]]. In [[.NET 8]], adding the Swashbuckle NuGet package automatically scans your [[Controller]] classes and generates a Swagger UI at `/swagger`. This makes it easy for developers to explore and test the API without writing any client code.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

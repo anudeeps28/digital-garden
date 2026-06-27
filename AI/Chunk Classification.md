@@ -10,10 +10,10 @@ date: 2026-06-26
 Chunk classification tags each document chunk with what kind of content it holds, so retrieval can filter by structure, not just by words.
 
 ## Definition
-When a health-plan document is split during [[Chunking]], each resulting chunk is labeled by content type — Benefit, TableRow, Exclusion, Definition, Eligibility, PlanAdmin, or Prose. Storing this label as metadata in [[Azure AI Search]] lets retrieval narrow the field before scoring: a question about what's excluded can restrict to Exclusion chunks, and a copay lookup can favor TableRow chunks. In the KBA project this structural tagging makes [[Hybrid Search]] far more precise, because the system isn't searching the whole corpus blindly — it searches the slice that structurally matches the question's [[Query Intent Classification|intent]].
+When a health-plan document is split during [[Chunking]], each resulting chunk is labeled by content type — Benefit, TableRow, Exclusion, Definition, Eligibility, PlanAdmin, or Prose. Storing this label as metadata in [[Azure AI Search]] lets retrieval narrow the field before scoring: a question about what's excluded can restrict to Exclusion chunks, and a copay lookup can favor TableRow chunks. In the project this structural tagging makes [[Hybrid Search]] far more precise, because the system isn't searching the whole corpus blindly — it searches the slice that structurally matches the question's [[Query Intent Classification|intent]].
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

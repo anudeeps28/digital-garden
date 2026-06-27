@@ -10,10 +10,10 @@ date: 2026-06-26
 Pagination returns a long list in bite-sized pages instead of dumping everything at once.
 
 ## Definition
-Pagination splits a large result set into pages so the API never serializes thousands of rows in one go. In the KBA AI Document Ingestion project, endpoints like query history take `pageNumber` and `pageSize` as [[FromQuery Attribute|[FromQuery]]] parameters and translate them into a `Skip(...).Take(...)` on the [[EF Core]] query (or `OFFSET/FETCH` when I drop to Dapper for read-heavy paths). The response wraps the page of [[DTOs (Data Transfer Objects)|DTOs]] alongside metadata — total count, current page, page size — so the client can render "page 3 of 12". This keeps payloads small, queries fast, and memory bounded, which matters when the underlying [[Database Tables]] grow over time.
+Pagination splits a large result set into pages so the API never serializes thousands of rows in one go. In the AI document ingestion project, endpoints like query history take `pageNumber` and `pageSize` as [[FromQuery Attribute|[FromQuery]]] parameters and translate them into a `Skip(...).Take(...)` on the [[EF Core]] query (or `OFFSET/FETCH` when I drop to Dapper for read-heavy paths). The response wraps the page of [[DTOs (Data Transfer Objects)|DTOs]] alongside metadata — total count, current page, page size — so the client can render "page 3 of 12". This keeps payloads small, queries fast, and memory bounded, which matters when the underlying [[Database Tables]] grow over time.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

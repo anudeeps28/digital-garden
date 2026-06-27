@@ -10,10 +10,10 @@ date: 2026-06-26
 The N+1 problem is when loading a list then looping to fetch each item's related data fires one query per row — N+1 round-trips where one would do.
 
 ## Definition
-The N+1 query problem is a classic ORM performance trap: you run 1 query to get N parent rows, then accidentally run N more queries (one per row) to load each parent's related data. In the KBA AI Document Ingestion project this would bite when listing documents and then lazily touching each document's processing records — suddenly 50 documents means 51 trips to [[Azure SQL]]. The fix in [[EF Core]] is eager loading with `Include()` (or a projection) so the related data comes back in the same query; when I drop to Dapper for hot read paths I just write a single [[JOIN (SQL)]]. Either way the cure is "fewer, fatter queries," and [[Pagination]] keeps even the fat query bounded.
+The N+1 query problem is a classic ORM performance trap: you run 1 query to get N parent rows, then accidentally run N more queries (one per row) to load each parent's related data. In the AI document ingestion project this would bite when listing documents and then lazily touching each document's processing records — suddenly 50 documents means 51 trips to [[Azure SQL]]. The fix in [[EF Core]] is eager loading with `Include()` (or a projection) so the related data comes back in the same query; when I drop to Dapper for hot read paths I just write a single [[JOIN (SQL)]]. Either way the cure is "fewer, fatter queries," and [[Pagination]] keeps even the fat query bounded.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

@@ -10,10 +10,10 @@ date: 2026-06-26
 Self-learning templates let the system teach itself how to extract from a brand-new document type by generating, testing, and auto-deploying its own extraction rules.
 
 ## Definition
-When a document arrives that doesn't match any known template, an LLM generates a candidate set of extraction rules for it, then self-tests those rules against the source document to see how well they pull the right fields. If the result clears an 85% [[Confidence Score]] threshold, the template is auto-deployed; below that, it's held for human review. In the KBA project this is what lets [[Template-Based Extraction]] scale to new health-plan formats without an engineer hand-writing rules each time. It's a tight, self-correcting loop — generate, verify, gate — and a step toward more [[Agentic RAG Evolution|agentic]] behavior where the system improves its own tooling.
+When a document arrives that doesn't match any known template, an LLM generates a candidate set of extraction rules for it, then self-tests those rules against the source document to see how well they pull the right fields. If the result clears an 85% [[Confidence Score]] threshold, the template is auto-deployed; below that, it's held for human review. In the project this is what lets [[Template-Based Extraction]] scale to new health-plan formats without an engineer hand-writing rules each time. It's a tight, self-correcting loop — generate, verify, gate — and a step toward more [[Agentic RAG Evolution|agentic]] behavior where the system improves its own tooling.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

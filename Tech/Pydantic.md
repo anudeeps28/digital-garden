@@ -10,10 +10,10 @@ date: 2026-06-26
 A Python library that turns type hints into runtime guardrails for API data.
 
 ## Definition
-Pydantic is a data-validation library that uses Python type hints to define schemas and then validates and parses incoming data against them at runtime. In the KBA AI Document Ingestion project, Pydantic models define the request and response shapes for the [[FastAPI]] embedding service — for example enforcing a maximum text length and a maximum batch size on the `/embed/batch` endpoint, so a malformed or oversized [[JSON]] payload is rejected before it ever reaches the all-MiniLM-L6-v2 model. This keeps the self-hosted service safe and predictable and is what lets [[FastAPI]] auto-generate accurate OpenAPI docs.
+Pydantic is a data-validation library that uses Python type hints to define schemas and then validates and parses incoming data against them at runtime. In the AI document ingestion project, Pydantic models define the request and response shapes for the [[FastAPI]] embedding service — for example enforcing a maximum text length and a maximum batch size on the `/embed/batch` endpoint, so a malformed or oversized [[JSON]] payload is rejected before it ever reaches the all-MiniLM-L6-v2 model. This keeps the self-hosted service safe and predictable and is what lets [[FastAPI]] auto-generate accurate OpenAPI docs.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

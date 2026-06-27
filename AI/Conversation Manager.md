@@ -10,10 +10,10 @@ date: 2026-06-26
 The conversation manager is the stateful piece that remembers recent turns in a session so follow-up questions have context.
 
 ## Definition
-RAG itself is stateless — each query is answered fresh — but conversations are not. The conversation manager holds the recent query/answer turns for a session (with a 30-minute timeout that clears stale context) so later steps know what "it" and "that plan" mean. In the KBA project it feeds the [[Follow-Up Rewriter]], which uses the stored turns to perform [[Co-reference Resolution]] and produce a standalone query. It is deliberately lightweight: just enough short-term memory to make multi-turn chat coherent, without trying to persist a full history that would bloat the [[Retrieval Context (Top-K)]].
+RAG itself is stateless — each query is answered fresh — but conversations are not. The conversation manager holds the recent query/answer turns for a session (with a 30-minute timeout that clears stale context) so later steps know what "it" and "that plan" mean. In the project it feeds the [[Follow-Up Rewriter]], which uses the stored turns to perform [[Co-reference Resolution]] and produce a standalone query. It is deliberately lightweight: just enough short-term memory to make multi-turn chat coherent, without trying to persist a full history that would bloat the [[Retrieval Context (Top-K)]].
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

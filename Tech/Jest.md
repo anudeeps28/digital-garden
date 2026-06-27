@@ -10,10 +10,10 @@ date: 2026-06-26
 The JavaScript test runner that guards the Angular front end the way xUnit guards the API.
 
 ## Definition
-Jest is the JavaScript/TypeScript testing framework I use for the [[Angular]] UI's unit tests in the KBA AI Document Ingestion project. It runs component and service specs fast, has assertions and mocking built in, and produces a coverage report that feeds the same [[Code Coverage Gate]] as the backend. Conceptually it's the front-end mirror of [[xUnit]] + [[Moq]]: isolate a unit, fake its dependencies, assert the result — same [[Arrange-Act-Assert]] rhythm, different language. Jest covers logic in isolation; the slower [[Playwright]] suite covers the app driven through a real browser.
+Jest is the JavaScript/TypeScript testing framework I use for the [[Angular]] UI's unit tests in the AI document ingestion project. It runs component and service specs fast, has assertions and mocking built in, and produces a coverage report that feeds the same [[Code Coverage Gate]] as the backend. Conceptually it's the front-end mirror of [[xUnit]] + [[Moq]]: isolate a unit, fake its dependencies, assert the result — same [[Arrange-Act-Assert]] rhythm, different language. Jest covers logic in isolation; the slower [[Playwright]] suite covers the app driven through a real browser.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

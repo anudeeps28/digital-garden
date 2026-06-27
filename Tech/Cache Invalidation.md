@@ -10,10 +10,10 @@ date: 2026-06-26
 Cache invalidation is the hard problem of deciding when cached data has gone stale and must be thrown away.
 
 ## Definition
-Cache invalidation answers the question every cache must face: when is this entry no longer trustworthy? In the KBA AI Document Ingestion project I keep it simple and use **time-based absolute expiration** — each [[In-Memory Caching|IMemoryCache]] entry (templates, RAG answers) carries a TTL, and once it lapses the next read misses and refetches from [[Azure SQL]] or the LLM. I deliberately avoid manual eviction tied to writes, because the data changes rarely and a short TTL bounds staleness to an acceptable window without the bug-prone bookkeeping of "remember to evict on every update." The trade-off is explicit: a longer TTL means fewer round-trips but a longer window where a user might see slightly old data. It's famously one of the two hard things in computer science.
+Cache invalidation answers the question every cache must face: when is this entry no longer trustworthy? In the AI document ingestion project I keep it simple and use **time-based absolute expiration** — each [[In-Memory Caching|IMemoryCache]] entry (templates, RAG answers) carries a TTL, and once it lapses the next read misses and refetches from [[Azure SQL]] or the LLM. I deliberately avoid manual eviction tied to writes, because the data changes rarely and a short TTL bounds staleness to an acceptable window without the bug-prone bookkeeping of "remember to evict on every update." The trade-off is explicit: a longer TTL means fewer round-trips but a longer window where a user might see slightly old data. It's famously one of the two hard things in computer science.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

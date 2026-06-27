@@ -14,7 +14,7 @@ A standard way of building web services that uses HTTP to let clients read, crea
 REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API exposes resources (like documents, users, or groups) at specific URLs and uses [[HTTP Methods]] (GET, POST, PUT, DELETE) to perform operations on them. Each request is stateless — the server doesn't remember previous requests. Data is typically sent and received as [[JSON]]. In [[.NET 8]] and [[ASP.NET Core]], REST APIs are built using [[Controller]] classes that map incoming HTTP requests to C# methods.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

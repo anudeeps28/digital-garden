@@ -10,10 +10,10 @@ date: 2026-06-26
 A SQL-flavoured query language for asking telemetry questions like "show me every slow request in the last hour."
 
 ## Definition
-KQL is the read-only query language behind [[Application Insights]] and Log Analytics, and it's how I actually investigate the KBA AI Document Ingestion system in production. I write piped queries (`traces | where severityLevel >= 3 | summarize count() by operation_Name`) to find errors, trace a slow document-ingestion run, or chase a [[Percentile-Based-Performance-Metrics|p95 latency]] spike. Because the app emits [[Structured Logging|structured logs]] via [[Serilog]], the custom fields become first-class columns I can filter and aggregate on. KQL is where [[Fail Fast Fail Loudly]] pays off after deploy — loud, structured signals turn into answerable questions.
+KQL is the read-only query language behind [[Application Insights]] and Log Analytics, and it's how I actually investigate the the project AI Document Ingestion system in production. I write piped queries (`traces | where severityLevel >= 3 | summarize count() by operation_Name`) to find errors, trace a slow document-ingestion run, or chase a [[Percentile-Based-Performance-Metrics|p95 latency]] spike. Because the app emits [[Structured Logging|structured logs]] via [[Serilog]], the custom fields become first-class columns I can filter and aggregate on. KQL is where [[Fail Fast Fail Loudly]] pays off after deploy — loud, structured signals turn into answerable questions.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

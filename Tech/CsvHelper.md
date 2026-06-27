@@ -10,10 +10,10 @@ date: 2026-06-26
 A .NET library that maps between C# objects and CSV rows so I don't hand-roll comma parsing.
 
 ## Definition
-CsvHelper is the C# library I use in the KBA AI Document Ingestion project for reading and writing CSV — primarily for CSV plan-data exports. It maps a collection of [[DTOs (Data Transfer Objects)|DTOs]] straight to rows (and back), handling quoting, escaping, and headers correctly instead of me concatenating strings and inviting bugs. It's the lightweight, universally-openable counterpart to [[ClosedXML]]: CSV when the consumer just needs raw tabular data or another system will ingest it, Excel when formatting matters. The export typically streams out through a [[Controller]] on the [[REST API]].
+CsvHelper is the C# library I use in the AI document ingestion project for reading and writing CSV — primarily for CSV plan-data exports. It maps a collection of [[DTOs (Data Transfer Objects)|DTOs]] straight to rows (and back), handling quoting, escaping, and headers correctly instead of me concatenating strings and inviting bugs. It's the lightweight, universally-openable counterpart to [[ClosedXML]]: CSV when the consumer just needs raw tabular data or another system will ingest it, Excel when formatting matters. The export typically streams out through a [[Controller]] on the [[REST API]].
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

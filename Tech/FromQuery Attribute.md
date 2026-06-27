@@ -13,7 +13,7 @@ date: 2026-03-24
 In [[ASP.NET Core]], the `[FromQuery]` attribute binds a [[Controller]] method parameter to a value in the URL's query string. For example, `GET /api/documents?groupNumber=123` would map to a method parameter `[FromQuery] string groupNumber`. This is commonly used for optional filters, search terms, and pagination parameters on GET [[API Endpoints|endpoints]]. Unlike [[FromForm Attribute|[FromForm]]], which reads from uploaded form data, `[FromQuery]` reads from the URL itself, making it visible and bookmarkable.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

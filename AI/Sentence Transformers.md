@@ -10,10 +10,10 @@ date: 2026-06-26
 A library of pretrained models that map a sentence to a single dense vector — the heart of our cost-saving, self-hosted embedding service.
 
 ## Definition
-Sentence Transformers is a Python library offering pretrained models that turn whole sentences or passages into dense [[Vector Embedding|embeddings]], where semantic similarity becomes geometric closeness. In the KBA AI Document Ingestion project, this is the core of the embedding microservice: we self-host the `all-MiniLM-L6-v2` model, which produces 384-dimensional vectors, instead of paying for [[Azure OpenAI]] embeddings — a deliberate cost-cutting choice for a system that embeds large volumes of document [[Chunking|chunks]]. The model runs on [[PyTorch]] (CPU-only), is wrapped by a [[FastAPI]] app, served by [[Uvicorn]], and deployed in [[Docker]] on [[Azure Container Apps]]. Those embeddings then power [[Vector Search]] and [[Hybrid Search]] in our [[RAG (Retrieval-Augmented Generation)]] pipeline.
+Sentence Transformers is a Python library offering pretrained models that turn whole sentences or passages into dense [[Vector Embedding|embeddings]], where semantic similarity becomes geometric closeness. In the AI document ingestion project, this is the core of the embedding microservice: we self-host the `all-MiniLM-L6-v2` model, which produces 384-dimensional vectors, instead of paying for [[Azure OpenAI]] embeddings — a deliberate cost-cutting choice for a system that embeds large volumes of document [[Chunking|chunks]]. The model runs on [[PyTorch]] (CPU-only), is wrapped by a [[FastAPI]] app, served by [[Uvicorn]], and deployed in [[Docker]] on [[Azure Container Apps]]. Those embeddings then power [[Vector Search]] and [[Hybrid Search]] in our [[RAG (Retrieval-Augmented Generation)]] pipeline.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

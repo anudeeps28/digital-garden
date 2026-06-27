@@ -10,10 +10,10 @@ date: 2026-06-26
 The deep-learning engine quietly doing the math under our embedding model — and installed lean to keep the image small.
 
 ## Definition
-PyTorch is a deep-learning framework that provides tensors, automatic differentiation, and the neural-network runtime that models execute on. In the KBA AI Document Ingestion project, PyTorch is the engine beneath [[Sentence Transformers]]: when the embedding service runs all-MiniLM-L6-v2 to turn text into 384-dim [[Vector Embedding|vectors]], PyTorch is doing the actual forward pass. We install the CPU-only build (no CUDA/GPU stack) deliberately, because our [[Azure Container Apps]] deployment has no GPU and the CPU wheels make the [[Docker Image]] dramatically smaller and faster to pull. It's a transitive dependency we rarely call directly but always pay attention to at build time.
+PyTorch is a deep-learning framework that provides tensors, automatic differentiation, and the neural-network runtime that models execute on. In the AI document ingestion project, PyTorch is the engine beneath [[Sentence Transformers]]: when the embedding service runs all-MiniLM-L6-v2 to turn text into 384-dim [[Vector Embedding|vectors]], PyTorch is doing the actual forward pass. We install the CPU-only build (no CUDA/GPU stack) deliberately, because our [[Azure Container Apps]] deployment has no GPU and the CPU wheels make the [[Docker Image]] dramatically smaller and faster to pull. It's a transitive dependency we rarely call directly but always pay attention to at build time.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

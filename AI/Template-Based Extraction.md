@@ -10,10 +10,10 @@ date: 2026-03-24
 Template-based extraction uses a fixed JSON template plus an AI model to pull structured data from unstructured documents automatically.
 
 ## Definition
-Instead of manually reading a plan document and typing out benefit details, template-based extraction gives the [[LLM (Large Language Model)|LLM]] a JSON schema (the template) that defines which fields to extract — like deductible amounts, copays, coinsurance percentages, and coverage limits. The model reads the document chunks and fills in the template with the correct values. In the KBA project, this powers automated benefit extraction: a plan document goes in, and structured [[JSON]] data comes out. The template acts as both the instruction and the output format, sent to [[Azure OpenAI]] as part of the [[Prompt Engineering|prompt]]. This replaces hours of manual data entry.
+Instead of manually reading a plan document and typing out benefit details, template-based extraction gives the [[LLM (Large Language Model)|LLM]] a JSON schema (the template) that defines which fields to extract — like deductible amounts, copays, coinsurance percentages, and coverage limits. The model reads the document chunks and fills in the template with the correct values. In the project, this powers automated benefit extraction: a plan document goes in, and structured [[JSON]] data comes out. The template acts as both the instruction and the output format, sent to [[Azure OpenAI]] as part of the [[Prompt Engineering|prompt]]. This replaces hours of manual data entry.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 

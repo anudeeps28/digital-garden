@@ -13,7 +13,7 @@ Entity Framework Core is an ORM that lets you write C# code instead of raw SQL â
 EF Core (Entity Framework Core) is an Object-Relational Mapper (ORM) for [[.NET 8]]. Instead of writing [[SQL]] strings manually, you define [[CSharp]] entity classes that map to [[Database Tables]], and use LINQ queries that EF translates to SQL behind the scenes. For example, `context.Plans.Where(p => p.GroupNumber == "123")` becomes `SELECT * FROM Plans WHERE GroupNumber = '123'`. EF Core also handles [[Database Migrations]] â€” when you change your entity classes, EF generates migration scripts to update the [[Azure SQL]] schema. It manages [[Foreign Key|foreign key]] relationships through navigation properties and supports async operations with methods like `SaveChangesAsync()`.
 
 ## Source
-KBA AI Document Ingestion project
+AI document ingestion project
 
 ---
 
