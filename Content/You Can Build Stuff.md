@@ -17,14 +17,6 @@ A content piece arguing that AI hasn't made effort pointless — it's the exact 
 - The limiting factor has shifted from knowledge/skill to effort/execution
 - "This is the best time in history to be alive. Go act like it."
 
-## Script Draft
-
-**Hook:** "Everyone thinks AI made effort pointless. It's the exact opposite."
-
-**Body:** I'm an engineer — I spent 3 hours at a cafe building a landing page. The copy, the design, the positioning. None of it my field. And it wasn't that I became a marketer overnight. It was bigger: I can now learn to solve almost any problem faster than anyone in history with the help of AI. And so can you. You can build anything now — video, images, code, writing. So the only thing between you and what you want is whether you actually do the work.
-
-**Close:** The barrier's gone. The excuse is gone. All that's left is effort. So get off this app. Yeah, this one. Stop watching people build — go build. That thing you wanted to make as a kid? You can actually make it now. This is the best time in history to be alive. Go act like it.
-
 ## Atomic Notes Spawned
 - [[AI Removes the Barriers]] — the core thesis: AI dissolves the prerequisites to creation
 
