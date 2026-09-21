@@ -47,6 +47,7 @@ const IGNORED = new Set([
   ".quartz",
   "private",
   "scripts",
+  "CLAUDE.md", // agent instructions, not a note (gitignored, local only)
 ])
 
 // ---------------------------------------------------------------------------
