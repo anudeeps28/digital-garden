@@ -19,7 +19,11 @@
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
-    "prebuild": "npm run install-plugins"
+    "prebuild": "npm run install-plugins",
+    "prepare": "npm run garden:install-hook",
+    "garden:aliases": "node scripts/garden.mjs aliases",
+    "garden:check": "node scripts/garden.mjs check",
+    "garden:install-hook": "node -e \"const fs=require('fs');if(!fs.existsSync('.git/hooks')){console.log('no .git/hooks - skipping');process.exit(0)}fs.copyFileSync('scripts/pre-commit','.git/hooks/pre-commit');fs.chmodSync('.git/hooks/pre-commit',0o755);console.log('pre-commit hook installed')\""
   },
   "engines": {
     "npm": ">=10.9.2",
