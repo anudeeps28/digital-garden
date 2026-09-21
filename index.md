@@ -4,7 +4,7 @@ title: Anudeep's Digital Garden
 
 <div class="garden-hero">
 <p class="garden-tagline">A growing web of ideas on building things, thinking clearly, and navigating the world.</p>
-<p class="garden-subtitle">200+ interconnected notes — not a blog, not a wiki. A <a href="Mental-Models/Digital-Garden">digital garden</a>.</p>
+<p class="garden-subtitle">250+ interconnected notes — not a blog, not a wiki. A <a href="Mental-Models/Digital-Garden">digital garden</a>.</p>
 </div>
 
 ---
@@ -15,21 +15,21 @@ title: Anudeep's Digital Garden
 <span class="area-icon">🧠</span>
 
 ### [[Mental-Models/|Mental Models]]
-Frameworks for thinking, deciding, and living — from [[Stoicism]] and [[Amor Fati]] to [[The Eisenhower Matrix]] and the [[Pareto Principle]]. The ideas I keep coming back to.
+Frameworks for thinking, deciding, and living — from [[Stoicism]] and [[Amor Fati]] to [[The Eisenhower Matrix]] and the [[Pareto Principle]], by way of [[A Stale Source Is Confidently Wrong]] and [[Record the Reason, Not Just the Blocker]]. The ideas I keep coming back to.
 </div>
 
 <div class="garden-area">
 <span class="area-icon">🤖</span>
 
 ### [[AI/|AI & Machine Learning]]
-How machines learn, reason, and retrieve — [[RAG (Retrieval-Augmented Generation)|RAG]], [[Vector Embedding|embeddings]], [[Prompt Engineering|prompting]], [[LLM (Large Language Model)|LLMs]], and the architectures behind them.
+How machines learn, reason, and retrieve. [[AI/Retrieval/|Retrieval]] — [[RAG (Retrieval-Augmented Generation)|RAG]], [[Vector Embedding|embeddings]], [[Hybrid Search|hybrid search]]. [[AI/LLM/|LLMs]] — [[Prompt Engineering|prompting]], [[Tokens|tokens]], [[Selective LLM Usage|when not to use one]]. And the [[AI/Foundations/|foundations]] underneath it all.
 </div>
 
 <div class="garden-area">
 <span class="area-icon">⚙️</span>
 
 ### [[Tech/|Technology]]
-The craft of building software — from [[Clean Architecture]] and [[REST API|REST APIs]] to [[Docker]], [[CI-CD Pipeline|CI/CD]], [[PostgreSQL]], and [[Angular]]. Notes from the trenches.
+The craft of building software, in nine areas — [[Tech/Cloud/|Cloud]], [[Tech/Data/|Data]], [[Tech/Security/|Security]], [[Tech/DevOps/|DevOps]], [[Tech/Testing/|Testing]], [[Tech/Architecture/|Architecture]], [[Tech/Languages/|Languages]], [[Tech/Frontend/|Frontend]] and [[Tech/Web-and-APIs/|Web & APIs]]. From [[Clean Architecture]] and [[REST API|REST APIs]] to [[Infrastructure as Code]], [[Row-Level Security]], [[Defence in Depth]] and [[Mutation Testing]]. Notes from the trenches.
 </div>
 
 <div class="garden-area">
@@ -43,7 +43,7 @@ On ambition, careers, and making things work — [[Managing Ambiguity]], [[How t
 <span class="area-icon">✍️</span>
 
 ### [[Content/|Content & Writing]]
-Creating things that resonate — [[Scott Adams' Four Rules of Writing|writing clearly]], [[Show Your Work|showing your work]], and [[You Can Build Stuff|building in the open]].
+Creating things that resonate — [[Scott Adams' Four Rules of Writing|writing clearly]], [[Explain in Layers|explaining in layers]], [[Show Your Work|showing your work]], and [[You Can Build Stuff|building in the open]].
 </div>
 
 </div>
@@ -52,7 +52,7 @@ Creating things that resonate — [[Scott Adams' Four Rules of Writing|writing c
 
 <div class="garden-start">
 
-**Start here:** [[Digital Garden]] · [[Stoicism]] · [[RAG (Retrieval-Augmented Generation)|RAG]] · [[Clean Architecture]] · [[The Parable of the Pottery Class]] · [[Prompt Engineering]]
+**Start here:** [[Digital Garden]] · [[Stoicism]] · [[RAG (Retrieval-Augmented Generation)|RAG]] · [[Clean Architecture]] · [[The Parable of the Pottery Class]] · [[Prompt Engineering]] · [[Defence in Depth]] · [[Explain in Layers]]
 
 </div>
 
