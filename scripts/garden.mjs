@@ -25,10 +25,11 @@
  * have produced for the old path.
  */
 
+// Deliberately dependency-free: this runs from a git hook and from CI before
+// `npm ci`, so it cannot rely on anything in node_modules.
 import { execFileSync } from "node:child_process"
 import fs from "node:fs"
 import path from "node:path"
-import YAML from "yaml"
 
 const ROOT = process.cwd()
 
@@ -127,16 +128,47 @@ function splitFrontmatter(text) {
  * every run.
  */
 function readAliases(block) {
-  const yaml = block.replace(/^---\n/, "").replace(/\n---\n?$/, "")
-  let parsed
-  try {
-    parsed = YAML.parse(yaml)
-  } catch {
-    return []
+  const inline = block.match(/^aliases:\s*\[(.*)\]\s*$/m)
+  if (inline) return splitFlowSeq(inline[1])
+
+  const blockList = block.match(/^aliases:\s*\n((?:\s*-\s*.+\n)+)/m)
+  if (blockList) {
+    return blockList[1]
+      .split("\n")
+      .map((l) => unquote(l.replace(/^\s*-\s*/, "").trim()))
+      .filter(Boolean)
   }
-  const a = parsed?.aliases
-  if (!a) return []
-  return (Array.isArray(a) ? a : [a]).map(String).filter(Boolean)
+  return []
+}
+
+function unquote(s) {
+  const m = s.match(/^(["'])([\s\S]*)\1$/)
+  return m ? m[2] : s
+}
+
+/**
+ * Split a YAML flow sequence on commas that are NOT inside quotes, so
+ * "ai/ai-is-a-tool,-not-magic" stays a single entry.
+ */
+function splitFlowSeq(s) {
+  const out = []
+  let cur = ""
+  let quote = null
+  for (const ch of s) {
+    if (quote) {
+      if (ch === quote) quote = null
+      else cur += ch
+    } else if (ch === '"' || ch === "'") {
+      quote = ch
+    } else if (ch === ",") {
+      out.push(cur.trim())
+      cur = ""
+    } else {
+      cur += ch
+    }
+  }
+  out.push(cur.trim())
+  return out.filter(Boolean)
 }
 
 /**
