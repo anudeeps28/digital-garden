@@ -28,6 +28,7 @@
 import { execFileSync } from "node:child_process"
 import fs from "node:fs"
 import path from "node:path"
+import YAML from "yaml"
 
 const ROOT = process.cwd()
 
@@ -117,23 +118,25 @@ function splitFrontmatter(text) {
   }
 }
 
-/** Read existing aliases, supporting both `[a, b]` and block-list styles. */
+/**
+ * Read existing aliases.
+ *
+ * Parsed as real YAML rather than split on commas: a quoted value that itself
+ * contains a comma ("ai/ai-is-a-tool,-not-magic") must stay one alias. Naive
+ * splitting turns it into two bogus ones and then re-appends the real one on
+ * every run.
+ */
 function readAliases(block) {
-  const inline = block.match(/^aliases:\s*\[(.*?)\]\s*$/m)
-  if (inline) {
-    return inline[1]
-      .split(",")
-      .map((s) => s.trim().replace(/^["']|["']$/g, ""))
-      .filter(Boolean)
+  const yaml = block.replace(/^---\n/, "").replace(/\n---\n?$/, "")
+  let parsed
+  try {
+    parsed = YAML.parse(yaml)
+  } catch {
+    return []
   }
-  const blockList = block.match(/^aliases:\s*\n((?:\s*-\s*.+\n)+)/m)
-  if (blockList) {
-    return blockList[1]
-      .split("\n")
-      .map((l) => l.replace(/^\s*-\s*/, "").trim().replace(/^["']|["']$/g, ""))
-      .filter(Boolean)
-  }
-  return []
+  const a = parsed?.aliases
+  if (!a) return []
+  return (Array.isArray(a) ? a : [a]).map(String).filter(Boolean)
 }
 
 /**
