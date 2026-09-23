@@ -15,6 +15,8 @@ Six to eight months to get genuinely good, at ten hours a week. That's the real 
 
 ## Before you start
 
+**This is the ML path, not the AI-engineering one.** They're different jobs. If what you want is to build applications on top of models — RAG, agents, LLM APIs — the [[AI Engineer Roadmap]] is the one you want. ML engineering is where the statistics and model-architecture depth actually live.
+
 **Python has to be solid.** That's the honest prerequisite. If it isn't, do that first — everything after this gets easier.
 
 **You do not need the math first.** Most roadmaps open with linear algebra, calculus and probability, and tell you that you're allowed to touch a model afterwards. I did it that way, enjoyed it, and it's the single thing that cost me the most time. Fun is not the same as getting good.

@@ -43,7 +43,7 @@ On ambition, careers, and making things work — [[Managing Ambiguity]], [[How t
 <span class="area-icon">🗺️</span>
 
 ### [[Roadmaps/|Roadmaps]]
-Written companions to the videos — full learning paths you can read instead of scrubbing a timeline. Start with the [[Machine Learning Roadmap]].
+Written companions to the videos — full learning paths you can read instead of scrubbing a timeline. The [[AI Engineer Roadmap]] (9 steps, 24 weeks) and the [[Machine Learning Roadmap]] (6 months). Different jobs, different paths.
 </div>
 
 <div class="garden-area">

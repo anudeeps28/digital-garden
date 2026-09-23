@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: anudeepsharma.github.io/digital-garden
+  baseUrl: anudeeps28.github.io/digital-garden
   ignorePatterns:
     - 00-Inbox
     - Templates
