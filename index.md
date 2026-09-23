@@ -40,6 +40,13 @@ On ambition, careers, and making things work — [[Managing Ambiguity]], [[How t
 </div>
 
 <div class="garden-area">
+<span class="area-icon">🗺️</span>
+
+### [[Roadmaps/|Roadmaps]]
+Written companions to the videos — full learning paths you can read instead of scrubbing a timeline. Start with the [[Machine Learning Roadmap]].
+</div>
+
+<div class="garden-area">
 <span class="area-icon">✍️</span>
 
 ### [[Content/|Content & Writing]]
