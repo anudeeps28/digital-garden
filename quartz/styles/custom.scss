@@ -242,13 +242,6 @@ body[data-slug="index"] {
   }
 }
 
-.garden-subtitle {
-  font-style: italic;
-  color: var(--gray);
-  font-size: 0.95rem;
-  margin: 0;
-}
-
 .garden-label {
   @extend %small-caps;
   margin: 2.4rem 0 0.6rem;

@@ -4,7 +4,6 @@ title: Anudeep's Digital Garden
 
 <div class="garden-hero">
 <p class="garden-lead">A growing web of ideas on building things, thinking clearly, and navigating the world.</p>
-<p class="garden-subtitle">250+ interconnected notes. Not a blog, not a wiki. A <a href="Mental-Models/Digital-Garden" class="internal">digital garden</a>.</p>
 </div>
 
 <p class="garden-label">Contents</p>
