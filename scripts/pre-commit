@@ -5,7 +5,8 @@
 #   1. Any note that moved or was renamed gets its old URL recorded as an
 #      alias, so the old address keeps redirecting. Renames also get their
 #      [[wikilinks]] retargeted across the garden.
-#   2. Structural problems (duplicate filenames, missing frontmatter) block
+#   2. The note counts on the home page are recounted from the folders.
+#   3. Structural problems (duplicate filenames, missing frontmatter) block
 #      the commit. Dangling links do not — those are unwritten-note seeds.
 #
 # Install with:  npm run garden:install-hook
@@ -13,4 +14,5 @@
 set -e
 
 node scripts/garden.mjs aliases --staged
+node scripts/garden.mjs counts --staged
 node scripts/garden.mjs check

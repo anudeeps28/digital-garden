@@ -1,74 +1,340 @@
 @use "./variables.scss" as *;
 
-// Landing page styles
-.garden-hero {
-  text-align: center;
-  margin: 2rem 0 1.5rem;
+// Warm & bookish theme. Colours and fonts live in quartz.config.yaml;
+// this file sets the reading rhythm and the book-like details.
+
+// ── Reading rhythm ──────────────────────────────────────────────────────────
+body {
+  font-size: 17px;
+  line-height: 1.75;
 }
 
-.garden-tagline {
-  font-size: 1.35rem;
+// one comfortable column, about 65 characters wide
+@media all and not ($mobile) {
+  .center {
+    max-width: 42rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--headerFont);
   font-weight: 600;
+  color: var(--dark);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+article h2 {
+  font-size: 1.45rem;
+  margin-top: 2.2rem;
+}
+
+// quieter links: moss text with a thin underline instead of a grey pill
+a.internal,
+a.external {
+  background-color: transparent;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--secondary) 35%, transparent);
+  text-underline-offset: 3px;
+
+  &:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+a.internal.tag-link {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gray);
+
+  &::before {
+    content: "";
+  }
+}
+
+// small-caps label, used for breadcrumbs, sidebar titles and section labels
+%small-caps {
+  font-family: var(--bodyFont);
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--gray);
+}
+
+// ── Page title & sidebars ───────────────────────────────────────────────────
+.page-title {
+  font-family: var(--headerFont);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.sidebar {
+  .explorer h2,
+  .toc h3,
+  .backlinks h3 {
+    @extend %small-caps;
+  }
+
+  .toc-content,
+  .backlinks ul,
+  .explorer-content {
+    font-size: 0.9rem;
+  }
+
+  .toc-content a,
+  .backlinks a {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--gray);
+
+    &:hover,
+    &.in-view {
+      color: var(--secondary);
+    }
+  }
+}
+
+.explorer .folder-title,
+.explorer a {
+  font-weight: 400;
+}
+
+// ── Note header ─────────────────────────────────────────────────────────────
+.breadcrumb-container {
+  @extend %small-caps;
+  font-size: 0.85rem;
+
+  a {
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 600;
+  }
+}
+
+.article-title {
+  font-size: 2.6rem;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0.6rem 0 0.4rem;
+}
+
+.content-meta {
+  font-style: italic;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.tags {
+  gap: 0.6rem;
+}
+
+// notes repeat their title as a markdown heading; the page title already shows it
+article > .markdown-rendered > h1:first-child,
+.toc-content > li.depth-0:first-child {
+  display: none;
+}
+
+// ── Note body ───────────────────────────────────────────────────────────────
+// the opening idea reads as a pull quote
+article h2#idea {
+  @extend %small-caps;
+  margin-bottom: 0.2rem;
+}
+
+article h2#idea + p {
+  font-family: var(--headerFont);
+  font-style: italic;
+  font-size: 1.3rem;
   line-height: 1.5;
   color: var(--dark);
-  margin-bottom: 0.5rem;
+  border-left: 2px solid var(--secondary);
+  padding-left: 1.1rem;
+  margin: 0.4rem 0 1.6rem;
+}
+
+// the Compass: each direction on its own ruled line, label in small caps
+article h2#compass ~ p {
+  border-top: 1px solid var(--lightgray);
+  padding-top: 0.8rem;
+  margin: 0;
+  padding-bottom: 0.8rem;
+  font-size: 0.97rem;
+
+  & > strong:first-child {
+    @extend %small-caps;
+    color: var(--secondary);
+    font-size: 1.05rem;
+  }
+
+  // "where this comes from" ends the label line; the thought starts below it
+  & > strong:first-child + em {
+    color: var(--gray);
+    font-size: 0.9rem;
+
+    &::after {
+      content: "";
+      display: block;
+    }
+  }
+}
+
+article h2#compass ~ p:last-of-type {
+  border-bottom: 1px solid var(--lightgray);
+}
+
+blockquote {
+  border-left-color: var(--tertiary);
+}
+
+// the graph sits at the end of a note, like an index
+.page-footer .graph {
+  margin-top: 1.5rem;
+
+  & > h3 {
+    @extend %small-caps;
+  }
+}
+
+// ── Home page ───────────────────────────────────────────────────────────────
+body[data-slug="index"] {
+  .article-title {
+    font-style: italic;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .content-meta {
+    display: none;
+  }
+}
+
+.garden-hero {
+  margin: 1.5rem 0 2rem;
+}
+
+.garden-lead {
+  font-size: 1.35rem;
+  line-height: 1.55;
+  color: var(--dark);
+  margin: 0 0 0.6rem;
+
+  &::first-letter {
+    font-family: var(--headerFont);
+    font-weight: 600;
+    font-size: 4.1rem;
+    line-height: 0.8;
+    float: left;
+    margin: 0.35rem 0.6rem 0 0;
+    color: var(--secondary);
+  }
 }
 
 .garden-subtitle {
-  font-size: 0.95rem;
-  color: var(--gray);
   font-style: italic;
+  color: var(--gray);
+  font-size: 0.95rem;
+  margin: 0;
 }
 
-.garden-areas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin: 1.5rem 0;
+.garden-label {
+  @extend %small-caps;
+  margin: 2.4rem 0 0.6rem;
 }
 
-.garden-area {
-  padding: 1.25rem 1.5rem;
-  border-radius: 8px;
-  background: var(--highlight);
-  border: 1px solid var(--lightgray);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+// a book's table of contents: title, dotted leader, note count
+.garden-contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
-  &:hover {
-    border-color: var(--secondary);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 0.5rem;
+    align-items: baseline;
+    padding: 0.45rem 0;
+    margin: 0;
   }
 
-  h3 {
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
+  li > a.internal {
+    font-family: var(--headerFont);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--dark);
+
+    &:hover {
+      color: var(--secondary);
+    }
   }
+
+  .leader {
+    border-bottom: 1px dotted var(--gray);
+    transform: translateY(-0.3rem);
+  }
+
+  .count {
+    font-variant-numeric: oldstyle-nums tabular-nums;
+    color: var(--gray);
+  }
+
+  .blurb {
+    grid-column: 1 / -1;
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--gray);
+    line-height: 1.55;
+
+    a.internal {
+      font-weight: 400;
+    }
+  }
+}
+
+.garden-start ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 2.5rem;
+
+  li {
+    break-inside: avoid;
+    padding: 0.35rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  @media all and ($mobile) {
+    columns: 1;
+  }
+}
+
+.garden-philosophy blockquote {
+  margin: 2.8rem 0 0;
+  padding: 1.1rem 0;
+  border: 0;
+  border-top: 1px solid var(--lightgray);
+  border-bottom: 1px solid var(--lightgray);
+  text-align: center;
 
   p {
-    font-size: 0.9rem;
-    color: var(--darkgray);
-    margin: 0;
+    font-family: var(--headerFont);
+    font-size: 1.1rem;
     line-height: 1.6;
-  }
-}
-
-.area-icon {
-  font-size: 1.5rem;
-}
-
-.garden-start {
-  text-align: center;
-  margin: 1rem 0;
-  font-size: 0.95rem;
-}
-
-.garden-philosophy {
-  margin: 1.5rem auto;
-  max-width: 600px;
-
-  blockquote {
-    border-left-color: var(--tertiary);
-    font-size: 0.9rem;
     color: var(--gray);
   }
 }

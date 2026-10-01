@@ -9,6 +9,9 @@
  *             alias-redirects plugin turns each one into a redirect stub, so
  *             external links and bookmarks keep working forever.
  *
+ *   counts    Rewrite the note count beside each section on the home page
+ *             (index.md) so it always matches the folders on disk.
+ *
  *   check     Fail if the garden has broken internal structure:
  *               - dangling [[wikilinks]] pointing at nothing
  *               - duplicate filenames (ambiguous under `shortest` resolution)
@@ -16,6 +19,7 @@
  *
  * Usage:
  *   node scripts/garden.mjs aliases [--staged] [--dry-run]
+ *   node scripts/garden.mjs counts [--staged] [--dry-run]
  *   node scripts/garden.mjs check
  *
  * Why aliases must be written pre-slugified and lowercase:
@@ -379,6 +383,33 @@ function cmdCheck({ strict }) {
 }
 
 // ---------------------------------------------------------------------------
+// Command: counts
+// ---------------------------------------------------------------------------
+
+// Matches a contents entry on the home page:
+//   [[Tech/|Technology]] <span class="leader"></span> <span class="count">150</span>
+const countRe = /(\[\[([^\]|]+)\/(?:\|[^\]]*)?\]\][^\n]*?<span class="count">)(\d+)(<\/span>)/g
+
+function cmdCounts({ staged, dryRun }) {
+  const indexRel = "index.md"
+  const notes = allNotes().filter((rel) => !slugifyFilePath(rel).endsWith("index"))
+  const before = fs.readFileSync(path.join(ROOT, indexRel), "utf8")
+
+  const after = before.replace(countRe, (whole, head, folder, old, tail) => {
+    const n = notes.filter((rel) => rel.startsWith(`${folder}/`)).length
+    if (String(n) !== old) console.log(`  ${folder}: ${old} -> ${n}`)
+    return `${head}${n}${tail}`
+  })
+
+  if (after === before) return 0
+  if (dryRun) return 0
+  fs.writeFileSync(path.join(ROOT, indexRel), after)
+  if (staged) git(["add", indexRel])
+  console.log(`Updated note counts in ${indexRel}.`)
+  return 0
+}
+
+// ---------------------------------------------------------------------------
 
 const [cmd, ...rest] = process.argv.slice(2)
 const flags = new Set(rest)
@@ -397,8 +428,11 @@ switch (cmd) {
   case "check":
     code = cmdCheck({ strict: flags.has("--strict") })
     break
+  case "counts":
+    code = cmdCounts({ staged: flags.has("--staged"), dryRun: flags.has("--dry-run") })
+    break
   default:
-    console.log("usage: node scripts/garden.mjs <aliases|check> [--staged] [--dry-run]")
+    console.log("usage: node scripts/garden.mjs <aliases|check|counts> [--staged] [--dry-run]")
     code = 1
 }
 process.exit(code)

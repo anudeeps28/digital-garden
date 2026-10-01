@@ -3,63 +3,35 @@ title: Anudeep's Digital Garden
 ---
 
 <div class="garden-hero">
-<p class="garden-tagline">A growing web of ideas on building things, thinking clearly, and navigating the world.</p>
-<p class="garden-subtitle">250+ interconnected notes — not a blog, not a wiki. A <a href="Mental-Models/Digital-Garden">digital garden</a>.</p>
+<p class="garden-lead">A growing web of ideas on building things, thinking clearly, and navigating the world.</p>
+<p class="garden-subtitle">250+ interconnected notes. Not a blog, not a wiki. A <a href="Mental-Models/Digital-Garden" class="internal">digital garden</a>.</p>
 </div>
 
----
+<p class="garden-label">Contents</p>
 
-<div class="garden-areas">
+<div class="garden-contents">
 
-<div class="garden-area">
-<span class="area-icon">🧠</span>
-
-### [[Mental-Models/|Mental Models]]
-Frameworks for thinking, deciding, and living — from [[Stoicism]] and [[Amor Fati]] to [[The Eisenhower Matrix]] and the [[Pareto Principle]], by way of [[A Stale Source Is Confidently Wrong]] and [[Record the Reason, Not Just the Blocker]]. The ideas I keep coming back to.
-</div>
-
-<div class="garden-area">
-<span class="area-icon">🤖</span>
-
-### [[AI/|AI & Machine Learning]]
-How machines learn, reason, and retrieve. [[AI/Retrieval/|Retrieval]] — [[RAG (Retrieval-Augmented Generation)|RAG]], [[Vector Embedding|embeddings]], [[Hybrid Search|hybrid search]]. [[AI/LLM/|LLMs]] — [[Prompt Engineering|prompting]], [[Tokens|tokens]], [[Selective LLM Usage|when not to use one]]. And the [[AI/Foundations/|foundations]] underneath it all.
-</div>
-
-<div class="garden-area">
-<span class="area-icon">⚙️</span>
-
-### [[Tech/|Technology]]
-The craft of building software, in nine areas — [[Tech/Cloud/|Cloud]], [[Tech/Data/|Data]], [[Tech/Security/|Security]], [[Tech/DevOps/|DevOps]], [[Tech/Testing/|Testing]], [[Tech/Architecture/|Architecture]], [[Tech/Languages/|Languages]], [[Tech/Frontend/|Frontend]] and [[Tech/Web-and-APIs/|Web & APIs]]. From [[Clean Architecture]] and [[REST API|REST APIs]] to [[Infrastructure as Code]], [[Row-Level Security]], [[Defence in Depth]] and [[Mutation Testing]]. Notes from the trenches.
-</div>
-
-<div class="garden-area">
-<span class="area-icon">💼</span>
-
-### [[Business/|Business & Career]]
-On ambition, careers, and making things work — [[Managing Ambiguity]], [[How to Make More Money in Your Job|making more money]], and the [[80,000 Hours Career Guide|80,000 hours]] you have to do it.
-</div>
-
-<div class="garden-area">
-<span class="area-icon">🗺️</span>
-
-### [[Roadmaps/|Roadmaps]]
-Written companions to the videos — full learning paths you can read instead of scrubbing a timeline. The [[AI Engineer Roadmap]] (9 steps, 24 weeks) and the [[Machine Learning Roadmap]] (6 months). Different jobs, different paths.
-</div>
-
-<div class="garden-area">
-<span class="area-icon">✍️</span>
-
-### [[Content/|Content & Writing]]
-Creating things that resonate — [[Scott Adams' Four Rules of Writing|writing clearly]], [[Explain in Layers|explaining in layers]], [[Show Your Work|showing your work]], and [[You Can Build Stuff|building in the open]].
-</div>
+- [[Mental-Models/|Mental Models]] <span class="leader"></span> <span class="count">67</span> <span class="blurb">Frameworks for thinking, deciding, and living, from [[Stoicism]] and [[Amor Fati]] to [[The Eisenhower Matrix]] and the [[Pareto Principle]].</span>
+- [[AI/|AI & Machine Learning]] <span class="leader"></span> <span class="count">38</span> <span class="blurb">How machines learn, reason, and retrieve: [[AI/Retrieval/|retrieval]], [[AI/LLM/|LLMs]] and the [[AI/Foundations/|foundations]] underneath.</span>
+- [[Tech/|Technology]] <span class="leader"></span> <span class="count">174</span> <span class="blurb">The craft of building software in nine areas: [[Tech/Cloud/|Cloud]], [[Tech/Data/|Data]], [[Tech/Security/|Security]], [[Tech/DevOps/|DevOps]], [[Tech/Testing/|Testing]], [[Tech/Architecture/|Architecture]], [[Tech/Languages/|Languages]], [[Tech/Frontend/|Frontend]] and [[Tech/Web-and-APIs/|Web & APIs]].</span>
+- [[Business/|Business & Career]] <span class="leader"></span> <span class="count">5</span> <span class="blurb">On ambition, careers, and making things work, like [[Managing Ambiguity]] and the [[80,000 Hours Career Guide|80,000 hours]] you have.</span>
+- [[Roadmaps/|Roadmaps]] <span class="leader"></span> <span class="count">2</span> <span class="blurb">Written companions to the videos: the [[AI Engineer Roadmap]] and the [[Machine Learning Roadmap]].</span>
+- [[Content/|Content & Writing]] <span class="leader"></span> <span class="count">6</span> <span class="blurb">Creating things that resonate: [[Explain in Layers|explaining in layers]], [[Show Your Work|showing your work]], [[You Can Build Stuff|building in the open]].</span>
 
 </div>
 
----
+<p class="garden-label">Start here</p>
 
 <div class="garden-start">
 
-**Start here:** [[Digital Garden]] · [[Stoicism]] · [[RAG (Retrieval-Augmented Generation)|RAG]] · [[Clean Architecture]] · [[The Parable of the Pottery Class]] · [[Prompt Engineering]] · [[Defence in Depth]] · [[Explain in Layers]]
+- [[Digital Garden]]
+- [[Stoicism]]
+- [[RAG (Retrieval-Augmented Generation)|RAG]]
+- [[Clean Architecture]]
+- [[The Parable of the Pottery Class]]
+- [[Prompt Engineering]]
+- [[Defence in Depth]]
+- [[Explain in Layers]]
 
 </div>
 
