@@ -13,6 +13,12 @@ Clicking buttons in a cloud portal produces an environment nobody can reproduce.
 ## Definition
 Infrastructure as Code (IaC) is the practice of describing every cloud resource in version-controlled files and letting a tool create them, rather than provisioning by hand. The properties that make it worth the effort are: **reproducibility** — the same files produce the same environment every time; **reviewability** — an infrastructure change arrives as a pull request a colleague can read; and **convergence** — re-running against an existing environment brings it back to the described state rather than duplicating it. What it actually prevents is *drift*: the slow divergence where dev works and production doesn't and nobody can say what differs, because the difference was made by someone clicking something eighteen months ago. The discipline only holds if the portal becomes read-only in practice — one manual change and the files are no longer the truth.
 
+## Providers
+- **Azure** — Bicep / ARM templates.
+- **AWS** — CloudFormation, AWS CDK.
+- **Google Cloud** — Infrastructure Manager.
+- **Cross-cloud** — Terraform / OpenTofu, Pulumi, Ansible (for configuration).
+
 ## Source
 Term popularized by the DevOps movement in the early 2010s; Kief Morris's *Infrastructure as Code* (O'Reilly, 2016) is the canonical treatment. Tooling includes Terraform, [[Bicep]]/ARM, CloudFormation, and Pulumi.
 

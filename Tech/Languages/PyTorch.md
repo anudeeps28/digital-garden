@@ -30,4 +30,4 @@ The choice between CPU and GPU builds directly affects deployment size and infer
 [[Sentence Transformers]] is the higher-level library that sits directly on top of PyTorch and provides the embedding functionality we use in practice.
 
 **Clash** — *what pushes against this*
-[[Azure OpenAI]] represents the opposite approach — a hosted model API that hides the framework entirely, eliminating the need for self-hosting PyTorch and managing dependencies.
+[[Managed LLM Service|Azure OpenAI]] represents the opposite approach — a hosted model API that hides the framework entirely, eliminating the need for self-hosting PyTorch and managing dependencies.

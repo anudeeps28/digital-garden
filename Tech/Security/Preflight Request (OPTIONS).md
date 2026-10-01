@@ -46,4 +46,4 @@ Same-origin requests don't need a preflight at all, and "simple" cross-origin re
 [[CORS]] is the broader security mechanism that uses preflight as its permission-checking tool. The fundamental question underneath is: why does the browser check at all instead of just letting the server reject the request?
 
 **Paths** — *where this leads*
-Understanding preflight reveals why [[Azure Portal CORS vs Code CORS]] works differently—IIS can intercept the preflight before your application code runs. It also shows why [[Middleware]] pipeline ordering matters so much: who handles the preflight determines whether CORS succeeds or fails.
+Understanding preflight reveals why [[Platform CORS vs Code CORS|Azure Portal CORS vs Code CORS]] works differently—IIS can intercept the preflight before your application code runs. It also shows why [[Middleware]] pipeline ordering matters so much: who handles the preflight determines whether CORS succeeds or fails.

@@ -13,6 +13,12 @@ Release stages are the ordered environments a build flows through on its way to 
 ## Definition
 A release pipeline is structured as a chain of stages, each representing an environment. A new [[Build Artifacts|artifact]] enters the first stage, deploys to that environment, runs whatever validation lives there, and — if everything passes the [[Pre-deploy Approvals|gates]] for the next stage — promotes forward. The project's typical chain: **Dev** (auto-deploy on every successful build to a sandbox), **Test** (auto-deploy when the build comes from `master`, run integration tests), **Prod** (manual approval, possibly a deployment window). Each stage can be configured with its own variables, connections, and approval rules. The promotion model is what makes [[Build Artifacts|the artifact]] meaningful — the same bytes go through the same steps in each stage, so production gets the version that survived dev and test.
 
+## Providers
+- **Azure** — stages and environments in Azure Pipelines.
+- **AWS** — CodePipeline stages.
+- **Google Cloud** — Cloud Deploy delivery-pipeline targets.
+- **Others** — GitHub Actions environments, Argo CD / Flux promotion.
+
 ## Source
 CI/CD learning session — Azure DevOps release pipeline structure.
 

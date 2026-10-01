@@ -27,7 +27,7 @@ Linus Torvalds, Git (initial release 2005). Branches are a foundational feature 
 [[Trunk-Based Development]] takes the opposite approach by having everyone commit directly to main with no long-lived branches, and [[Working Directly on Main]] abandons branching entirely, making changes without isolation—a risky practice.
 
 **Roots** — *where this comes from*
-Branches are a core feature of [[Git]] itself, and in enterprise contexts like [[Azure DevOps]], branch policies enforce code review rules to maintain quality standards.
+Branches are a core feature of [[Git]] itself, and in enterprise contexts like [[DevOps Platform|Azure DevOps]], branch policies enforce code review rules to maintain quality standards.
 
 **Paths** — *where this leads*
 Branches flow into [[Pull Request|Pull Requests]], which are the mechanism for merging your work back into main, and they integrate with [[CI-CD Pipeline|CI-CD pipelines]] that automatically build and validate code before merging occurs.

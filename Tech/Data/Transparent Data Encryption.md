@@ -12,6 +12,12 @@ Encryption at rest protects against someone walking off with the disk — not ag
 ## Definition
 Transparent Data Encryption (TDE) encrypts database files, log files, and backups on disk, decrypting pages transparently as they're read into memory. It's "transparent" because no application change is required — queries behave identically. That transparency is also its limit: an authenticated connection sees plaintext, so TDE does nothing against SQL injection, a leaked credential, or an over-privileged account. It defends the *stolen media* and *stolen backup file* threats, and it satisfies the encryption-at-rest line in most compliance frameworks. On Azure SQL it's on by default with a Microsoft-managed key; moving to [[Customer-Managed Keys (CMK)]] is what changes the trust story, because it means the platform operator alone can no longer decrypt.
 
+## Providers
+- **Azure** — TDE on Azure SQL and SQL Server, on by default.
+- **AWS** — RDS / Aurora encryption at rest with KMS; TDE on RDS for SQL Server and Oracle.
+- **Google Cloud** — Cloud SQL encrypts at rest by default.
+- **Others** — PostgreSQL has no built-in TDE; disk-level encryption is the usual substitute.
+
 ## Source
 Introduced in SQL Server 2008; enabled by default on Azure SQL Database since 2017. Equivalent features exist in Oracle, [[PostgreSQL]] (via filesystem or cloud-provider encryption), and all major cloud storage services.
 

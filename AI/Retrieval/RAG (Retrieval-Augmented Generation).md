@@ -28,4 +28,4 @@ RAG's retrieval step is essentially what [[Search Engines]] do — find the rele
 [[LLM (Large Language Model)]] is the foundation that RAG augments with grounded retrieval. The core insight comes from information retrieval research: pairing relevance-based document retrieval with generative synthesis creates more reliable, traceable answers than generation alone.
 
 ## Paths — *where this leads*
-Documents must be [[Chunking|chunked]] before they can be retrieved, and chunks are [[Vector Embedding|embedded]] for semantic retrieval using [[Hybrid Search]] via [[Azure AI Search]]. These retrieved chunks are then injected into the [[Prompt Engineering|prompt]] for the model to synthesize an answer.
+Documents must be [[Chunking|chunked]] before they can be retrieved, and chunks are [[Vector Embedding|embedded]] for semantic retrieval using [[Hybrid Search]] via [[Managed Search Service|Azure AI Search]]. These retrieved chunks are then injected into the [[Prompt Engineering|prompt]] for the model to synthesize an answer.

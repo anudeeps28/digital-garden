@@ -12,6 +12,12 @@ The bugs you find by reading code are the ones you thought to look for. The bugs
 ## Definition
 An orphan resource sweep is a systematic cross-check of two inventories that should correspond exactly, looking for entries present in one and absent from the other. Concretely: list every application in the solution, list every host defined in the infrastructure templates, list every entry in the deployment pipeline — then take the set differences. Applications with nowhere to run are orphans; hosts with nothing to run on them are waste; pipeline stages pointing at either are broken. It works because the failure it catches is an *absence*, and absences are invisible when you read either list on its own — nothing looks wrong in a file that's simply missing an entry. The same mechanical check finds a value written in two places that has drifted apart in one: enumerate, compare, don't reason.
 
+## Providers
+- **Azure** — Azure Resource Graph queries, Azure Advisor.
+- **AWS** — Resource Explorer, Trusted Advisor, AWS Config.
+- **Google Cloud** — Cloud Asset Inventory, Recommender.
+- **Others** — cloud-nuke, Steampipe.
+
 ## Source
 A general auditing technique; appears as reconciliation in accounting and as drift detection in [[Infrastructure as Code]] tooling (`terraform plan`, Azure what-if).
 

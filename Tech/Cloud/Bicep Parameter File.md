@@ -11,7 +11,12 @@ date: 2026-06-26
 A Bicep parameter file is the one knob-board per environment — same template, different settings — so Test and Prod never drift in structure but stay distinct in values.
 
 ## Definition
-A `.bicepparam` file supplies environment-specific values to a single shared Bicep template, letting one `main.bicep` deploy differently to each environment. For example, separate `.bicepparam` files for test and production feed the same template—they set things like SKU sizes, resource names, and which [[Azure OpenAI]] or [[Azure AI Search]] endpoint to target, while the template's logic stays identical. This is the mechanism that keeps environments as separate-but-mirrored deployments. Sensitive values aren't hardcoded here either; secrets stay in [[Azure Key Vault]] and services reach them via [[Workload Identity|Managed Identity]], so a param file holds configuration, not credentials.
+A `.bicepparam` file supplies environment-specific values to a single shared Bicep template, letting one `main.bicep` deploy differently to each environment. For example, separate `.bicepparam` files for test and production feed the same template—they set things like SKU sizes, resource names, and which [[Managed LLM Service|Azure OpenAI]] or [[Managed Search Service|Azure AI Search]] endpoint to target, while the template's logic stays identical. This is the mechanism that keeps environments as separate-but-mirrored deployments. Sensitive values aren't hardcoded here either; secrets stay in [[Secrets and Key Management|Azure Key Vault]] and services reach them via [[Workload Identity|Managed Identity]], so a param file holds configuration, not credentials.
+
+## Providers
+- **Azure** — `.bicepparam` files.
+- **AWS** — CloudFormation parameter files; CDK context.
+- **Cross-cloud** — Terraform `.tfvars` files, Pulumi stack config.
 
 ## Source
 Microsoft, introduced as a native feature in Bicep (2021). Bicep is Azure's domain-specific language for declarative infrastructure as code, and parameter files are the standard mechanism for supplying environment-specific values to Bicep templates.
@@ -21,7 +26,7 @@ Microsoft, introduced as a native feature in Bicep (2021). Bicep is Azure's doma
 ## Compass
 
 **Neighbors** — *what lives nearby*
-Both [[Bicep Module|Bicep modules]] and parameter files are pieces of a Bicep deployment; modules give structure while param files give values. Parameter files carry configuration much like [[Connection String|connection strings]] do, but parameter files keep secrets *out* and defer them to [[Azure Key Vault]] instead.
+Both [[Bicep Module|Bicep modules]] and parameter files are pieces of a Bicep deployment; modules give structure while param files give values. Parameter files carry configuration much like [[Connection String|connection strings]] do, but parameter files keep secrets *out* and defer them to [[Secrets and Key Management|Azure Key Vault]] instead.
 
 **Clash** — *what pushes against this*
 [[Bicep]] itself is the environment-agnostic logic, while the parameter file is the environment-specific data — they're opposite sides of the same deployment coin.

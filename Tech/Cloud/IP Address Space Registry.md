@@ -12,6 +12,12 @@ Private IP ranges look infinite until two teams pick the same one. Then the netw
 ## Definition
 An IP address space registry is a single authoritative record of which private network ranges are allocated to which system — a street-address book for the organization's networks. It exists because private address space is a shared finite resource with a brutal failure mode: overlapping ranges cannot be connected. Two systems that each quietly took the same subnet work perfectly in isolation and become impossible to peer, route between, or place behind shared infrastructure, and by the time anyone notices both are in production. So allocation is a claim you register before you build, typically as a reviewed change to a file in a shared repository, with ranges reserved per environment. The discipline worth keeping: verify the registry against what's actually deployed before trusting it, because a stale document is more dangerous than no document — it hands you a wrong answer with full confidence.
 
+## Providers
+- **Azure** — Azure Virtual Network Manager IP address management (IPAM).
+- **AWS** — Amazon VPC IP Address Manager (IPAM).
+- **Google Cloud** — no dedicated service; usually a spreadsheet or a tool like NetBox.
+- **Others** — NetBox, Infoblox.
+
 ## Source
 Long-standing network engineering practice (IP Address Management, IPAM), formalized in tools like Infoblox and NetBox and in cloud landing-zone reference architectures.
 

@@ -12,6 +12,12 @@ Putting a guarded front door on a building is pointless if the back windows are 
 ## Definition
 Origin verification is the backend's check that a request genuinely arrived via the intended edge service rather than directly at the origin's own address. Edge platforms inject a secret or identifier into every forwarded request — Azure Front Door sends an `X-Azure-FDID` header carrying the profile's unique id, Cloudflare uses authenticated origin pull certificates, CloudFront supports a custom origin header — and the backend rejects anything without the expected value. Without it, an attacker who discovers the origin hostname simply walks around [[Web Application Firewall (WAF)|WAF]], [[Rate Limiting]], and every other edge control. The check must run early in the [[Middleware]] pipeline, before any real work happens, and it pairs with forwarded-header handling restricted to the edge's known IP ranges — otherwise a client can spoof its own `X-Forwarded-For` and poison whatever you keyed off the caller's address.
 
+## Providers
+- **Azure** — Front Door's `X-Azure-FDID` header, checked by App Service access restrictions or middleware.
+- **AWS** — CloudFront custom origin headers; VPC origins.
+- **Google Cloud** — serverless NEGs with ingress restricted to the load balancer.
+- **Others** — Cloudflare authenticated origin pulls (mTLS), Cloudflare Tunnel.
+
 ## Source
 Documented as required practice by Azure Front Door, AWS CloudFront (custom origin headers), and Cloudflare (authenticated origin pulls).
 

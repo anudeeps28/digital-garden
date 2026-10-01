@@ -8,10 +8,15 @@ date: 2026-04-24
 # Deployment Groups
 
 ## Idea
-A Deployment Group is a logical pool of physical or virtual machines — typically on-prem or inside a [[Virtual Networks (VNets)|VNet]] — that an Azure DevOps release pipeline can target as deployment destinations.
+A Deployment Group is a logical pool of physical or virtual machines — typically on-prem or inside a [[Virtual Network|VNet]] — that an Azure DevOps release pipeline can target as deployment destinations.
 
 ## Definition
-When the deployment target is a managed PaaS service like [[Azure App Service]], the pipeline talks to Azure APIs and you're done. But when the target is a real Windows machine running [[IIS]], a self-hosted [[SQL Server]], or any on-prem box, you need an **agent** running on that machine that can pull deployment instructions and execute them locally. A Deployment Group is the collection of those agents grouped under a name, with tags like `role:web`, `env:prod`. The release pipeline says "deploy to all machines in deployment group `Test` tagged `web`" and Azure DevOps fans the deployment out. The project's `SVDDCAPP01` and similar machine names are members of a Deployment Group — they run an Azure DevOps agent service that polls for jobs and runs them on the local box. This is also how you deploy *into* a network that has [[publicNetworkAccess Disabled]] on its targets — the agent is already inside the network, so it can reach the resources the cloud pipeline can't.
+When the deployment target is a managed PaaS service like [[Managed Web Hosting (PaaS)|Azure App Service]], the pipeline talks to Azure APIs and you're done. But when the target is a real Windows machine running [[IIS]], a self-hosted [[SQL Server]], or any on-prem box, you need an **agent** running on that machine that can pull deployment instructions and execute them locally. A Deployment Group is the collection of those agents grouped under a name, with tags like `role:web`, `env:prod`. The release pipeline says "deploy to all machines in deployment group `Test` tagged `web`" and Azure DevOps fans the deployment out. The project's `SVDDCAPP01` and similar machine names are members of a Deployment Group — they run an Azure DevOps agent service that polls for jobs and runs them on the local box. This is also how you deploy *into* a network that has [[Private Endpoint|publicNetworkAccess Disabled]] on its targets — the agent is already inside the network, so it can reach the resources the cloud pipeline can't.
+
+## Providers
+- **Azure** — Azure DevOps deployment groups / VM resources in environments.
+- **AWS** — CodeDeploy deployment groups (EC2 and on-premises).
+- **Others** — Octopus Deploy tentacles, Ansible inventories.
 
 ## Source
 CI/CD learning session — the project on-prem deployment targets.

@@ -12,6 +12,11 @@ A backup stored next to the thing it protects is not a backup. It's a second cop
 ## Definition
 Geo-redundant backup means backup copies are replicated to a physically separate region, so a regional outage, a datacentre fire, or a region-wide misconfiguration cannot destroy both the primary and its recovery path. Cloud platforms expose this as a redundancy setting — locally redundant (same datacentre), zone redundant (separate buildings in one region), geo-redundant (a paired region hundreds of miles away) — with cost rising accordingly. The sane default is to vary it by environment: geo-redundant in production, locally redundant everywhere else, because a dev environment's backup is not worth cross-region egress. Expressing that as one conditional in [[Infrastructure as Code]] rather than a manual setting per environment is what stops production quietly ending up on the cheap option.
 
+## Providers
+- **Azure** — LRS / ZRS / GRS / GZRS storage redundancy; geo-redundant database backups.
+- **AWS** — S3 Cross-Region Replication, AWS Backup cross-region copies.
+- **Google Cloud** — dual- and multi-region buckets.
+
 ## Source
 Standard cloud storage redundancy tiers — Azure LRS/ZRS/GRS, AWS S3 cross-region replication, Google Cloud multi-region buckets.
 

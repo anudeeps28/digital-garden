@@ -13,6 +13,10 @@ A SQL-flavoured query language for asking telemetry questions like "show me ever
 ## Definition
 KQL is the read-only query language behind [[Application Insights]] and Log Analytics. I write piped queries (`traces | where severityLevel >= 3 | summarize count() by operation_Name`) to find errors, trace slow runs, or chase a [[Percentile-Based-Performance-Metrics|p95 latency]] spike. Because the app emits [[Structured Logging|structured logs]] via [[Serilog]], the custom fields become first-class columns I can filter and aggregate on. KQL is where structured telemetry pays off after deploy — loud, structured signals turn into answerable questions.
 
+## Providers
+- **Azure** — Log Analytics, Application Insights, Azure Data Explorer, Sentinel.
+- **Equivalents** — CloudWatch Logs Insights query language (AWS), Logging query language and BigQuery SQL (Google Cloud), Splunk SPL.
+
 ## Source
 Microsoft, introduced as part of Kusto (Azure Data Explorer) and integrated into Application Insights and Log Analytics circa 2015.
 

@@ -12,6 +12,10 @@ A cloud database will drop your connection for reasons that have nothing to do w
 ## Definition
 Connection resiliency is the client-side policy that retries transient database failures automatically instead of surfacing them as errors. Managed databases fail over, throttle, and get reconfigured underneath you, producing short-lived errors that succeed on the next attempt. The policy has three knobs worth tuning together: a **retry count** (five is a common ceiling), a **maximum delay** between attempts so [[Exponential Backoff]] doesn't stretch to minutes, and a **command timeout** that bounds any single attempt. The critical constraint is that retries must only fire on error codes known to be transient — retrying a constraint violation or a syntax error just burns time — and any retried operation must be idempotent, because a timeout means "I don't know if it committed", not "it didn't".
 
+## Providers
+- **.NET** — EF Core `EnableRetryOnFailure`, Polly.
+- **Cloud guidance** — Azure SQL transient-fault guidance, AWS SDK retry modes, Google Cloud client library retries.
+
 ## Source
 Implemented as execution strategies in [[EF Core]] (`EnableRetryOnFailure`), and as the general Retry pattern in Microsoft's Cloud Design Patterns and libraries such as Polly.
 

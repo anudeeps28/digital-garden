@@ -12,6 +12,11 @@ Cloud providers put capabilities behind pricing tiers, and the type system doesn
 ## Definition
 Tier-gated features are capabilities available only on a higher SKU of a cloud service — managed WAF rule sets on a premium edge tier, private endpoints on a premium messaging tier, geo-replication above a certain database tier. The hazard is specific to [[Infrastructure as Code]]: the template language validates *syntax and schema*, not *entitlement*. Requesting a premium-only feature on a standard SKU is structurally valid, so it type-checks, lints clean, and compiles — and is refused by the resource provider at deployment. The fix is to make tier and feature a single conditional decided together (premium SKU plus the ruleset in production, standard SKU without it below), so the two can never be set inconsistently. The broader lesson is that a green build is not evidence of a valid deployment; the only authority on what the platform accepts is the platform.
 
+## Providers
+- **Azure** — Front Door Standard vs Premium, App Service plans, Azure SQL service tiers.
+- **AWS** — instance families, Shield Standard vs Advanced, support plans.
+- **Google Cloud** — Cloud Armor Standard vs Enterprise, Cloud SQL editions.
+
 ## Source
 A recurring constraint across cloud SKU matrices — Azure Front Door Standard vs Premium, Azure SQL service tiers, AWS instance-class-gated features.
 

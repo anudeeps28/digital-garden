@@ -13,6 +13,12 @@ PostgreSQL (Postgres) is an open-source relational database management system �
 ## Definition
 While [[SQL]] is a standardized language for querying relational data, PostgreSQL is a specific database engine that implements that language and adds features on top. Think of it like chess: SQL is the rules, Postgres is a specific chess engine that follows those rules and adds house rules of its own. Postgres originated at UC Berkeley in the late 1980s and is consistently ranked as developers' most-loved database. What it adds beyond standard SQL: advanced data types (JSON/JSONB, arrays, UUID, hstore, geometric types), full-text search, extensibility (custom functions, extensions like PostGIS), strong [[ACID Properties]] compliance, and proprietary syntax like `RETURNING` and `ON CONFLICT DO UPDATE` (upsert).
 
+## Providers
+- **Azure** — Azure Database for PostgreSQL Flexible Server.
+- **AWS** — RDS for PostgreSQL, Aurora PostgreSQL.
+- **Google Cloud** — Cloud SQL for PostgreSQL, AlloyDB.
+- **Others** — Supabase, Neon, Crunchy Data.
+
 ## Source
 Conversation with Claude — SQL vs Postgres differences
 
@@ -21,7 +27,7 @@ Conversation with Claude — SQL vs Postgres differences
 ## Compass
 
 **Neighbors** — *what lives nearby*
-[[MySQL]] and [[Azure SQL]] (Microsoft's cloud relational database that uses T-SQL dialect) are other popular relational database systems, while [[SQLite]] offers a lightweight, file-based alternative for similar use cases.
+[[MySQL]] and [[Managed SQL Database|Azure SQL]] (Microsoft's cloud relational database that uses T-SQL dialect) are other popular relational database systems, while [[SQLite]] offers a lightweight, file-based alternative for similar use cases.
 
 **Clash** — *what pushes against this*
 [[SQL]] is the language specification itself rather than a database engine, and [[NoSQL]] databases like MongoDB and Redis operate on entirely different principles by rejecting the relational model.

@@ -13,6 +13,12 @@ A build artifact is the packaged output of a build pipeline — the immutable, v
 ## Definition
 At the end of a successful build, the [[CI-CD Pipeline]] produces an artifact: typically a zip of compiled binaries, a [[Docker Image]], a NuGet package, or a published .NET output folder. The artifact is uploaded to artifact storage (Azure DevOps Artifacts, a container registry, a file feed) and tagged with the build number. From there, [[Release Stages|release pipelines]] download the artifact and deploy it. **The contract:** an artifact is built *once* and deployed *many times* — same bytes promoted from dev → test → prod. This is what makes "[[Runtime Config (Build Once Deploy Everywhere)|build once, deploy everywhere]]" possible. It also means a redeploy doesn't rebuild — the release pipeline can grab an old artifact and ship it to fix a regression. If you're tempted to "rebuild prod," you're probably skipping the artifact step and creating drift between what was tested and what shipped.
 
+## Providers
+- **Azure** — pipeline artifacts, Azure Artifacts feeds.
+- **AWS** — CodeArtifact, S3 artifact stores.
+- **Google Cloud** — Artifact Registry.
+- **Others** — GitHub Packages, JFrog Artifactory.
+
 ## Source
 CI/CD learning session.
 

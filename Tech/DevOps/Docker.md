@@ -13,6 +13,12 @@ Docker packages your app and all its dependencies into a container that runs the
 ## Definition
 Docker is a platform for building, shipping, and running applications in containers. A container is a lightweight, standalone package that includes your application code, runtime, libraries, and configuration — everything needed to run. You define the container in a `Dockerfile`, build it into a [[Docker Image]], and run it anywhere Docker is installed. This eliminates "works on my machine" problems. In practice, containerized applications are built into Docker images, pushed to a container registry for storage, and deployed to cloud platforms or Kubernetes clusters — enabling consistent deployment across development, staging, and production environments.
 
+## Providers
+- **Azure** — Container Apps, App Service for Containers, AKS.
+- **AWS** — ECS, Fargate, EKS, App Runner.
+- **Google Cloud** — Cloud Run, GKE.
+- **Others** — Podman as a daemonless alternative.
+
 ## Source
 Solomon Hykes and the Docker team at dotCloud (now Docker, Inc.); first released in 2013. Formalized as an open-source project that revolutionized containerization and application deployment.
 

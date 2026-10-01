@@ -12,6 +12,12 @@ If every service has its own public address, you have as many front doors as ser
 ## Definition
 Single origin ingress means all external traffic enters the system through exactly one public hostname, which then routes internally to the right backend by path. A single edge service — a CDN or reverse proxy such as [[Edge Gateway|Azure Front Door]], CloudFront, or an ingress controller — owns TLS, [[Web Application Firewall (WAF)|WAF]] rules, [[Rate Limiting]], and routing, and the backends stop being directly reachable. The payoff is that hardening is written once and cannot drift between services, and [[CORS]] largely disappears because the browser only ever sees one origin. The cost is that each backend now receives requests under a path prefix it wasn't written for, so it needs a path-base step to strip the prefix before routing — see [[Path Base Stripping]].
 
+## Providers
+- **Azure** — Front Door (global) or Application Gateway (regional).
+- **AWS** — CloudFront or an Application Load Balancer; API Gateway for APIs.
+- **Google Cloud** — global external Application Load Balancer.
+- **Others** — Cloudflare; NGINX / Envoy ingress controllers on Kubernetes.
+
 ## Source
 A standard pattern in edge and API-gateway architecture; described as the API Gateway pattern in Chris Richardson's *Microservices Patterns* (2018) and in CDN reference architectures.
 

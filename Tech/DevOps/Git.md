@@ -13,6 +13,9 @@ Git is a version control system that tracks every change to every file — allow
 ## Definition
 Git is a distributed version control system that records a complete history of every change made to your codebase. Each change is captured in a commit (a snapshot with a message explaining what changed and why). Git enables parallel development through [[Git Branches|branches]], collaboration through [[Pull Request|pull requests]], and safety through the ability to revert any change. In practice, teams host code in Git repositories, work on feature branches, submit PRs for code review, and merge into the main branch, which typically triggers automated processes like [[CI-CD Pipeline|CI/CD pipelines]].
 
+## Providers
+- **Hosting** — GitHub, Azure Repos, GitLab, Bitbucket; AWS CodeCommit and Google Cloud Source Repositories are both being wound down.
+
 ## Source
 Linus Torvalds, created in 2005 to manage the Linux kernel development. Introduced as a distributed version control system with speed, data integrity, and non-linear workflow support.
 

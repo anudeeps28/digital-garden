@@ -12,6 +12,11 @@ Instead of trusting every query to remember its `WHERE tenant_id = ...`, you pus
 ## Definition
 Row-Level Security (RLS) is a database feature that attaches a predicate function to a table so reads and writes are automatically constrained to the rows the current session is allowed to touch. In SQL Server it has two parts: a **FILTER predicate**, which silently removes invisible rows from `SELECT`, `UPDATE`, and `DELETE`, and a **BLOCK predicate**, which raises an error when someone tries to insert or move a row outside their slice. The predicate function is normally declared `WITH SCHEMABINDING` so the underlying columns can't be altered out from under it, and it reads the tenant key from `SESSION_CONTEXT` — a per-connection key/value store set by a connection interceptor when the connection opens, not passed as a query parameter the application could get wrong. The effect is that a query for the wrong tenant returns nothing rather than returning something it shouldn't.
 
+## Providers
+- **SQL Server / Azure SQL** — security policies with inline predicate functions.
+- **PostgreSQL** — `CREATE POLICY` (on AWS RDS/Aurora, Azure Database for PostgreSQL, Cloud SQL).
+- **Others** — Oracle Virtual Private Database, Snowflake row access policies, Supabase (Postgres RLS).
+
 ## Source
 SQL Server 2016 and Azure SQL Database; equivalent features exist in [[PostgreSQL]] (`CREATE POLICY`, since 9.5) and Oracle (Virtual Private Database).
 

@@ -24,7 +24,7 @@ Sebastián Ramírez, FastAPI framework (first released 2018); https://fastapi.ti
 [[Uvicorn]] is the ASGI server that actually runs the FastAPI app, while [[REST API]] is the interface style that FastAPI implements.
 
 **Clash** — *what pushes against this*
-Managed cloud APIs like [[Azure OpenAI]] provide embeddings as a service but incur per-call costs; self-hosting lightweight services avoids these costs at the expense of operational complexity.
+Managed cloud APIs like [[Managed LLM Service|Azure OpenAI]] provide embeddings as a service but incur per-call costs; self-hosting lightweight services avoids these costs at the expense of operational complexity.
 
 **Roots** — *where this comes from*
 [[Python]] is the language and ecosystem that FastAPI lives in.

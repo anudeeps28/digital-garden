@@ -27,7 +27,7 @@ Foundational concept emerging from information retrieval research in the late 19
 [[Single-Mode Search]] uses only keywords or only vectors rather than both, and [[No Search]] feeds entire documents to the LLM without retrieval, bypassing the need for any search strategy at all.
 
 **Roots** — *where this comes from*
-[[Azure AI Search]] is the service that implements hybrid search, and [[RAG (Retrieval-Augmented Generation)]] relies on hybrid search to power its retrieval step.
+[[Managed Search Service|Azure AI Search]] is the service that implements hybrid search, and [[RAG (Retrieval-Augmented Generation)]] relies on hybrid search to power its retrieval step.
 
 **Paths** — *where this leads*
 Better retrieval through [[RAG (Retrieval-Augmented Generation)]] yields better AI answers, and [[Chunking|chunk quality]] directly affects how well search results perform.

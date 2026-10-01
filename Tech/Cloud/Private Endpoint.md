@@ -12,6 +12,11 @@ A private endpoint pulls a public cloud service onto your private network. It's 
 ## Definition
 A private endpoint gives a managed service (a database, a key vault, a config store) a private IP address inside your virtual network, so traffic never traverses the public internet. It has two halves. The first is the endpoint resource itself: a network interface in your subnet, mapped to the service. The second is a **private DNS zone** — a zone like `privatelink.<service>.<domain>` linked to every virtual network that needs to resolve it — which overrides the service's public hostname to return the private IP. Miss the DNS half and the failure mode is nasty: the endpoint is created successfully, the deployment reports success, and every client silently resolves the public address instead. Nothing errors. You just don't have the isolation you think you have — a textbook case of the argument in [[Fail Fast Fail Loudly]].
 
+## Providers
+- **Azure** — Private Link private endpoints plus `privatelink.*` private DNS zones.
+- **AWS** — PrivateLink interface VPC endpoints (with private DNS).
+- **Google Cloud** — Private Service Connect endpoints.
+
 ## Source
 Azure Private Link (Microsoft, 2019); AWS PrivateLink and Google Private Service Connect are the equivalents.
 

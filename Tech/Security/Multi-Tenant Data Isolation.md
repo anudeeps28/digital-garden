@@ -12,6 +12,12 @@ When one system serves many customers out of one database, the only acceptable d
 ## Definition
 Multi-tenant data isolation is the set of controls that keep each customer's data reachable only by that customer in a shared platform. The strong version is defence in depth: several independent layers stacked so that a failure in one is caught by the next. A typical stack is (1) a least-privileged identity per application component, granted only the objects it needs; (2) [[Row-Level Security]] inside the database, filtering rows by a tenant key the application cannot forge; (3) per-tenant storage containers and, for higher tiers, a dedicated key store; and (4) [[Transparent Data Encryption|encryption at rest]] underneath all of it. Each layer is cheap; the combination is what makes a leak require several simultaneous mistakes rather than one. The alternative — filtering by tenant in application code alone — means every new query is a fresh opportunity to forget the `WHERE` clause.
 
+## Providers
+- **Azure** — Azure SQL elastic pools, RLS, per-tenant Key Vault keys.
+- **AWS** — SaaS Lens silo / bridge / pool guidance, IAM tenant-scoped policies.
+- **Google Cloud** — per-tenant projects or databases; Cloud SQL / AlloyDB with RLS.
+- **See also** — [[Tenancy Models]] for the shape choices.
+
 ## Source
 Standard practice in SaaS architecture; the layered "silo / bridge / pool" tenancy models are documented in AWS and Microsoft multi-tenant SaaS reference architectures.
 

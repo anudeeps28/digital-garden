@@ -19,7 +19,7 @@ Nils Reimers and Iryna Gurevych, "Sentence-BERT: Sentence Embeddings using Siame
 ---
 
 ## Neighbors — *what lives nearby*
-[[Vector Embedding]] is exactly what this library produces, turning text into dense vectors. [[Azure OpenAI]] is an alternative embeddings provider — a commercial option compared to self-hosting open-source models for cost-sensitive applications.
+[[Vector Embedding]] is exactly what this library produces, turning text into dense vectors. [[Managed LLM Service|Azure OpenAI]] is an alternative embeddings provider — a commercial option compared to self-hosting open-source models for cost-sensitive applications.
 
 ## Clash — *what pushes against this*
 [[Tokens]] are the discrete sub-word units that text is broken into, whereas Sentence Transformers collapses an entire sentence or passage into a single continuous vector representation.

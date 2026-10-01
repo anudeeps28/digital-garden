@@ -21,6 +21,10 @@ IIS has a **module pipeline** — a chain of small programs (modules) that each 
 
 **Locally** you use Kestrel directly (no IIS), which is why things like CORS work differently in dev vs production.
 
+## Providers
+- **Microsoft** — IIS on Windows Server; Azure App Service on Windows runs it underneath.
+- **Equivalents** — NGINX and Apache httpd on Linux; Kestrel behind a reverse proxy for .NET.
+
 ## Source
 PlanDocumentRAG CORS troubleshooting — the IIS CorsModule was intercepting OPTIONS preflight requests before ASP.NET Core middleware could handle them.
 
@@ -35,7 +39,7 @@ PlanDocumentRAG CORS troubleshooting — the IIS CorsModule was intercepting OPT
 [[Kestrel]] has no module pipeline — your middleware IS the pipeline — and self-hosted apps bypass the need for an external web server entirely.
 
 **Roots** — *where this comes from*
-[[Azure App Service]] runs IIS under the hood on Windows, and [[Middleware]] represents ASP.NET Core's equivalent of IIS modules, but operating at the application level rather than the server level.
+[[Managed Web Hosting (PaaS)|Azure App Service]] runs IIS under the hood on Windows, and [[Middleware]] represents ASP.NET Core's equivalent of IIS modules, but operating at the application level rather than the server level.
 
 **Paths** — *where this leads*
-IIS modules can conflict with app-level middleware, as seen in [[Azure Portal CORS vs Code CORS]], and understanding the IIS [[CorsModule]] is separate from ASP.NET Core CORS middleware is crucial for debugging. Configuration of these modules happens through [[web.config]], where you can add or remove modules to control request processing.
+IIS modules can conflict with app-level middleware, as seen in [[Platform CORS vs Code CORS|Azure Portal CORS vs Code CORS]], and understanding the IIS [[CorsModule]] is separate from ASP.NET Core CORS middleware is crucial for debugging. Configuration of these modules happens through [[web.config]], where you can add or remove modules to control request processing.

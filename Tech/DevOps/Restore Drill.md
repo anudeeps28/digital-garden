@@ -12,6 +12,11 @@ Nobody has a backup problem. Everybody has a restore problem — and you only fi
 ## Definition
 A restore drill is a rehearsed, timed exercise in bringing a system back from its backups into a scratch environment, verifying the data is complete and the application actually runs against it. It exists because backup success is measured by the backup job's exit code, which tells you a file was written and nothing about whether that file can be read back into a working system. The drill produces two numbers worth more than the backup configuration itself: how long recovery actually took, and how much data was lost between the last usable copy and the incident. Those are the real recovery time and recovery point objectives, as opposed to the ones written in a document. It's also the only honest way to discover that the restore depends on a credential, a schema version, or an encryption key that no longer exists.
 
+## Providers
+- **Azure** — point-in-time restore for Azure SQL; Azure Backup restores.
+- **AWS** — AWS Backup restore testing.
+- **Google Cloud** — Backup and DR Service; Cloud SQL point-in-time recovery.
+
 ## Source
 Long-standing operations practice; formalized in site reliability engineering — Google's SRE book makes the point that an untested restore procedure is not a recovery plan.
 

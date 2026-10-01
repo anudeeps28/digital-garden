@@ -12,6 +12,12 @@ A WAF is a bouncer reading the contents of each request at the door, turning awa
 ## Definition
 A Web Application Firewall inspects HTTP requests at the edge and blocks those matching known attack signatures — SQL injection, cross-site scripting, path traversal, known-bad bots. It runs **managed rule sets** curated by the vendor (Azure's Default Rule Set, AWS Managed Rules, the open OWASP Core Rule Set) plus custom rules you add. Two operational details matter more than the rules themselves. First, a WAF should start in *detection* mode so you can see what it would have blocked; switching straight to *prevention* mode without that soak period reliably breaks legitimate traffic. Second, managed rule sets are often gated to a higher pricing tier — see [[Tier-Gated Features]] — so a template that requests them on the cheap tier compiles cleanly and is rejected at deploy time.
 
+## Providers
+- **Azure** — Azure WAF on Front Door or Application Gateway (Default Rule Set, bot manager rule set).
+- **AWS** — AWS WAF with AWS Managed Rules and Bot Control.
+- **Google Cloud** — Cloud Armor preconfigured WAF rules.
+- **Others** — Cloudflare WAF, ModSecurity / Coraza with the OWASP Core Rule Set.
+
 ## Source
 Category formalized by the OWASP ModSecurity Core Rule Set (2006 onward); managed offerings from Azure Front Door, AWS WAF, and Cloudflare.
 

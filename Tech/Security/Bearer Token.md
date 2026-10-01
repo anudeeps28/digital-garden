@@ -13,6 +13,12 @@ A bearer token (JWT) is a signed token the client sends with every request to pr
 ## Definition
 A Bearer Token is a security token included in the `Authorization` header of HTTP requests: `Authorization: Bearer eyJhbG...`. These are often JWTs (JSON Web Tokens) — compact, signed [[JSON]] objects containing claims like user ID, email, roles, and expiration time. An identity provider issues the token after login, and the client includes it in every [[REST API]] request. The API's [[Middleware]] validates the token's signature (proving it wasn't tampered with), checks it hasn't expired, and extracts the user's identity and roles for [[Authorization]]. The token is "bearer" style — anyone holding a valid token is authenticated, so tokens must be kept secret.
 
+## Providers
+- **Azure** — Entra-issued JWT access tokens.
+- **AWS** — Cognito access tokens; SigV4 request signing is the non-bearer alternative.
+- **Google Cloud** — OAuth access tokens and identity tokens.
+- **Others** — Auth0 / Okta JWTs.
+
 ## Source
 RFC 6750 (OAuth 2.0 Bearer Token Usage), Internet Engineering Task Force, October 2012. Bearer tokens became a standard part of OAuth 2.0 for API authentication and are widely used with JSON Web Tokens (JWTs) as defined in RFC 7519 (2015).
 
@@ -27,7 +33,7 @@ RFC 6750 (OAuth 2.0 Bearer Token Usage), Internet Engineering Task Force, Octobe
 [[Basic Auth]] requires sending username and password with every request, which is far less secure than bearer tokens, whereas [[No Authentication]] foregoes any token requirement entirely.
 
 **Roots** — *where this comes from*
-Bearer tokens serve the fundamental purpose of [[Authentication]] to prove identity, and in this system [[Entra ID]] is responsible for issuing and signing the tokens.
+Bearer tokens serve the fundamental purpose of [[Authentication]] to prove identity, and in this system [[Identity Provider (IdP)|Entra ID]] is responsible for issuing and signing the tokens.
 
 **Paths** — *where this leads*
 The tokens carry role claims that enable [[Authorization]] for permission checks, and [[Middleware]] in the API pipeline validates these tokens during request processing. Proper key management is critical for maintaining the security of token signatures.

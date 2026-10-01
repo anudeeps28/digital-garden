@@ -30,4 +30,4 @@ Microsoft, introduced in ASP.NET Core as a built-in model binding source attribu
 [[Controller]] action methods use `[FromForm]` to decorate their parameters, and [[Request and Response]] architecture controls how request data is read and processed throughout the pipeline.
 
 **Paths** — *where this leads*
-API endpoints use `[FromForm]` to receive uploaded files and structured form data, enabling integration with file storage systems like [[Azure Blob Storage]].
+API endpoints use `[FromForm]` to receive uploaded files and structured form data, enabling integration with file storage systems like [[Object Storage|Azure Blob Storage]].

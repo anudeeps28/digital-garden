@@ -13,6 +13,12 @@ Structured logging records log entries as key-value pairs instead of plain text 
 ## Definition
 Traditional logging writes free-form strings: `"Error processing document plan.pdf for group 123"`. Structured logging preserves the data as properties: `{Event: "ProcessingError", FileName: "plan.pdf", GroupNumber: 123, Error: "timeout"}`. This means you can later query logs like "show me all errors for group 123" or "find all timeout errors in the last hour." Libraries like [[Serilog]] produce structured logs that can be sent to analysis platforms where they're queryable using tools like Kusto Query Language (KQL). This is essential for debugging production issues in complex systems with multiple components and services.
 
+## Providers
+- **Azure** — Application Insights / Log Analytics.
+- **AWS** — CloudWatch Logs (JSON logs, Logs Insights).
+- **Google Cloud** — Cloud Logging (structured `jsonPayload`).
+- **Others** — Seq, Elastic, Datadog, OpenTelemetry logs.
+
 ## Source
 Industry standard formalized in the 2010s as observability became central to operations. Serilog, ELK Stack (Elasticsearch, Logstash, Kibana), and Splunk popularized structured logging for production systems.
 

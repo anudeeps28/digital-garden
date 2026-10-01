@@ -11,7 +11,7 @@ date: 2026-04-02
 The build pipeline compiles your code into an artifact; the release pipeline takes that artifact and deploys it to environments — two separate stages.
 
 ## Definition
-In [[Azure DevOps]] (and most CI/CD systems), deployment is split into two stages:
+In [[DevOps Platform|Azure DevOps]] (and most CI/CD systems), deployment is split into two stages:
 
 **Build Pipeline** (CI — Continuous Integration):
 - Triggered by code commits (usually to specific branches like `master`, `release/*`)
@@ -37,6 +37,12 @@ In [[Azure DevOps]] (and most CI/CD systems), deployment is split into two stage
 
 **Key lesson:** If your code is on a feature branch that the build pipeline doesn't watch, your fixes will never get deployed — no matter how many times you push. Either merge to master or manually adjust the pipeline trigger.
 
+## Providers
+- **Azure** — Azure DevOps build pipelines vs classic release pipelines (or YAML multi-stage).
+- **AWS** — CodeBuild (build) vs CodePipeline / CodeDeploy (release).
+- **Google Cloud** — Cloud Build vs Cloud Deploy.
+- **Others** — GitHub Actions jobs + environments.
+
 ## Source
 PlanDocumentRAG deployment — CORS fixes were stuck on an unmerged branch. Pipeline only built master. This caused hours of "why isn't it working?" because the deployed code never had the fixes.
 
@@ -51,7 +57,7 @@ The [[CI-CD Pipeline]] is the combined concept that encompasses both build and r
 Manual deployment — copying files to server by hand with no pipeline — represents the opposite approach. The "Works on my machine" problem arises when there's no standardized build/deploy process, defeating the entire purpose of separation.
 
 **Roots** — *where this comes from*
-This concept lives within [[Azure DevOps]], where The project's pipelines are hosted and managed. It's an implementation of the broader [[CI-CD Pipeline]] pattern that separates concerns between building code and deploying it.
+This concept lives within [[DevOps Platform|Azure DevOps]], where The project's pipelines are hosted and managed. It's an implementation of the broader [[CI-CD Pipeline]] pattern that separates concerns between building code and deploying it.
 
 **Paths** — *where this leads*
 [[Migration Scripts (DBAUp)]] often run as part of the release pipeline to handle database changes. The principle of "build once, deploy everywhere" connects to [[Runtime Config (Build Once Deploy Everywhere)]], where one build artifact is deployed with different configurations per environment. Understanding this separation informs critical branch strategy decisions — which branches should trigger builds?

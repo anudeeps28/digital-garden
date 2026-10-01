@@ -13,6 +13,10 @@ In-memory caching keeps hot data in the running process so you skip repeat datab
 ## Definition
 In-memory caching stores frequently-read data right in the app's process memory, keyed by a lookup, so the next request hits RAM instead of a slow source. In .NET applications, `IMemoryCache` (injected via [[Dependency Injection]]) can cache expensive reads — such as frequently accessed templates or computed results — so an identical lookup doesn't re-execute a slow database query or computation. Each entry gets a TTL (absolute expiration), and on a miss the code falls back to the real source — a clean case of [[Graceful Degradation]]. Because it lives in-process it's blazing fast but per-instance (not shared across servers) and bounded by memory, which is exactly why a deliberate [[Cache Invalidation]] policy matters.
 
+## Providers
+- **In process** — .NET `IMemoryCache`, Caffeine (Java).
+- **Distributed equivalents** — Azure Cache for Redis, Amazon ElastiCache, Google Memorystore.
+
 ## Source
 Microsoft, introduced in ASP.NET Core (2016) as part of Microsoft.Extensions.Caching.Memory; foundational caching concept in computer science with roots in early memory management systems.
 

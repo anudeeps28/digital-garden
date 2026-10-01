@@ -30,4 +30,4 @@ Microsoft, introduced in C# 5.0 (2012) with .NET Framework 4.5; formalized as as
 [[CSharp]] is the language that provides this feature, and [[.NET 8]] is the runtime that manages async thread scheduling underneath. The fundamental question driving this pattern is how to handle errors in async code differently than in synchronous code.
 
 **Paths** — *where this leads*
-[[REST API]] controllers use async to handle many concurrent HTTP requests efficiently without blocking. [[Azure Functions]] relies on async as essential for event-triggered serverless functions. [[EF Core]] database queries use async methods like `SaveChangesAsync()` throughout application code.
+[[REST API]] controllers use async to handle many concurrent HTTP requests efficiently without blocking. [[Serverless Functions|Azure Functions]] relies on async as essential for event-triggered serverless functions. [[EF Core]] database queries use async methods like `SaveChangesAsync()` throughout application code.

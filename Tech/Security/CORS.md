@@ -36,7 +36,7 @@ app.UseCors(); // must come before UseAuthentication/UseAuthorization
 **Key gotchas:**
 - Origin matching is **exact** — `https://foo.com` ≠ `https://foo.com/` (trailing slash)
 - Middleware order matters — `UseCors()` must come before `UseAuthentication()` and `UseAuthorization()`
-- On [[Azure App Service]], there's a separate IIS-level CORS that can conflict with your code — see [[Azure Portal CORS vs Code CORS]]
+- On [[Managed Web Hosting (PaaS)|Azure App Service]], there's a separate IIS-level CORS that can conflict with your code — see [[Platform CORS vs Code CORS|Azure Portal CORS vs Code CORS]]
 
 ## Source
 W3C recommendation; formalized in the Fetch Standard (WHATWG). CORS evolved from earlier workarounds like JSONP to provide a secure, standardized mechanism for cross-origin requests.
@@ -47,7 +47,7 @@ W3C recommendation; formalized in the Fetch Standard (WHATWG). CORS evolved from
 CORS is one of many browser security features that make up [[Web Security]]. It exists to answer a fundamental question: why does CORS only apply to browsers and not to tools like Postman or curl?
 
 ## Paths — *where this leads*
-The [[Preflight Request (OPTIONS)]] is the "permission check" that browsers send before executing certain requests, and understanding CORS often reveals a deeper problem when deploying to [[Azure App Service]] — there's a two-system conflict between [[Azure Portal CORS vs Code CORS]] that must be resolved. Configuring CORS properly requires understanding how it fits within the broader [[Middleware]] pipeline in ASP.NET Core.
+The [[Preflight Request (OPTIONS)]] is the "permission check" that browsers send before executing certain requests, and understanding CORS often reveals a deeper problem when deploying to [[Managed Web Hosting (PaaS)|Azure App Service]] — there's a two-system conflict between [[Platform CORS vs Code CORS|Azure Portal CORS vs Code CORS]] that must be resolved. Configuring CORS properly requires understanding how it fits within the broader [[Middleware]] pipeline in ASP.NET Core.
 
 ## Neighbors — *what lives nearby*
 [[Authentication]] shares CORS's role as a security mechanism that gates access, though it operates at a different layer. At the network level, [[Firewall Rules]] provide similar access control but at a lower level than CORS, which operates strictly in the browser.

@@ -51,7 +51,7 @@ Franco set this up for PlanDocumentRAG — 2026-04-01. Ticket DBA-13854 for depl
 Manual SQL execution — connecting to each database by hand and running scripts — represents the opposite approach with no tracking. At the extreme, there's "just modify the table in production" with no versioning, tracking, or safety at all.
 
 **Roots** — *where this comes from*
-This practice lives within [[Azure DevOps]], where the release pipeline runs the DBAUp task as part of deployment. The broader question it addresses is database versioning — how do you version-control a database the way you do code?
+This practice lives within [[DevOps Platform|Azure DevOps]], where the release pipeline runs the DBAUp task as part of deployment. The broader question it addresses is database versioning — how do you version-control a database the way you do code?
 
 **Paths** — *where this leads*
 Migration scripts are pure [[SQL]], which means you have full control over exactly what executes in each environment. This enables reproducible deployments where the same scripts run identically everywhere, and it creates an audit trail where the ledger shows exactly what ran and when.

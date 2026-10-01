@@ -12,6 +12,11 @@ Some infrastructure can't be owned by the team that needs it, because it's share
 ## Definition
 Centralized infrastructure ownership is the arrangement where a platform team holds the shared substrate — network address allocation, DNS zones, the reusable module library, subscription-level policy — and product teams consume it rather than recreate it. It's enforced through two mechanisms working together: a **shared module library** that product templates import, so everyone gets the same hardened building blocks instead of inventing their own; and **tenant-level policy** that outright blocks certain resource types from being created outside the central resource group, so the boundary isn't a convention anyone can bypass under deadline pressure. The practical consequence for a project team is that some work is simply not yours to do, however capable you are — and the only real mistake is finding that out during deployment rather than during planning.
 
+## Providers
+- **Azure** — Cloud Adoption Framework landing zones, management groups.
+- **AWS** — Control Tower, AWS Organizations.
+- **Google Cloud** — landing zones and the resource hierarchy (organization, folders).
+
 ## Source
 The platform-team model described in Skelton and Pais's *Team Topologies* (2019); implemented in cloud landing-zone architectures (Azure Cloud Adoption Framework, AWS Control Tower).
 

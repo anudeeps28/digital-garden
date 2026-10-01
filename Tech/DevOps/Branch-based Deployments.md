@@ -13,6 +13,11 @@ A branching strategy where the branch a commit lives on determines which environ
 ## Definition
 Branch-based deployment couples Git topology to the [[Release Stages|release pipeline]]: the [[CI-CD Pipeline]] watches multiple branches, builds [[Build Artifacts|artifacts]] from each, and uses [[Artifact Filters]] in the release pipeline to send artifacts to the right environment based on the source branch. The project's pattern: feature branches build but don't auto-promote past Dev; `master` builds promote through Test → Prod (with approvals); `release/*` branches build for staging environments. The advantages: zero ambiguity about what's deploying where, easy mental model, and `git log master` is the production deploy history. The trap covered in [[Build Pipeline vs Release Pipeline]]: if you fix something on a feature branch and forget to merge, the fix never reaches the environments your watcher is filtering for. The pipeline doesn't lie — it just won't deploy code from branches it isn't watching.
 
+## Providers
+- **Azure** — branch filters on Azure Pipelines triggers.
+- **AWS** — CodePipeline source branch triggers; Amplify branch deployments.
+- **Others** — GitHub Actions `on.push.branches`, Vercel / Netlify preview deploys.
+
 ## Source
 CI/CD learning session — The project's branch-to-environment mapping.
 

@@ -13,6 +13,12 @@ A Docker image is the blueprint for a container — a read-only template contain
 ## Definition
 A [[Docker]] image is built from a `Dockerfile` — a text file with instructions like "start from the base OS image, copy code, install dependencies, and set the entry point." Each instruction creates a layer, and layers are cached for fast rebuilds. Images are tagged with versions and stored in registries like [[Docker Hub]] or container registries. When you "run" an image, Docker creates a container from it — a live, executable instance of that blueprint.
 
+## Providers
+- **Azure** — Azure Container Registry.
+- **AWS** — Amazon ECR.
+- **Google Cloud** — Artifact Registry.
+- **Others** — Docker Hub, GitHub Container Registry.
+
 ## Source
 Solomon Hykes, dotCloud (now Docker, Inc.), first released 2013. Docker revolutionized containerization by making it accessible and practical for developers.
 

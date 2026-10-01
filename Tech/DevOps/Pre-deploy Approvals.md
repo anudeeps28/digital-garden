@@ -13,6 +13,12 @@ A pre-deploy approval is a manual or automated checkpoint that must pass before 
 ## Definition
 Pre-deploy approvals attach to a [[Release Stages|release stage]] and specify *who must approve* before the stage begins. Common patterns: a named individual or group must click "Approve" in the Azure DevOps UI; an automated check (HTTP probe, work-item state, ServiceNow ticket status) must return success; a time window (don't deploy on weekends) must be open. Until the approval clears, the stage sits in a "pending approval" state — the [[Build Artifacts|artifact]] is ready, the deploy hasn't started. Approvals exist for two reasons: **safety** (a human verifies the right thing is being deployed at the right time) and **compliance** ([[SOC 1 Audit|SOC 1]] and similar regimes require evidence that production deploys went through an approved gate, not just an automated push). The approval record itself becomes audit evidence — who approved, when, and any attached comments.
 
+## Providers
+- **Azure** — approvals and checks on Azure Pipelines environments.
+- **AWS** — CodePipeline manual approval actions.
+- **Google Cloud** — Cloud Deploy approvals.
+- **Others** — GitHub environment protection rules.
+
 ## Source
 CI/CD learning session — Azure DevOps stage configuration.
 

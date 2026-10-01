@@ -11,7 +11,7 @@ date: 2026-03-24
 Entity Framework Core is an ORM that lets you write C# code instead of raw SQL — it translates your C# queries into SQL automatically.
 
 ## Definition
-EF Core (Entity Framework Core) is an Object-Relational Mapper (ORM) for [[.NET 8]]. Instead of writing [[SQL]] strings manually, you define [[CSharp]] entity classes that map to [[Database Tables]], and use LINQ queries that EF translates to SQL behind the scenes. For example, `context.Plans.Where(p => p.GroupNumber == "123")` becomes `SELECT * FROM Plans WHERE GroupNumber = '123'`. EF Core also handles [[Database Migrations]] — when you change your entity classes, EF generates migration scripts to update the [[Azure SQL]] schema. It manages [[Foreign Key|foreign key]] relationships through navigation properties and supports async operations with methods like `SaveChangesAsync()`.
+EF Core (Entity Framework Core) is an Object-Relational Mapper (ORM) for [[.NET 8]]. Instead of writing [[SQL]] strings manually, you define [[CSharp]] entity classes that map to [[Database Tables]], and use LINQ queries that EF translates to SQL behind the scenes. For example, `context.Plans.Where(p => p.GroupNumber == "123")` becomes `SELECT * FROM Plans WHERE GroupNumber = '123'`. EF Core also handles [[Database Migrations]] — when you change your entity classes, EF generates migration scripts to update the [[Managed SQL Database|Azure SQL]] schema. It manages [[Foreign Key|foreign key]] relationships through navigation properties and supports async operations with methods like `SaveChangesAsync()`.
 
 ## Source
 Microsoft, introduced in 2016 as a lightweight, cross-platform rewrite of the Entity Framework for .NET Core.

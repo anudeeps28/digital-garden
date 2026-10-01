@@ -11,7 +11,7 @@ date: 2026-03-24
 xUnit is the test framework for .NET — it discovers and runs your test methods and reports pass/fail results.
 
 ## Definition
-xUnit.net is a free, open-source [[NuGet]] testing framework for [[.NET 8]]. It provides attributes like `[Fact]` (a single test case) and `[Theory]` (parameterized test with multiple inputs via `[InlineData]`) to mark test methods. When you run `dotnet test`, xUnit discovers all test methods, executes them, and reports which passed or failed. It integrates with [[Azure DevOps]] pipelines for automated test reporting. In practice, xUnit is commonly paired with [[Moq]] to write [[Unit Tests]] and [[Integration Tests]] across application layers.
+xUnit.net is a free, open-source [[NuGet]] testing framework for [[.NET 8]]. It provides attributes like `[Fact]` (a single test case) and `[Theory]` (parameterized test with multiple inputs via `[InlineData]`) to mark test methods. When you run `dotnet test`, xUnit discovers all test methods, executes them, and reports which passed or failed. It integrates with [[DevOps Platform|Azure DevOps]] pipelines for automated test reporting. In practice, xUnit is commonly paired with [[Moq]] to write [[Unit Tests]] and [[Integration Tests]] across application layers.
 
 ## Source
 Kent Beck, *SUnit* (Smalltalk Unit framework, 1994). xUnit.net specifically created by Brad Wilson and James Newkirk for the .NET ecosystem (introduced circa 2008).

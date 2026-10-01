@@ -13,6 +13,12 @@ A CI/CD pipeline automatically builds, tests, and deploys your code when you pus
 ## Definition
 CI/CD stands for **Continuous Integration** (automatically building and testing code on every commit) and **Continuous Deployment** (automatically deploying passing builds to production). Pipelines are configured in version control (typically YAML) and run whenever code is pushed or a [[Pull Request]] is merged. A typical pipeline includes stages such as: (1) restoring dependencies, (2) building the application, (3) running [[Unit Tests]] and [[Integration Tests]], (4) building a [[Docker Image]], (5) pushing artifacts to a registry, (6) deploying to a target environment, and (7) running [[Database Migrations]]. If any step fails, the pipeline stops and the team is notified.
 
+## Providers
+- **Azure** — Azure Pipelines (Azure DevOps).
+- **AWS** — CodePipeline + CodeBuild.
+- **Google Cloud** — Cloud Build, Cloud Deploy.
+- **Others** — GitHub Actions, GitLab CI, Jenkins.
+
 ## Source
 Industry standard practice; foundational concepts from the DevOps movement. "Continuous Integration" was popularized by Martin Fowler (2000s). Continuous Deployment evolved as an extension of CI practices.
 

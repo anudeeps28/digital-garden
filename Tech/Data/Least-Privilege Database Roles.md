@@ -12,6 +12,11 @@ Most applications connect to their database as an account that can do anything, 
 ## Definition
 Least-privilege database roles means every application component connects with a distinct database principal granted only the operations it actually performs, on only the objects it actually touches. The granularity that matters is **per schema, not per database**: granting `SELECT` on a schema and nothing else means a new table added to a different schema is inaccessible by default rather than accessible by accident. So a reporting component gets read on the reporting schema; a writer gets insert and update on its own schema and nothing on anyone else's. Combined with [[Workload Identity|Managed Identity]] there are no passwords to rotate, and combined with [[Row-Level Security]] the account restriction and the row restriction fail independently — which is the whole point of [[Defence in Depth]].
 
+## Providers
+- **Azure** — Entra-authenticated contained database users mapped to workload identities.
+- **AWS** — IAM database authentication for RDS / Aurora.
+- **Google Cloud** — Cloud SQL IAM database authentication.
+
 ## Source
 The principle of least privilege, articulated by Saltzer and Schroeder in "The Protection of Information in Computer Systems" (1975), applied to database access control.
 

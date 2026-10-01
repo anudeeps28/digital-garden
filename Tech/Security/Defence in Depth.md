@@ -12,6 +12,11 @@ One lock is a single point of failure. Three independent locks mean an attacker 
 ## Definition
 Defence in depth is the practice of layering independent controls so that the compromise or misconfiguration of any one of them does not, by itself, cause a breach. The word doing the work is *independent*: three checks that all read the same header, or all trust the same token, are one control wearing three hats. Real depth means the layers fail for different reasons — a network boundary, an identity boundary, a data-level predicate, and encryption at rest each break under different conditions. The practical test is to ask, for each layer, "if this one silently stopped working, would anything else stop the request?" If the answer is no, you have a chain, not a stack.
 
+## Providers
+- **Azure** — Front Door + WAF, NSGs, private endpoints, Entra, Defender for Cloud.
+- **AWS** — CloudFront + AWS WAF, security groups, PrivateLink, IAM, GuardDuty.
+- **Google Cloud** — Cloud Armor, VPC firewall rules, IAM, Security Command Center.
+
 ## Source
 Originates in military fortification doctrine; adopted into information security by NSA guidance in the 1990s and now standard in NIST and ISO security frameworks.
 
