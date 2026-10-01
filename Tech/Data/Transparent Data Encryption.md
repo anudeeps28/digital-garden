@@ -26,7 +26,7 @@ TDE is the bottom layer of [[Multi-Tenant Data Isolation]] — the one that assu
 The upgrade path is [[Customer-Managed Keys (CMK)]], which moves key custody from the platform to you.
 
 **Neighbors** — *what lives nearby*
-[[Managed Identity]] removes secrets from the wire and from config; TDE removes plaintext from the disk. Different surfaces, same instinct.
+[[Workload Identity|Managed Identity]] removes secrets from the wire and from config; TDE removes plaintext from the disk. Different surfaces, same instinct.
 
 **Clash** — *what pushes against this*
 Because it's on by default and invisible, TDE creates a false sense of completeness — a compliance checkbox that reads like "our data is encrypted" while the live attack paths run entirely through authenticated sessions.

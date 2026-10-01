@@ -26,7 +26,7 @@ CMK is the upgrade on top of [[Transparent Data Encryption]], which by default u
 A key per tenant strengthens [[Multi-Tenant Data Isolation]] and makes cryptographic erasure a real deletion mechanism.
 
 **Neighbors** — *what lives nearby*
-[[Managed Identity]] is how the service proves it may use the key without holding a secret of its own.
+[[Workload Identity|Managed Identity]] is how the service proves it may use the key without holding a secret of its own.
 
 **Clash** — *what pushes against this*
 You've swapped "the provider could read my data" for "I could lock myself out permanently". For most workloads the platform-managed key is the better risk trade; CMK earns its keep when a contract or regulator demands it.

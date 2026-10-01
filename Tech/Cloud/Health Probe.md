@@ -23,7 +23,7 @@ Standard in load balancer and orchestrator design; formalized as liveness/readin
 Probes exist because distributed systems partially fail — the same premise as [[Fault-vs-Failure]].
 
 **Paths** — *where this leads*
-A probe result drives removal from an origin group in [[Azure Front Door]], which is what makes [[Graceful Degradation]] automatic rather than manual.
+A probe result drives removal from an origin group in [[Edge Gateway|Azure Front Door]], which is what makes [[Graceful Degradation]] automatic rather than manual.
 
 **Neighbors** — *what lives nearby*
 [[Structured Logging]] and [[Percentile-Based-Performance-Metrics]] tell you *how* a service is doing; a probe answers the cruder binary question of whether to route to it at all.
