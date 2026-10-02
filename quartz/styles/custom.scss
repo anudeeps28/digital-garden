@@ -331,3 +331,101 @@ body[data-slug="index"] {
     color: var(--gray);
   }
 }
+
+// ── Phones ──────────────────────────────────────────────────────────────────
+// The left sidebar becomes a sticky top bar on mobile, so it has to stay short:
+// the title shrinks, the search label drops to its icon, and every control in
+// the bar gets a 40px touch area.
+@media all and ($mobile) {
+  .left.sidebar {
+    gap: 0.4rem;
+    min-width: 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  // takes the space the toolbar leaves, but never narrower than its longest
+  // word — a shrinkable title breaks mid-word
+  .page-title {
+    flex: 1 1 auto;
+    min-width: min-content;
+    font-size: 1.05rem;
+    line-height: 1.25;
+  }
+
+  .search .search-button {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    padding: 0;
+
+    & > p {
+      display: none;
+    }
+  }
+
+  .darkmode,
+  .readermode,
+  .explorer-toggle.mobile-explorer {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  // titles set for a wide column are too loud on a 390px screen
+  .article-title {
+    font-size: 2rem;
+  }
+
+  body[data-slug="index"] .article-title {
+    font-size: 2.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .garden-lead {
+    font-size: 1.2rem;
+
+    &::first-letter {
+      font-size: 3.4rem;
+    }
+  }
+
+  // keep the dotted leader from pushing the note count off-screen
+  .garden-contents ul {
+    li > a.internal {
+      font-size: 1.08rem;
+    }
+
+    .leader {
+      min-width: 0.75rem;
+    }
+  }
+
+  // explorer rows are a scroll list of ~40px rows rather than 21px hairlines
+  .explorer {
+    .nav-file-title.tree-item-self {
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .folder-button {
+      padding: 0.4rem 0;
+    }
+  }
+
+  // a result card that runs eight lines leaves room for two results
+  .result-card .card-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// the page should not scroll underneath the open search modal
+body:has(.search-container.active) {
+  overflow: hidden;
+}
