@@ -44,7 +44,7 @@ W3C recommendation; formalized in the Fetch Standard (WHATWG). CORS evolved from
 ---
 
 ## Roots — *where this comes from*
-CORS is one of many browser security features that make up [[Web Security]]. It exists to answer a fundamental question: why does CORS only apply to browsers and not to tools like Postman or curl?
+CORS is one of many browser security features that make up [[Web Security]]. It exists to answer a fundamental question: why does CORS only apply to browsers and not to [[API Client|tools like Postman or curl]]?
 
 ## Paths — *where this leads*
 The [[Preflight Request (OPTIONS)]] is the "permission check" that browsers send before executing certain requests, and understanding CORS often reveals a deeper problem when deploying to [[Managed Web Hosting (PaaS)|Azure App Service]] — there's a two-system conflict between [[Platform CORS vs Code CORS|Azure Portal CORS vs Code CORS]] that must be resolved. Configuring CORS properly requires understanding how it fits within the broader [[Middleware]] pipeline in ASP.NET Core.

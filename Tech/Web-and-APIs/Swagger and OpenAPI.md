@@ -25,7 +25,7 @@ SmartBear Software introduced Swagger in 2011 as a framework for describing and 
 ---
 
 ## Neighbors — *what lives nearby*
-[[Postman]] is a standalone tool for testing APIs manually, providing similar hands-on exploration of endpoints. [[API Blueprint]] is another API documentation format that serves a comparable purpose of specifying API structure.
+[[API Client|Postman]] is a standalone tool for testing APIs manually, providing similar hands-on exploration of endpoints. [[API Blueprint]] is another API documentation format that serves a comparable purpose of specifying API structure.
 
 ## Clash — *what pushes against this*
 [[Undocumented APIs]] have no specification or documentation, standing in contrast to Swagger's machine-readable specification approach. [[Manual Documentation]], where API docs are written by hand, is error-prone and tends to get outdated quickly compared to auto-generated specifications.
