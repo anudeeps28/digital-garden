@@ -26,7 +26,7 @@ IIS has a **module pipeline** — a chain of small programs (modules) that each 
 - **Equivalents** — NGINX and Apache httpd on Linux; Kestrel behind a reverse proxy for .NET.
 
 ## Source
-PlanDocumentRAG CORS troubleshooting — the IIS CorsModule was intercepting OPTIONS preflight requests before ASP.NET Core middleware could handle them.
+Microsoft Learn, "Introduction to IIS architecture" and "Host ASP.NET Core on Windows with IIS" (in-process vs out-of-process hosting).
 
 ---
 

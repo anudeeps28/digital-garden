@@ -30,7 +30,7 @@ If **any** of these response headers are missing, the browser kills the request.
 **Important:** The OPTIONS request has no authentication token. If your auth middleware runs before CORS middleware and rejects unauthenticated requests, it will reject the preflight → CORS fails. This is why `UseCors()` must come before `UseAuthentication()` in [[Middleware]] order.
 
 ## Source
-PlanDocumentRAG CORS error — browser console showed "Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+MDN Web Docs, "Preflight request" and "Cross-Origin Resource Sharing (CORS)"; the Fetch Standard (WHATWG), which defines the CORS protocol.
 
 ---
 

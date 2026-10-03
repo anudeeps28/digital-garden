@@ -14,7 +14,7 @@ Artifact filters are conditions on a release stage that decide whether a given b
 In Azure DevOps Classic Releases, each stage's "pre-deployment conditions" can include an **artifact filter**: a rule that inspects the [[Build Artifacts|artifact]]'s metadata (source branch, build tags, build number) and either allows or skips the deployment. The most common filter is `sourceBranch: master` on the Test and Prod stages — meaning only builds produced from `master` will trigger those stages. A build from a feature branch will reach the artifact store, may even auto-deploy to Dev, but the Test stage will silently skip it. **This is a feature, not a bug** — it prevents random feature-branch builds from sneaking into Test or Prod. The trap: if you don't know the filter exists, the symptom looks like "the pipeline is broken" — your build succeeded, so where's my deploy? Always check the artifact filter before assuming a stage is misconfigured.
 
 ## Source
-CI/CD learning session — Franco's deliberate `sourceBranch: master` filter that initially looked like a bug.
+Microsoft Learn, "Release triggers" and "Deployment control using approvals" (artifact filters in Classic release pipelines).
 
 ---
 

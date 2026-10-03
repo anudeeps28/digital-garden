@@ -22,7 +22,7 @@ Normally, frontend frameworks like Angular bake settings (API URLs, feature flag
 3. At startup, the app fetches `config.json` and loads the settings
 4. To deploy to a different environment, just swap `config.json` — no rebuild needed
 
-**In PlanDocumentRAG**, `ConfigService` loads `config.json` in the Angular app's `APP_INITIALIZER`:
+**For example**, a `ConfigService` loads `config.json` in the Angular app's `APP_INITIALIZER`:
 ```typescript
 load(): Promise<void> {
     return firstValueFrom(
@@ -34,7 +34,7 @@ load(): Promise<void> {
 **Key lesson:** The path to `config.json` must be **relative** (no leading `/`). If the app is served from a subdirectory like `/rag/`, an absolute path `/config.json` goes to the root of the domain (404). A relative path `config.json` resolves to `/rag/config.json` — see [[Relative vs Absolute Paths]].
 
 ## Source
-PlanDocumentRAG Angular app — blank page at `/rag/` because `config.json` was requested with absolute path. Fixed by removing the leading slash.
+The Twelve-Factor App, "III. Config" (Adam Wiggins, 2011); Angular documentation on `APP_INITIALIZER` / `provideAppInitializer`.
 
 ---
 

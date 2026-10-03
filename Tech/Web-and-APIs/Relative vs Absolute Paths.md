@@ -36,7 +36,7 @@ When an app is deployed to a **subdirectory** (virtual directory like `/rag/`), 
 - `.\file.txt` or `file.txt` — relative to current working directory
 
 ## Source
-PlanDocumentRAG — Angular app at `/rag/` requested `/config.json` (absolute) → 404. Changed to `config.json` (relative) → resolved to `/rag/config.json` → worked.
+RFC 3986, "Uniform Resource Identifier (URI): Generic Syntax", section 5 (resolving relative references); MDN Web Docs, "What is a URL?".
 
 ---
 

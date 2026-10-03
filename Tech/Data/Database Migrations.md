@@ -30,4 +30,4 @@ Ruby on Rails, introduced as ActiveRecord Migrations (2004); popularized the con
 [[EF Core]] provides migrations as a core feature for managing database schemas, and [[Managed SQL Database|Azure SQL]] is the database whose schema migrations modify.
 
 **Paths** — *where this leads*
-Migrations run automatically during deployment through the [[CI-CD Pipeline]], and they create and modify [[Database Tables]] as the schema evolves.
+Migrations run automatically during deployment through the [[CI-CD Pipeline]], and they create and modify [[Database Tables]] as the schema evolves. The `Down()` half is what makes [[Rollback Scripts|rolling back]] a bad release possible.
