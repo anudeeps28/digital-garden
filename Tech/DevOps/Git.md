@@ -23,6 +23,9 @@ Linus Torvalds, created in 2005 to manage the Linux kernel development. Introduc
 
 ## Compass
 
+**Paths** — *where this leads*
+Once Windows and Linux machines share a repository, [[Line Endings (LF vs CRLF)|line endings]] need settling in a committed `.gitattributes` file, or Git shows whole files as changed when only one line was edited.
+
 **Neighbors** — *what lives nearby*
 [[SVN]] is an older centralized version control system that served a similar purpose, and [[Mercurial]] is another distributed version control system like Git.
 
