@@ -20,7 +20,7 @@ Emerged as a common pattern in [[Prompt Engineering|prompt engineering]] circa 2
 
 ## Neighbors — *what lives nearby*
 
-[[Named Entity Recognition]] is the traditional NLP approach to extracting structured data, while [[Form Recognition]] services like Azure's handle extracting data from forms and invoices similarly.
+[[Named Entity Recognition]] is the traditional NLP approach to extracting structured data, while [[Document Extraction Service|document extraction services]] like Azure Document Intelligence handle extracting data from forms and invoices similarly.
 
 ## Clash — *what pushes against this*
 
