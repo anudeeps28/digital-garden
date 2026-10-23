@@ -1,5 +1,5 @@
 ---
-aliases: [tech/designing-data-intensive-applications]
+aliases: ["tech/designing-data-intensive-applications", "tech/architecture/designing-data-intensive-applications"]
 type: resource
 tags: [coding/distributed-systems, ddia]
 date: 2026-03-30
@@ -31,7 +31,7 @@ A deep, practical guide to the internals of distributed data systems — databas
 ## Atomic Notes Spawned
 - [[Fault vs Failure]]
 - [[Scalability and Load Parameters]]
-- [[Percentile-Based Performance Metrics]]
+- [[Percentile-Based-Performance-Metrics|Percentile-Based Performance Metrics]]
 - [[Maintainability-Operability-Simplicity-Evolvability]]
 
 ## Related

@@ -13,7 +13,7 @@ The default life script — work hard, earn money, then live — is a trap that 
 Popularized by Tim Ferriss in *The 4-Hour Workweek*: the Deferred Life Plan is the belief that you must complete prerequisite stages (get job → save money → retire → then enjoy life) before you're allowed to do what you actually want. Ferriss challenges this by showing that the lifestyle most people are deferring — travel, freedom, interesting work — costs far less than imagined and doesn't require traditional retirement. The real cost of deferral is the years of your life spent waiting.
 
 ## Source
-Tim Ferriss, *The 4-Hour Workweek* (2007).
+Tim Ferriss, *The 4-Hour Workweek* (2007). See [[The 4-Hour Workweek]].
 
 ---
 

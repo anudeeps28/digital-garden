@@ -1,4 +1,5 @@
 ---
+aliases: ["content/show-your-work"]
 type: resource
 tags: [content/writing, creativity, building-in-public, art]
 date: 2026-03-26
@@ -32,5 +33,6 @@ The core insight — that sharing work-in-progress is itself a creative act — 
 - [[Building in Public]] — the practice of sharing the process openly
 
 ## Related
+- [[Steal Like an Artist]] and [[Keep Going]]: the other two books in Kleon's trilogy
 - [[Consistency]] — daily sharing is a consistency practice
 - [[We Learn by Doing, Not by Watching]] — sharing forces you to reflect and learn

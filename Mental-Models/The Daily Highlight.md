@@ -13,7 +13,7 @@ Choose one meaningful task as your focus for the day — if you accomplish only 
 From the book *Make Time* by Jake Knapp and John Zeratsky: instead of a long to-do list, pick a single highlight — one task that takes 60–90 minutes, matters to you, and you'll feel good about completing. The highlight should be either the most urgent thing, the most satisfying thing, or the most joyful thing. Everything else is secondary. Doing more doesn't make you more productive; it makes you frazzled. One clear intention beats 100 items you never finish.
 
 ## Source
-Jake Knapp & John Zeratsky, *Make Time* (2018).
+Jake Knapp & John Zeratsky, *Make Time* (2018). See [[Make Time]].
 
 ---
 
