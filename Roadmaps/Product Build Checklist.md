@@ -25,7 +25,7 @@ It's long on purpose. Not every box applies to every product, but every box is a
 - [ ] Key screens and user flows sketched.
 - [ ] Framework chosen (e.g. [[React]], Next.js, [[Angular]], Blazor, mobile).
 - [ ] Works on mobile and desktop.
-- [ ] Empty states, loading states, error states designed.
+- [ ] Empty states, loading states, error states designed ([[Design Every UI State]]).
 - [ ] **Accessibility:** readable contrast, keyboard friendly, alt text.
 
 ## 3. Backend
@@ -67,7 +67,7 @@ It's long on purpose. Not every box applies to every product, but every box is a
 - [ ] **[[Git]]:** repo, [[Git Branches|branching strategy]], [[Pull Request|PR reviews]].
 - [ ] **Testing:** [[Unit Tests]] + a few end-to-end tests of key flows ([[Playwright]]).
 - [ ] **CI/CD:** tests and deploys run automatically on push ([[CI-CD Pipeline]]).
-- [ ] Easy rollback if a deploy breaks.
+- [ ] Easy rollback if a deploy breaks ([[Make Every Deploy Reversible]]).
 - [ ] **Docs:** README with setup, run, and deploy steps.
 
 ## 8. Running it in production
@@ -101,7 +101,7 @@ It's long on purpose. Not every box applies to every product, but every box is a
 
 - [ ] Model choice and fallback model ([[Model Tiering]], [[Pin the Model Version]]).
 - [ ] Prompts versioned like code ([[Prompt Engineering]]).
-- [ ] **Evals:** a test set to check quality before changes ship ([[LLM-as-a-Judge]]).
+- [ ] **Evals:** a test set to check quality before changes ship ([[Evals]], [[LLM-as-a-Judge]]).
 - [ ] [[Tokens|Token]] cost per user, with limits.
 - [ ] Guardrails for bad input and bad output ([[Structured Output Validation]]).
 
