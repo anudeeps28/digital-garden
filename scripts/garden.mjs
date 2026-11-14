@@ -316,9 +316,9 @@ function rewriteWikilinks(oldName, newName, dryRun) {
 // note (Folder/Folder.md or Folder/index.md) is not counted.
 const MAX_FOLDER_ITEMS = 10
 
-// Warn-only while existing folders are being split. Flip to true once
-// `check` reports no crowded folders, and the limit then blocks commits.
-const FOLDER_LIMIT_BLOCKS = false
+// When true, a crowded folder is a structural problem and blocks the commit.
+// Set to false only temporarily, e.g. mid-way through a large reorganisation.
+const FOLDER_LIMIT_BLOCKS = true
 
 /** Return one problem string per folder holding more than MAX_FOLDER_ITEMS items. */
 function crowdedFolders(notes) {
