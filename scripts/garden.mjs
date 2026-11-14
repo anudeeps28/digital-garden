@@ -307,6 +307,45 @@ function rewriteWikilinks(oldName, newName, dryRun) {
 }
 
 // ---------------------------------------------------------------------------
+// Folder size rule
+// ---------------------------------------------------------------------------
+
+// No published folder may hold more than this many items, counting notes and
+// subfolders together. A folder that outgrows it is split into subfolders, so
+// every folder stays a small, browsable entry point. A folder's own landing
+// note (Folder/Folder.md or Folder/index.md) is not counted.
+const MAX_FOLDER_ITEMS = 10
+
+// Warn-only while existing folders are being split. Flip to true once
+// `check` reports no crowded folders, and the limit then blocks commits.
+const FOLDER_LIMIT_BLOCKS = false
+
+/** Return one problem string per folder holding more than MAX_FOLDER_ITEMS items. */
+function crowdedFolders(notes) {
+  const items = new Map() // folder -> Set of direct child names (notes + subfolders)
+  const add = (folder, child) => {
+    if (!items.has(folder)) items.set(folder, new Set())
+    items.get(folder).add(child)
+  }
+
+  for (const rel of notes) {
+    const parts = rel.split("/")
+    if (parts.length < 2) continue // vault root is the home page, not a folder
+    if (slugifyFilePath(rel).endsWith("index")) continue // landing note
+    add(parts.slice(0, -1).join("/"), parts.at(-1))
+    // Register each ancestor's subfolder as an item of its parent
+    for (let i = 2; i < parts.length; i++) {
+      add(parts.slice(0, i - 1).join("/"), parts[i - 1] + "/")
+    }
+  }
+
+  return [...items]
+    .filter(([, children]) => children.size > MAX_FOLDER_ITEMS)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([folder, children]) => `crowded folder ${folder}/ — ${children.size} items`)
+}
+
+// ---------------------------------------------------------------------------
 // Command: check
 // ---------------------------------------------------------------------------
 
@@ -359,10 +398,20 @@ function cmdCheck({ strict }) {
     }
   }
 
+  const crowded = crowdedFolders(notes)
+  if (FOLDER_LIMIT_BLOCKS) problems.push(...crowded)
+
   const dangling = problems.filter((p) => p.startsWith("dangling"))
   const structural = problems.filter((p) => !p.startsWith("dangling"))
 
   console.log(`Checked ${notes.length} notes.`)
+
+  if (crowded.length && !FOLDER_LIMIT_BLOCKS) {
+    console.log(
+      `\n${crowded.length} folder(s) over the ${MAX_FOLDER_ITEMS}-item limit (warning — split into subfolders):`,
+    )
+    for (const p of crowded) console.log(`  - ${p}`)
+  }
 
   // Dangling links are NORMAL in a garden — they are seeds for notes not yet
   // written. They are reported, but only fail the build under --strict.
