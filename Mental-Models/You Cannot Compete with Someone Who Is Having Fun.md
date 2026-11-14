@@ -13,7 +13,9 @@ Intrinsic enjoyment is the most powerful competitive advantage — people who lo
 Someone who genuinely loves what they do can sustain 12-hour days effortlessly, while someone doing it out of obligation struggles through 2. Willpower is a finite, exhaustible resource; passion is renewable. This isn't about toxic productivity — "workaholics" who seem to work 14+ hours are often just people having a blast. The implication: if you're not enjoying what you're doing, you're not just unhappy — you're structurally disadvantaged against anyone who is.
 
 ## Source
-Personal observation; ties to [[Toxic Productivity]] and intrinsic motivation research.
+Personal observation; ties to [[Toxic Productivity]] and intrinsic motivation research. Revisited in my reel "Fun-maxxing will get you places" (October 2026) as *bringing childlike energy to grown-up games*: as kids we played without needing discipline or willpower, and adulthood turns play into a productivity game. You don't have to be less sincere, but you get better at the game when you are less serious.
+
+The line is often credited to Naval Ravikant, but I couldn't find a primary source with that wording. His documented version is "find what feels like play to you but looks like work to others", plus "no one can compete with you on being you" (*The Almanack of Naval Ravikant*, Eric Jorgenson, 2020).
 
 ---
 
